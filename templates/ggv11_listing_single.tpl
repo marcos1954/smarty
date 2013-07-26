@@ -1,5 +1,5 @@
 {config_load file="ggv_dayCal.conf"}
-{strip}
+{*strip*}
 {include file=$headerfilename}
      	<div id="main_content">
  		  <div id="Listing_full_content" style="margin-top: 0">
@@ -38,6 +38,9 @@
                         {if $list_url != ''}
      	                    <a class="listlink" href="{$list_url}">{$list_url_text}</a>&nbsp;&nbsp;
      	                {/if}
+						{if $list_fb_url != ''}
+     	                    <a class="listlink" href="{$list_fb_url}">{$list_fb_text}</a>&nbsp;&nbsp;
+     	                {/if}
 						
 						 {if $list_url != ''}
      	                      <br /><br />{$list_closed}
@@ -68,6 +71,7 @@
 					<div id="ggv_cal_link" class="linkbox{if $list_rows_cal == array()} empty{/if}"  onclick="chooseCtlBoxItem('ggv_cal')">{$calendar_text|default:"calendar"}</a></div>
 					<div id="ggv_menu_link" class="linkbox{if $menus == array()} empty{/if}"  onclick="chooseCtlBoxItem('ggv_menu')">{$menu_text|default:"menu"}</a></div>
 					<div id="ggv_about_link" class="linkbox{if $list_desclong == ''} empty{/if}"  onclick="chooseCtlBoxItem('ggv_about')">{$about_text|default:"about"}</a></div>
+					<div id="ggv_fb_link" class="linkbox{if $list_fb_url_href == ''} empty{/if}"  onclick="chooseCtlBoxItem('ggv_fb')">{$fb_text|default:"facebook"}</a></div>
 				</div>
 	     		<br clear="all" />
 	     		<div id="ggv_underline" ></div>
@@ -75,12 +79,32 @@
 	     		<div id="ggv_flyer"  style="text-align: center;" class="ggv-ctlbox-content">
 	     		{if $flyer_url != ''} <img src="http://src.sencha.io/702/1050/http://www.gayguidevallarta.com{$flyer_url}" > {/if}
 	     		</div>
-
-	     		<div id="ggv_about"  class="ggv-ctlbox-content">
+				
+				<div id="ggv_about"  class="ggv-ctlbox-content">
 	     			<div class="borderbox">
 		     			<p>{$list_desclong|nl2br}</p>
 		     			<br clear="all" />
 	     			</div>
+				</div>
+
+	     		<div id="ggv_fb"  class="ggv-ctlbox-content">
+	     			
+							  
+<div style="margin: 5px  0 10px  25px ; float: right; clear: right; height: 500px !important" class="fb-like-box" data-href="{$list_fb_url_href}" data-width="730" data-height="500" data-show-faces="false" data-stream="true" data-header="true"></div>
+
+<div id="fb-root"></div>
+<script type="text/javascript">
+{literal}
+(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+		  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+{/literal}
+</script>
+	     			
 	     		</div>
 
 				<div id="ggv_events"  class="ggv-ctlbox-content">
@@ -179,4 +203,5 @@
 		</div>
 	</div>
 {include file="ggv10_footer.tpl"}
-{/strip}
+{*debug*}
+{*/strip*}
