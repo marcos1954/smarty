@@ -67,6 +67,7 @@
 
 
      {foreach from=$subcat item="sub"}
+	 <a id="{$sub.subcat_typecode}"></a>
      <br /><h2>{$sub.subcat_name}</h2>
 
      {if $sub.subcat_desc != ''} <p>{$sub.subcat_desc}</p>  <br />{/if}
