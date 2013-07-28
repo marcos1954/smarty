@@ -16,13 +16,19 @@
                       {/if}
                </div>
                <div id="Listing_header_right">
+					
                		<p class="listing_address">
 						{if $EDIT != ''}
 					       <a href="{$EDIT}">EDIT</a> &nbsp;
 				        {/if}
 					    {if $list_tagsicons != ''}
-							{$list_tagsicons}<hr />
+							{$list_tagsicons}
 					    {/if}
+					</p>
+						
+					<div class="links" ><span>location & phone</span></div>
+					
+					<p  class="listing_address">
      					{$list_addr1}
      					{if $list_addr2 != ''}
      						<br /> {$list_addr2}
@@ -33,8 +39,10 @@
      					{if $list_phone != ''}
      						<br /> Tel. {$list_phone}
      					{/if}
+                   </p>
+					<div class="links" ><span>website & listings</span></div>
+							 
 
-     					<br /><br />
                         {if $list_url != ''}
      	                    <a class="listlink" href="{$list_url}">{$list_url_text}</a>&nbsp;&nbsp;
      	                {/if}
@@ -42,13 +50,17 @@
      	                    <a class="listlink" href="{$list_fb_url}">{$list_fb_text}</a>&nbsp;&nbsp;
      	                {/if}
 						
+						{if $list_ta_url != ''}
+     	                    <a class="listlink" href="{$list_ta_url}">{$list_ta_text}</a>&nbsp;&nbsp;
+     	                {/if}
+						
 						 {if $list_url != ''}
      	                      <br /><br />{$list_closed}
      	                {/if}
-						
+	
 						
 
-     				</p>
+
                </div>
                <div class="listing_info">
                  	<p class="listing_name" style="margin-top: 0">{$list_name}</p>

@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.26, created on 2013-07-26 09:35:16
+<?php /* Smarty version 2.6.27, created on 2013-07-28 14:55:28
          compiled from ggv11_listing_single.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('function', 'config_load', 'ggv11_listing_single.tpl', 1, false),array('modifier', 'default', 'ggv11_listing_single.tpl', 67, false),array('modifier', 'nl2br', 'ggv11_listing_single.tpl', 85, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('function', 'config_load', 'ggv11_listing_single.tpl', 1, false),array('modifier', 'default', 'ggv11_listing_single.tpl', 79, false),array('modifier', 'nl2br', 'ggv11_listing_single.tpl', 97, false),)), $this); ?>
 <?php echo smarty_function_config_load(array('file' => "ggv_dayCal.conf"), $this);?>
 
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
@@ -27,6 +27,7 @@ unset($_smarty_tpl_vars);
                       <?php endif; ?>
                </div>
                <div id="Listing_header_right">
+					
                		<p class="listing_address">
 						<?php if ($this->_tpl_vars['EDIT'] != ''): ?>
 					       <a href="<?php echo $this->_tpl_vars['EDIT']; ?>
@@ -34,8 +35,13 @@ unset($_smarty_tpl_vars);
 				        <?php endif; ?>
 					    <?php if ($this->_tpl_vars['list_tagsicons'] != ''): ?>
 							<?php echo $this->_tpl_vars['list_tagsicons']; ?>
-<hr />
+
 					    <?php endif; ?>
+					</p>
+						
+					<div class="links" ><span>location & phone</span></div>
+					
+					<p  class="listing_address">
      					<?php echo $this->_tpl_vars['list_addr1']; ?>
 
      					<?php if ($this->_tpl_vars['list_addr2'] != ''): ?>
@@ -50,8 +56,10 @@ unset($_smarty_tpl_vars);
      						<br /> Tel. <?php echo $this->_tpl_vars['list_phone']; ?>
 
      					<?php endif; ?>
+                   </p>
+					<div class="links" ><span>website & listings</span></div>
+							 
 
-     					<br /><br />
                         <?php if ($this->_tpl_vars['list_url'] != ''): ?>
      	                    <a class="listlink" href="<?php echo $this->_tpl_vars['list_url']; ?>
 "><?php echo $this->_tpl_vars['list_url_text']; ?>
@@ -63,14 +71,20 @@ unset($_smarty_tpl_vars);
 </a>&nbsp;&nbsp;
      	                <?php endif; ?>
 						
+						<?php if ($this->_tpl_vars['list_ta_url'] != ''): ?>
+     	                    <a class="listlink" href="<?php echo $this->_tpl_vars['list_ta_url']; ?>
+"><?php echo $this->_tpl_vars['list_ta_text']; ?>
+</a>&nbsp;&nbsp;
+     	                <?php endif; ?>
+						
 						 <?php if ($this->_tpl_vars['list_url'] != ''): ?>
      	                      <br /><br /><?php echo $this->_tpl_vars['list_closed']; ?>
 
      	                <?php endif; ?>
-						
+	
 						
 
-     				</p>
+
                </div>
                <div class="listing_info">
                  	<p class="listing_name" style="margin-top: 0"><?php echo $this->_tpl_vars['list_name']; ?>
