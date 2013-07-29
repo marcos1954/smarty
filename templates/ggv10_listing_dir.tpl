@@ -27,6 +27,8 @@
 									<a href="{$entry.EDIT}">EDIT</a> &nbsp;
 								 {/if}
 								{$entry.list_tagsicons}
+								{if $entry.list_fb}<img src="/images/facebookIcon.png" height=22 width=auto title="Listed on Facebook" />{/if}
+								{if $entry.list_ta}<img src="/images/tripadvisor2.png" height=22 width=auto title="Reviewed on Tripadvisor" />{/if}
 							</div>
 					{/if}
                  	<p class="listing_name">{$entry.list_name}</p>
@@ -80,6 +82,8 @@
 									<a href="{$entry.EDIT}">EDIT</a> &nbsp;
 								 {/if}
 								{$entry.list_tagsicons}
+								{if $entry.list_fb}<img src="/images/facebookIcon.png" height=22 width=auto title="Listed on Facebook" />{/if}
+								{if $entry.list_ta}<img src="/images/tripadvisor2.png" height=22 width=auto title="Reviewed on Tripadvisor" />{/if}
 							</div>
 					{/if}
                  	<p class="listing_name">{$entry.list_name}</p>

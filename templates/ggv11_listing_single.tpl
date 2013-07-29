@@ -24,6 +24,12 @@
 					    {if $list_tagsicons != ''}
 							{$list_tagsicons}
 					    {/if}
+						{if $list_fb_url != ''}
+							  <img src="/images/facebookIcon.png" height=24 width=auto title="Facebook" />
+						{/if}
+						{if $list_ta_url != ''}
+							  <img src="/images/tripadvisor2.png" height=24 width=auto title="Reviewed on Tripadvisor" />
+						{/if}
 					</p>
 						
 					<div class="links" ><span>location & phone</span></div>
@@ -215,5 +221,5 @@
 		</div>
 	</div>
 {include file="ggv10_footer.tpl"}
-{*debug*}
+
 {*/strip*}

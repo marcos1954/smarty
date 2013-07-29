@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.27, created on 2013-07-28 14:55:28
+<?php /* Smarty version 2.6.27, created on 2013-07-28 17:31:03
          compiled from ggv11_listing_single.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('function', 'config_load', 'ggv11_listing_single.tpl', 1, false),array('modifier', 'default', 'ggv11_listing_single.tpl', 79, false),array('modifier', 'nl2br', 'ggv11_listing_single.tpl', 97, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('function', 'config_load', 'ggv11_listing_single.tpl', 1, false),array('function', 'debug', 'ggv11_listing_single.tpl', 224, false),array('modifier', 'default', 'ggv11_listing_single.tpl', 85, false),array('modifier', 'nl2br', 'ggv11_listing_single.tpl', 103, false),)), $this); ?>
 <?php echo smarty_function_config_load(array('file' => "ggv_dayCal.conf"), $this);?>
 
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
@@ -37,6 +37,12 @@ unset($_smarty_tpl_vars);
 							<?php echo $this->_tpl_vars['list_tagsicons']; ?>
 
 					    <?php endif; ?>
+						<?php if ($this->_tpl_vars['list_fb_url'] != ''): ?>
+							  <img src="/images/facebookIcon.png" height=24 width=auto title="Facebook" />
+						<?php endif; ?>
+						<?php if ($this->_tpl_vars['list_ta_url'] != ''): ?>
+							  <img src="/images/tripadvisor2.png" height=24 width=auto title="Tripadvisor Info Available" />
+						<?php endif; ?>
 					</p>
 						
 					<div class="links" ><span>location & phone</span></div>
@@ -274,3 +280,4 @@ $this->_smarty_include(array('smarty_include_tpl_file' => "ggv10_footer.tpl", 's
 $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
  ?>
+<?php echo smarty_function_debug(array(), $this);?>
