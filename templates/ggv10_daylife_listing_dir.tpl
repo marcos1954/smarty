@@ -33,7 +33,7 @@
 							</div>
 					{/if}
                  	<p class="listing_name">{$entry.list_name}</p>
-     				<p class="listing_address">
+     				<!--<p class="listing_address">
      					{$entry.list_addr1}
      					{if $entry.list_addr2 != ''}
      						, {$entry.list_addr2}
@@ -44,7 +44,7 @@
      					{if $entry.list_phone != ''}
      						<br /> Tel. {$entry.list_phone}
      					{/if}
-     				</p>					
+     				</p>			-->		
 					{if $entry.list_tags != ''}
 					   <p class="tags" >{$entry.list_tags}</p>
 					{/if}
@@ -100,7 +100,7 @@
 							</div>
 					{/if}
                  	<p class="listing_name">{$entry.list_name}</p>
-     				<p class="listing_address">
+     				<!--<p class="listing_address">
      					{$entry.list_addr1}
      					{if $entry.list_addr2 != ''}
      						, {$entry.list_addr2}
@@ -111,7 +111,7 @@
      					{if $entry.list_phone != ''}
      						<br /> Tel. {$entry.list_phone}
      					{/if}
-     				</p>
+     				</p>-->
 					{if $entry.list_tags != ''}
 					   <p class="tags" >{$entry.list_tags}</p>
 					{/if}

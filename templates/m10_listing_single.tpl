@@ -28,6 +28,14 @@
      					{if $list_phone != ''}
      						<br /> Tel. {$list_phone}
      					{/if}
+						
+						{if $list_cell != ''}
+     						<br /> Cel. {$list_cell}
+     					{/if}
+						{if $list_intlphone != ''}
+     						<br /> US/Can. {$list_intlphone}
+     					{/if}
+						
      					<br />
                         {if $list_url != ''}
      	                    <a class="listlink" href="{$list_url}">{$website}</a>&nbsp;&nbsp;

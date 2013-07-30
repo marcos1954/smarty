@@ -1,5 +1,5 @@
 {config_load file="ggv_dayCal.conf"}
-{*strip*}
+{strip}
 {include file=$headerfilename}
      	<div id="main_content">
  		  <div id="Listing_full_content" style="margin-top: 0">
@@ -44,6 +44,12 @@
      					{/if}
      					{if $list_phone != ''}
      						<br /> Tel. {$list_phone}
+     					{/if}
+						{if $list_cell != ''}
+     						<br /> Cel. {$list_cell}
+     					{/if}
+						{if $list_intlphone != ''}
+     						<br /> US/Can. {$list_intlphone}
      					{/if}
                    </p>
 					<div class="links" ><span>website & listings</span></div>
@@ -222,4 +228,4 @@
 	</div>
 {include file="ggv10_footer.tpl"}
 
-{*/strip*}
+{/strip}
