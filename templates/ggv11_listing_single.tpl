@@ -66,7 +66,7 @@
      	                    <a class="listlink" href="{$list_ta_url}">{$list_ta_text}</a>&nbsp;&nbsp;
      	                {/if}
 						
-						 {if $list_url != ''}
+					    {if $list_closed != ''}
      	                      <br /><br />{$list_closed}
      	                {/if}
 	
