@@ -29,6 +29,11 @@
 								{$entry.list_tagsicons}
 								{if $entry.list_fb}<img src="/images/facebookIcon.png" height=22 width=auto title="Listed on Facebook" />{/if}
 								{if $entry.list_ta}<img src="/images/tripadvisor2.png" height=22 width=auto title="Reviewed on Tripadvisor" />{/if}
+
+								{if $list_lastupdate != '' && $EDIT != ''}
+									<div style="text-align: center; color: gray; font-size: .8em;" >{$list_lastupdate}</div>
+								{/if}
+     	               
 							</div>
 					{/if}
                  	<p class="listing_name">{$entry.list_name}</p>
@@ -80,7 +85,11 @@
                    <div class="listing_info">
 					{if $entry.list_tagsicons != '' || $entry.EDIT != ''}
 							<div style="float: right;margin-top:.7em;" >
+								
 								 {if $entry.EDIT != ''}
+									{if $entry.list_lastupdate != '0000-00-00 00:00:00'}
+										<div style="text-align:right; color: gray; font-size: .8em;">{$entry.list_lastupdate}</div>
+									{/if}
 									<a href="{$entry.EDIT}">EDIT</a> &nbsp;
 								 {/if}
 								{$entry.list_tagsicons}
@@ -135,4 +144,5 @@
 {include file="ggv10_right_content.tpl"}
 
 {include file="ggv10_footer.tpl"}
+
 {/strip}

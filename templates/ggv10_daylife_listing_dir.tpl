@@ -24,6 +24,9 @@
 					{if $entry.list_tagsicons != '' || $entry.EDIT != ''}
 							<div style="float: right;margin-top:.7em;" >
 								 {if $entry.EDIT != ''}
+								 	{if $entry.list_lastupdate != '0000-00-00 00:00:00'}
+										<div style="text-align:right; color: gray; font-size: .8em;">{$entry.list_lastupdate}</div>
+									{/if}
 									<a href="{$entry.EDIT}">EDIT</a> &nbsp;
 								 {/if}
 								{$entry.list_tagsicons}
@@ -33,18 +36,7 @@
 							</div>
 					{/if}
                  	<p class="listing_name">{$entry.list_name}</p>
-     				<!--<p class="listing_address">
-     					{$entry.list_addr1}
-     					{if $entry.list_addr2 != ''}
-     						, {$entry.list_addr2}
-     					{/if}
-     					{if $entry.list_addr3 != ''}
-     						, {$entry.list_addr3}
-     					{/if}
-     					{if $entry.list_phone != ''}
-     						<br /> Tel. {$entry.list_phone}
-     					{/if}
-     				</p>			-->		
+	
 					{if $entry.list_tags != ''}
 					   <p class="tags" >{$entry.list_tags}</p>
 					{/if}
@@ -61,13 +53,7 @@
                    </div>
                    <br clear="left" />
      			 </div>
-
-
-
      {/foreach}
-
-
-
 
      {foreach from=$subcat item="sub"}
 	 <a id="{$sub.subcat_typecode}"></a>
@@ -92,6 +78,10 @@
 					{if $entry.list_tagsicons != '' || $entry.EDIT != ''}
 							<div style="float: right;margin-top:.7em;" >
 								 {if $entry.EDIT != ''}
+								 	{if $entry.list_lastupdate != '0000-00-00 00:00:00'}
+										<div style="text-align:right; color: gray; font-size: .8em;">{$entry.list_lastupdate}</div>
+									{/if}
+									
 									<a href="{$entry.EDIT}">EDIT</a> &nbsp;
 								 {/if}
 								{$entry.list_tagsicons}
@@ -100,18 +90,7 @@
 							</div>
 					{/if}
                  	<p class="listing_name">{$entry.list_name}</p>
-     				<!--<p class="listing_address">
-     					{$entry.list_addr1}
-     					{if $entry.list_addr2 != ''}
-     						, {$entry.list_addr2}
-     					{/if}
-     					{if $entry.list_addr3 != ''}
-     						, {$entry.list_addr3}
-     					{/if}
-     					{if $entry.list_phone != ''}
-     						<br /> Tel. {$entry.list_phone}
-     					{/if}
-     				</p>-->
+
 					{if $entry.list_tags != ''}
 					   <p class="tags" >{$entry.list_tags}</p>
 					{/if}

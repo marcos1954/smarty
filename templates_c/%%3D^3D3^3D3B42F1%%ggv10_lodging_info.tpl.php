@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2012-10-10 07:36:32
+<?php /* Smarty version 2.6.27, created on 2013-08-15 05:06:33
          compiled from ggv10_lodging_info.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'config_load', 'ggv10_lodging_info.tpl', 1, false),array('function', 'html_options', 'ggv10_lodging_info.tpl', 128, false),array('function', 'html_radios', 'ggv10_lodging_info.tpl', 208, false),array('modifier', 'nl2br', 'ggv10_lodging_info.tpl', 93, false),)), $this); ?>

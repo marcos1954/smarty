@@ -1,18 +1,16 @@
 {config_load file="ggv_dayCal.conf"}
 {strip}
 {include file=$headerfilename}
-<script>
-selectedIndex = {$dd_minus_one};
-</script>
+
      	<div id="main_content">
  		  <div id="Listing_full_content" style="margin-top: 0">
 			<div id="Listing_header">
 			  <div class="listinglogo">
-                      {if $list_src != ''}
+                      {if $lodging_logo_src != ''}
                        <img border="0"
-			                src="{$list_src}"
-			                width="{$list_width}"
-			                height="{$list_height}"
+			                src="../Listings/{$lodging_logo_src}"
+			                width="{$lodging_logo_width}"
+			                height="{$lodging_logo_height}"
 			                align="left">
                       {else}
                          &nbsp;
@@ -38,15 +36,15 @@ selectedIndex = {$dd_minus_one};
 					<div class="links" ><span>location & phone</span></div>
 					
 					<p  class="listing_address">
-     					{$list_addr1}
-     					{if $list_addr2 != ''}
-     						<br /> {$list_addr2}
+     					{$lodging_addr1}
+     					{if $lodging_addr2 != ''}
+     						<br /> {$lodging_addr2}
      					{/if}
-     					{if $list_addr3 != ''}
-     						<br /> {$list_addr3}
+     					{if $lodging_addr3 != ''}
+     						<br /> {$lodging_addr3}
      					{/if}
-     					{if $list_phone != ''}
-     						<br /> Tel. {$list_phone}
+     					{if $lodging_phone != ''}
+     						<br /> Tel. {$lodging_phone}
      					{/if}
 						{if $list_cell != ''}
      						<br /> Cel. {$list_cell}
@@ -58,8 +56,8 @@ selectedIndex = {$dd_minus_one};
 					<div class="links" ><span>website & listings</span></div>
 							 
 
-                        {if $list_url != ''}
-     	                    <a class="listlink" href="{$list_url}">{$list_url_text}</a>&nbsp;&nbsp;
+                        {if $lodging_link_url != ''}
+     	                    <a class="listlink" href="{$lodging_link_url}">website</a>&nbsp;&nbsp;
      	                {/if}
 						{if $list_fb_url != ''}
      	                    <a class="listlink" href="{$list_fb_url}">{$list_fb_text}</a>&nbsp;&nbsp;
@@ -80,12 +78,18 @@ selectedIndex = {$dd_minus_one};
 	
 			   </div>
                <div class="listing_info">
-                 	<p class="listing_name" style="margin-top: 0">{$list_name}</p>
+                 	<p class="listing_name" style="margin-top: 0">{$hotel_name}</p>
+					<p class="tags">
      					{if $list_tags != ''}
-     	                   <p class="tags">{$list_tags}</p>
+     	                   {$list_tags}
      	                {/if}
-
-                 	<div id="ggv_descshort">{$list_descshort}</div>
+						{if $list_tags != '' && $features != ''}, {/if}
+						
+						{if $features != ''}
+     	                   {$features}
+     	                {/if}
+					</p>
+                 	<div id="ggv_descshort">{$lodging_descshort}</div>
      			</div>
                 <br clear="all" />
      		</div>  <!-- end of Listing_header -->
@@ -98,8 +102,8 @@ selectedIndex = {$dd_minus_one};
 					<div id="ggv_mapa_link"	class="linkbox{if $list_map == ''} empty{/if}"  onclick="chooseCtlBoxItem('ggv_mapa')">{$map_text|default:"map"}</a></div>
  				    <div id="ggv_events_link" class="linkbox{if $list_rows_cal == array()} empty{/if}"  onclick="chooseCtlBoxItem('ggv_events')">{$events_text|default:"events"}</a></div>
 					<div id="ggv_cal_link" class="linkbox{if $list_rows_cal == array()} empty{/if}"  onclick="chooseCtlBoxItem('ggv_cal')">{$calendar_text|default:"calendar"}</a></div>
-					<div id="ggv_menu_link" class="linkbox{if $menus == array()} empty{/if}"  onclick="chooseCtlBoxItem('ggv_menu')">{$menu_text|default:"menu"}</a></div>
-					<div id="ggv_about_link" class="linkbox{if $list_desclong == ''} empty{/if}"  onclick="chooseCtlBoxItem('ggv_about')">{$about_text|default:"about"}</a></div>
+					<div id="ggv_rooms_link" class="linkbox"  onclick="chooseCtlBoxItem('ggv_rooms')">{$menu_text|default:"rooms"}</a></div>
+					<div id="ggv_about_link" class="linkbox{if $lodging_desclong == ''} empty{/if}"  onclick="chooseCtlBoxItem('ggv_about')">{$about_text|default:"about"}</a></div>
 					<div id="ggv_fb_link" class="linkbox{if $list_fb_url_href == ''} empty{/if}"  onclick="chooseCtlBoxItem('ggv_fb')">{$fb_text|default:"facebook"}</a></div>
 				</div>
 	     		<br clear="all" />
@@ -111,7 +115,7 @@ selectedIndex = {$dd_minus_one};
 				
 				<div id="ggv_about"  class="ggv-ctlbox-content">
 	     			<div class="borderbox">
-		     			<p>{$list_desclong|nl2br}</p>
+		     			<p>{$lodging_desclong|nl2br}</p>
 		     			<br clear="all" />
 	     			</div>
 				</div>
@@ -228,9 +232,14 @@ selectedIndex = {$dd_minus_one};
 					</div>
 				{/if}
 				</div>
+				
+			<div id="ggv_rooms" class="ggv-ctlbox-content">
+				<div id="lodging_ajax"></div>
+			  </div>
 			</div>
+
+			
 		</div>
 	</div>
 {include file="ggv10_footer.tpl"}
-
 {/strip}

@@ -142,7 +142,6 @@
 
 {literal}
 <SCRIPT LANGUAGE="JavaScript">
-<!-- Begin
 {
     {/literal}selectedIndex = {$dd_minus_one}; {literal}
 
@@ -172,7 +171,6 @@ function getYearsX() {
 	}
 	document.f1.year.options[document.f1.year.selectedIndex].selected=true;
 }
-//  End -->
 </script>
 {/literal}
 
