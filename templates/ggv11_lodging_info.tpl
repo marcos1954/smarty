@@ -1,5 +1,5 @@
 {config_load file="ggv_dayCal.conf"}
-{strip}
+{*strip*}
 {include file=$headerfilename}
 
      	<div id="main_content">
@@ -242,4 +242,4 @@
 		</div>
 	</div>
 {include file="ggv10_footer.tpl"}
-{/strip}
+{*/strip*}
