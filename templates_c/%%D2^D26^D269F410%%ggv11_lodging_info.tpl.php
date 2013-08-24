@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.27, created on 2013-08-17 18:05:15
+<?php /* Smarty version 2.6.27, created on 2013-08-22 12:57:13
          compiled from ggv11_lodging_info.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'config_load', 'ggv11_lodging_info.tpl', 1, false),array('modifier', 'default', 'ggv11_lodging_info.tpl', 100, false),array('modifier', 'nl2br', 'ggv11_lodging_info.tpl', 118, false),)), $this); ?>
@@ -141,7 +141,7 @@ unset($_smarty_tpl_vars);
 </a></div>
 					<div id="ggv_about_link" class="linkbox<?php if ($this->_tpl_vars['lodging_desclong'] == ''): ?> empty<?php endif; ?>"  onclick="chooseCtlBoxItem('ggv_about')"><?php echo ((is_array($_tmp=@$this->_tpl_vars['about_text'])) ? $this->_run_mod_handler('default', true, $_tmp, 'about') : smarty_modifier_default($_tmp, 'about')); ?>
 </a></div>
-					<div id="ggv_fb_link" class="linkbox<?php if ($this->_tpl_vars['list_fb_url_href'] == ''): ?> empty<?php endif; ?>"  onclick="chooseCtlBoxItem('ggv_fb')"><?php echo ((is_array($_tmp=@$this->_tpl_vars['fb_text'])) ? $this->_run_mod_handler('default', true, $_tmp, 'facebook') : smarty_modifier_default($_tmp, 'facebook')); ?>
+					<div id="ggv_fb_link" class="linkbox<?php if ($this->_tpl_vars['list_fb_url_href'] == ''): ?> empty<?php endif; ?>"  onclick="chooseCtlBoxItem('ggv_fb')"><?php echo ((is_array($_tmp=@$this->_tpl_vars['fb_text'])) ? $this->_run_mod_handler('default', true, $_tmp, 'news feed') : smarty_modifier_default($_tmp, 'news feed')); ?>
 </a></div>
 				</div>
 	     		<br clear="all" />

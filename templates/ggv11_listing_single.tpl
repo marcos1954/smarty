@@ -1,9 +1,7 @@
 {config_load file="ggv_dayCal.conf"}
 {strip}
 {include file=$headerfilename}
-<script>
-selectedIndex = {$dd_minus_one};
-</script>
+{if $dd_minus_one} <script>selectedIndex = {$dd_minus_one};</script>{/if}
      	<div id="main_content">
  		  <div id="Listing_full_content" style="margin-top: 0">
 			<div id="Listing_header">
@@ -21,9 +19,7 @@ selectedIndex = {$dd_minus_one};
                <div id="Listing_header_right">
 					
                		<p class="listing_address">
-						{if $EDIT != ''}
-					       <a href="{$EDIT}">EDIT</a> &nbsp;
-				        {/if}
+						
 					    {if $list_tagsicons != ''}
 							{$list_tagsicons}
 					    {/if}
@@ -73,10 +69,18 @@ selectedIndex = {$dd_minus_one};
      	                      <br /><br />{$list_closed}
      	                {/if}
 
-						{if $list_lastupdate != '0000-00-00 00:00:00' && $EDIT != ''}
+						{if $EDIT != ''}
 							  <div class="links" ><span>last update</span></div>
-									<div style="text-align: center; color: gray; font-size: .8em;" >{$list_lastupdate}</div>
-     	                {/if}
+							  
+							  <div style="text-align: left; color: gray; font-size: .8em;" >
+										<div style="float:right">
+												  <a href="{$EDIT}">EDIT</a>
+										</div>
+										{$list_lastupdate}
+							  </div>	
+					       
+				        {/if}
+
 	
 			   </div>
                <div class="listing_info">
@@ -100,7 +104,7 @@ selectedIndex = {$dd_minus_one};
 					<div id="ggv_cal_link" class="linkbox{if $list_rows_cal == array()} empty{/if}"  onclick="chooseCtlBoxItem('ggv_cal')">{$calendar_text|default:"calendar"}</a></div>
 					<div id="ggv_menu_link" class="linkbox{if $menus == array()} empty{/if}"  onclick="chooseCtlBoxItem('ggv_menu')">{$menu_text|default:"menu"}</a></div>
 					<div id="ggv_about_link" class="linkbox{if $list_desclong == ''} empty{/if}"  onclick="chooseCtlBoxItem('ggv_about')">{$about_text|default:"about"}</a></div>
-					<div id="ggv_fb_link" class="linkbox{if $list_fb_url_href == ''} empty{/if}"  onclick="chooseCtlBoxItem('ggv_fb')">{$fb_text|default:"facebook"}</a></div>
+					<div id="ggv_fb_link" class="linkbox{if $list_fb_url_href == ''} empty{/if}"  onclick="chooseCtlBoxItem('ggv_fb')">{$fb_text|default:"news feed"}</a></div>
 				</div>
 	     		<br clear="all" />
 	     		<div id="ggv_underline" ></div>
@@ -122,6 +126,7 @@ selectedIndex = {$dd_minus_one};
 <div style="margin: 5px  0 10px  25px ; float: right; clear: right; height: 500px !important" class="fb-like-box" data-href="{$list_fb_url_href}" data-width="730" data-height="500" data-show-faces="false" data-stream="true" data-header="true"></div>
 
 <div id="fb-root"></div>
+{if $list_fb_url_href}
 <script type="text/javascript">
 {literal}
 (function(d, s, id) {
@@ -133,6 +138,7 @@ selectedIndex = {$dd_minus_one};
 }(document, 'script', 'facebook-jssdk'));
 {/literal}
 </script>
+{/if}
 	     			
 	     		</div>
 
