@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.27, created on 2013-08-15 04:48:39
+<?php /* Smarty version 2.6.27, created on 2013-08-24 10:57:09
          compiled from ggv10_header.en.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'default', 'ggv10_header.en.tpl', 5, false),)), $this); ?>
@@ -58,9 +58,9 @@ ggv_links.php" title="List of all gay Vallarta businesses, agents, groups and li
 gayPVguide/" title="Our printed edition.  Download or find advertising information.">Guidebook</a>
         	&nbsp;&nbsp;|&nbsp;&nbsp;<a href="<?php echo $this->_tpl_vars['DIR_WS_BASE']; ?>
 /?forcemobile=true" title="mobile version of our website">Mobile</a>
-        	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         	<?php echo $this->_tpl_vars['LANG_FLAGS']; ?>
-&nbsp;&nbsp;&nbsp;<?php echo $this->_tpl_vars['translatemenulink']; ?>
+&nbsp;<?php echo $this->_tpl_vars['translatemenulink']; ?>
 
         </div>
     </div>

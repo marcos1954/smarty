@@ -31,7 +31,7 @@
 						{/if}
 					</p>
 						
-					<div class="links" ><span>location & phone</span></div>
+					<div class="links" ><span>{$locationPhones|default:'location & phone'}</span></div>
 					
 					<p  class="listing_address">
      					{$list_addr1}
@@ -51,7 +51,7 @@
      						<br /> US/Can. {$list_intlphone}
      					{/if}
                    </p>
-					<div class="links" ><span>website & listings</span></div>
+					<div class="links" ><span>{$websitesListings|default:'website & listings'}</span></div>
 							 
 
                         {if $list_url != ''}
@@ -123,8 +123,9 @@
 	     		<div id="ggv_fb"  class="ggv-ctlbox-content">
 	     			
 							  
-<div style="margin: 5px  0 10px  25px ; float: right; clear: right; height: 500px !important" class="fb-like-box" data-href="{$list_fb_url_href}" data-width="730" data-height="500" data-show-faces="false" data-stream="true" data-header="true"></div>
-
+<div style="margin: 5px  0 10px  25px ; float: right; clear: right; height: 500px !important"
+	 class="fb-like-box" data-href="{$list_fb_url_href}" data-width="730" data-height="500"
+	 data-show-faces="false" data-stream="true" data-header="true"></div>
 <div id="fb-root"></div>
 {if $list_fb_url_href}
 <script type="text/javascript">
@@ -205,7 +206,7 @@
 					</div>
 				{else}
 					<div class="borderbox">
-						No menus on file.
+						{$noMenus|default:'No menus on file.'}
 					</div>
 				{/if}
 				</div>
@@ -230,7 +231,7 @@
 
 				{else}
 					<div class="borderbox">
-						No photos on file.
+						{$noPhotos|default:'No photos on file.'}
 					</div>
 				{/if}
 				</div>
@@ -238,5 +239,4 @@
 		</div>
 	</div>
 {include file="ggv10_footer.tpl"}
-
 {/strip}

@@ -42,7 +42,7 @@
         	&nbsp;&nbsp;|&nbsp;&nbsp;
         	<a href="{$DIR_WS_BASE}gayPVguide/" title="Nuestra edici&iacute;n impresa. Descargar o encontrar informaci&oacute;n de publicidad.">Gu&iacute;a</a>
         	&nbsp;&nbsp;|&nbsp;&nbsp;<a href="{$DIR_WS_BASE}/?forcemobile=true" title="nuestro sitio para su celular">M&oacute;vil</a>
-        	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         	{$LANG_FLAGS}&nbsp;&nbsp;&nbsp;{$translatemenulink}
         </div>
     </div>

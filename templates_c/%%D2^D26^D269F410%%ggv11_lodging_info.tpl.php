@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.27, created on 2013-08-22 12:57:13
+<?php /* Smarty version 2.6.27, created on 2013-08-24 20:14:25
          compiled from ggv11_lodging_info.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('function', 'config_load', 'ggv11_lodging_info.tpl', 1, false),array('modifier', 'default', 'ggv11_lodging_info.tpl', 100, false),array('modifier', 'nl2br', 'ggv11_lodging_info.tpl', 118, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('function', 'config_load', 'ggv11_lodging_info.tpl', 1, false),array('modifier', 'default', 'ggv11_lodging_info.tpl', 36, false),array('modifier', 'nl2br', 'ggv11_lodging_info.tpl', 118, false),)), $this); ?>
 <?php echo smarty_function_config_load(array('file' => "ggv_dayCal.conf"), $this);?>
 
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
@@ -46,7 +46,8 @@ unset($_smarty_tpl_vars);
 						<?php endif; ?>
 					</p>
 						
-					<div class="links" ><span>location & phone</span></div>
+					<div class="links" ><span><?php echo ((is_array($_tmp=@$this->_tpl_vars['locationPhones'])) ? $this->_run_mod_handler('default', true, $_tmp, 'location & phone') : smarty_modifier_default($_tmp, 'location & phone')); ?>
+</span></div>
 					
 					<p  class="listing_address">
      					<?php echo $this->_tpl_vars['lodging_addr1']; ?>
@@ -72,7 +73,8 @@ unset($_smarty_tpl_vars);
 
      					<?php endif; ?>
                    </p>
-					<div class="links" ><span>website & listings</span></div>
+					<div class="links" ><span><?php echo ((is_array($_tmp=@$this->_tpl_vars['websitesListings'])) ? $this->_run_mod_handler('default', true, $_tmp, 'website & listings') : smarty_modifier_default($_tmp, 'website & listings')); ?>
+</span></div>
 							 
 
                         <?php if ($this->_tpl_vars['lodging_link_url'] != ''): ?>
@@ -137,7 +139,7 @@ unset($_smarty_tpl_vars);
 </a></div>
 					<div id="ggv_cal_link" class="linkbox<?php if ($this->_tpl_vars['list_rows_cal'] == array ( )): ?> empty<?php endif; ?>"  onclick="chooseCtlBoxItem('ggv_cal')"><?php echo ((is_array($_tmp=@$this->_tpl_vars['calendar_text'])) ? $this->_run_mod_handler('default', true, $_tmp, 'calendar') : smarty_modifier_default($_tmp, 'calendar')); ?>
 </a></div>
-					<div id="ggv_rooms_link" class="linkbox"  onclick="chooseCtlBoxItem('ggv_rooms')"><?php echo ((is_array($_tmp=@$this->_tpl_vars['menu_text'])) ? $this->_run_mod_handler('default', true, $_tmp, 'rooms') : smarty_modifier_default($_tmp, 'rooms')); ?>
+					<div id="ggv_rooms_link" class="linkbox"  onclick="chooseCtlBoxItem('ggv_rooms')"><?php echo ((is_array($_tmp=@$this->_tpl_vars['room_text'])) ? $this->_run_mod_handler('default', true, $_tmp, 'prices') : smarty_modifier_default($_tmp, 'prices')); ?>
 </a></div>
 					<div id="ggv_about_link" class="linkbox<?php if ($this->_tpl_vars['lodging_desclong'] == ''): ?> empty<?php endif; ?>"  onclick="chooseCtlBoxItem('ggv_about')"><?php echo ((is_array($_tmp=@$this->_tpl_vars['about_text'])) ? $this->_run_mod_handler('default', true, $_tmp, 'about') : smarty_modifier_default($_tmp, 'about')); ?>
 </a></div>
@@ -258,7 +260,8 @@ unset($_smarty_tpl_vars);
 					</div>
 				<?php else: ?>
 					<div class="borderbox">
-						No menus on file.
+						<?php echo ((is_array($_tmp=@$this->_tpl_vars['noMenus'])) ? $this->_run_mod_handler('default', true, $_tmp, 'No menus on file.') : smarty_modifier_default($_tmp, 'No menus on file.')); ?>
+
 					</div>
 				<?php endif; ?>
 				</div>
@@ -286,7 +289,8 @@ unset($_smarty_tpl_vars);
 
 				<?php else: ?>
 					<div class="borderbox">
-						No photos on file.
+						<?php echo ((is_array($_tmp=@$this->_tpl_vars['noPhotos'])) ? $this->_run_mod_handler('default', true, $_tmp, 'No photos on file.') : smarty_modifier_default($_tmp, 'No photos on file.')); ?>
+
 					</div>
 				<?php endif; ?>
 				</div>

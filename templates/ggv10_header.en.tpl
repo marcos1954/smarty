@@ -42,8 +42,8 @@
         	&nbsp;&nbsp;|&nbsp;&nbsp;
         	<a href="{$DIR_WS_BASE}gayPVguide/" title="Our printed edition.  Download or find advertising information.">Guidebook</a>
         	&nbsp;&nbsp;|&nbsp;&nbsp;<a href="{$DIR_WS_BASE}/?forcemobile=true" title="mobile version of our website">Mobile</a>
-        	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        	{$LANG_FLAGS}&nbsp;&nbsp;&nbsp;{$translatemenulink}
+        	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        	{$LANG_FLAGS}&nbsp;{$translatemenulink}
         </div>
     </div>
 	<br class="clearfloat" />

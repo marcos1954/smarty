@@ -33,7 +33,7 @@
 						{/if}
 					</p>
 						
-					<div class="links" ><span>location & phone</span></div>
+					<div class="links" ><span>{$locationPhones|default:'location & phone'}</span></div>
 					
 					<p  class="listing_address">
      					{$lodging_addr1}
@@ -53,7 +53,7 @@
      						<br /> US/Can. {$list_intlphone}
      					{/if}
                    </p>
-					<div class="links" ><span>website & listings</span></div>
+					<div class="links" ><span>{$websitesListings|default:'website & listings'}</span></div>
 							 
 
                         {if $lodging_link_url != ''}
@@ -102,7 +102,7 @@
 					<div id="ggv_mapa_link"	class="linkbox{if $list_map == ''} empty{/if}"  onclick="chooseCtlBoxItem('ggv_mapa')">{$map_text|default:"map"}</a></div>
  				    <div id="ggv_events_link" class="linkbox{if $list_rows_cal == array()} empty{/if}"  onclick="chooseCtlBoxItem('ggv_events')">{$events_text|default:"events"}</a></div>
 					<div id="ggv_cal_link" class="linkbox{if $list_rows_cal == array()} empty{/if}"  onclick="chooseCtlBoxItem('ggv_cal')">{$calendar_text|default:"calendar"}</a></div>
-					<div id="ggv_rooms_link" class="linkbox"  onclick="chooseCtlBoxItem('ggv_rooms')">{$menu_text|default:"rooms"}</a></div>
+					<div id="ggv_rooms_link" class="linkbox"  onclick="chooseCtlBoxItem('ggv_rooms')">{$room_text|default:"prices"}</a></div>
 					<div id="ggv_about_link" class="linkbox{if $lodging_desclong == ''} empty{/if}"  onclick="chooseCtlBoxItem('ggv_about')">{$about_text|default:"about"}</a></div>
 					<div id="ggv_fb_link" class="linkbox{if $list_fb_url_href == ''} empty{/if}"  onclick="chooseCtlBoxItem('ggv_fb')">{$fb_text|default:"news feed"}</a></div>
 				</div>
@@ -203,7 +203,7 @@
 					</div>
 				{else}
 					<div class="borderbox">
-						No menus on file.
+						{$noMenus|default:'No menus on file.'}
 					</div>
 				{/if}
 				</div>
@@ -228,7 +228,7 @@
 
 				{else}
 					<div class="borderbox">
-						No photos on file.
+						{$noPhotos|default:'No photos on file.'}
 					</div>
 				{/if}
 				</div>
