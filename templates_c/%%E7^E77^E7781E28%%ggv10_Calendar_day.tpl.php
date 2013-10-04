@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2012-10-10 07:36:08
+<?php /* Smarty version 2.6.27, created on 2013-10-04 10:55:11
          compiled from ggv10_Calendar_day.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'config_load', 'ggv10_Calendar_day.tpl', 1, false),)), $this); ?>
@@ -16,11 +16,13 @@ unset($_smarty_tpl_vars);
 		<div style="padding: 0px 0px 0px 20px;">
 			<table  border="0">
 	  			<tr>
-					<td width="170" height="190" background="Images/sunsetbackground.jpg" align="left" nowrap valign="bottom">
+					<td width=170 height=130 background="Images/Lobby-Sunset-Rain.jpg" align="left" nowrap valign="bottom">
 						<center>
 							<span class="eventdaysunset" style="color:yellow;">
-		 					<?php echo $this->_tpl_vars['transSunsetToday']; ?>
-<br>
+								View Sunset today at
+						<br />
+								Signature Lounge
+		 					<br />
 		 					<?php echo $this->_tpl_vars['sunset_today']; ?>
 .</span>
 						</center>

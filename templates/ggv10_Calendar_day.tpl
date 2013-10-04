@@ -6,10 +6,13 @@
 		<div style="padding: 0px 0px 0px 20px;">
 			<table  border="0">
 	  			<tr>
-					<td width="170" height="190" background="Images/sunsetbackground.jpg" align="left" nowrap valign="bottom">
+					<td width=170 height=130 background="Images/Lobby-Sunset-Rain.jpg" align="left" nowrap valign="bottom">
 						<center>
 							<span class="eventdaysunset" style="color:yellow;">
-		 					{$transSunsetToday}<br>
+								View Sunset today at
+						<br />
+								Signature Lounge
+		 					<br />
 		 					{$sunset_today}.</span>
 						</center>
 					</td>
