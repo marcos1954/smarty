@@ -6,9 +6,10 @@
 		<div style="padding: 0px 0px 0px 20px;">
 			<table  border="0">
 	  			<tr>
-					<td width=170 height=130 background="Images/Lobby-Sunset-Rain.jpg" align="left" nowrap valign="bottom">
+					<td width=170 height=160 align="center" nowrap valign="top">
+						<div ><img style="padding: 0 !important;" src="Images/Lobby-Sunset-Rain.jpg" width=170 height=130 /></div>
 						<center>
-							<span class="eventdaysunset" style="color:yellow;">
+							<span class="eventdaysunset" style="color:black;">
 								View Sunset today at
 						<br />
 								Signature Lounge
@@ -16,7 +17,7 @@
 		 					{$sunset_today}.</span>
 						</center>
 					</td>
-					<td width="330" align="center" valign="bottom" nowrap><br />
+					<td width="360" align="center" valign="bottom" nowrap><br />
 	 					<a href="{$yesterdayHREF}"><img style="padding-left: 0px;" class="buttons" border="0"   src="Images/leftbutton.gif"  width="10" height="15"></a>
 	 						&nbsp;
 	 					<span class="dayviewdate">{$dateformatted}</span>

@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.27, created on 2013-10-04 10:55:11
+<?php /* Smarty version 2.6.27, created on 2013-10-04 11:49:16
          compiled from ggv10_Calendar_day.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'config_load', 'ggv10_Calendar_day.tpl', 1, false),)), $this); ?>
@@ -16,9 +16,10 @@ unset($_smarty_tpl_vars);
 		<div style="padding: 0px 0px 0px 20px;">
 			<table  border="0">
 	  			<tr>
-					<td width=170 height=130 background="Images/Lobby-Sunset-Rain.jpg" align="left" nowrap valign="bottom">
+					<td width=170 height=160 align="center" nowrap valign="top">
+						<div ><img style="padding: 0 !important;" src="Images/Lobby-Sunset-Rain.jpg" width=170 height=130 /></div>
 						<center>
-							<span class="eventdaysunset" style="color:yellow;">
+							<span class="eventdaysunset" style="color:black;">
 								View Sunset today at
 						<br />
 								Signature Lounge
@@ -27,7 +28,7 @@ unset($_smarty_tpl_vars);
 .</span>
 						</center>
 					</td>
-					<td width="330" align="center" valign="bottom" nowrap><br />
+					<td width="360" align="center" valign="bottom" nowrap><br />
 	 					<a href="<?php echo $this->_tpl_vars['yesterdayHREF']; ?>
 "><img style="padding-left: 0px;" class="buttons" border="0"   src="Images/leftbutton.gif"  width="10" height="15"></a>
 	 						&nbsp;

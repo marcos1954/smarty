@@ -1,11 +1,14 @@
-{*strip*}		<br clear="all" />
+<?php /* Smarty version 2.6.27, created on 2013-10-19 18:12:58
+         compiled from ggv12_footer.tpl */ ?>
+		<br clear="all" />
 		</div>
 	</div>
 	<br clear="all" />
 	<br  />
   </div>
   <div style="width: 650px; margin: 10px auto 0px auto;">
-	<center> <span style="color: #333366; font-family: sans-serif;  font-size: 10px; font-weight: normal;">{$translatorcreditline}</span></center>
+	<center> <span style="color: #333366; font-family: sans-serif;  font-size: 10px; font-weight: normal;"><?php echo $this->_tpl_vars['translatorcreditline']; ?>
+</span></center>
   </div>
   <div style="width: 450px; margin: 10px auto 0px auto;">
 	<center>
@@ -17,40 +20,42 @@
 	</center>
   </div>
   
-{*/strip*}
 
-{if not ( false && $bottomAd == NULL )}
+<?php if (! ( false && $this->_tpl_vars['bottomAd'] == NULL )): ?>
   <div id = "dv" style = "z-index:2 !important; display: none; position:fixed; bottom:0;left:0px;width: 100%; height:0px; ">
 	<div style=" width: 950px; margin: 0px auto 0px auto;">
-	  {if $bottomAd != ''}
-		{$bottomAd}
-	  {else}
+	  <?php if ($this->_tpl_vars['bottomAd'] != ''): ?>
+		<?php echo $this->_tpl_vars['bottomAd']; ?>
+
+	  <?php else: ?>
 		<a href="http://www.gayguidevallarta.com/touch">
-		  <img  height="150" width="950" src="{$DIR_WS_BASE}includes/Images/topBannerAPP.gif" />
+		  <img  height="150" width="950" src="<?php echo $this->_tpl_vars['DIR_WS_BASE']; ?>
+includes/Images/topBannerAPP.gif" />
 		</a>
-	  {/if}
+	  <?php endif; ?>
 	</div>
   </div>
   
-  {if not $NOjquery}
+  <?php if (! $this->_tpl_vars['NOjquery']): ?>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-  {/if}
+  <?php endif; ?>
   
   <script type="text/javascript">
-	{literal}
+	<?php echo '
 	  $().ready(function () {
 		if (Math.random() < 0.50) {
 		  setTimeout(function () {
 			$("#dv").show();
-			$("#dv").animate({ height: '150px' }, 1000);
+			$("#dv").animate({ height: \'150px\' }, 1000);
 		  }, 2000);
 		  setTimeout(function () {
-			$("#dv").animate({ height: '0' }, 400, 'swing', function(){
+			$("#dv").animate({ height: \'0\' }, 400, \'swing\', function(){
 			  $("#dv").hide();
 			});
 		  }, 8000);	
 		}
 	  });
-	{/literal}
+	'; ?>
+
   </script>
-{/if}
+<?php endif; ?>
