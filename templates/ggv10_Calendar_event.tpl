@@ -1,4 +1,4 @@
-{*debug*}
+{*debug*} 
 {config_load file="ggv_search.conf"}
 {include file=$headerfilename}
  	<div id="Listing_right_column_pix">
@@ -55,9 +55,9 @@
 				{if $category_name != ''}<br><span class="eventcategory">{$category_name}&nbsp;</span>{/if}
 				<span class="eventtimes">
 				{if !$all_day_event}{$event_times}&nbsp;{/if}
-				{if $event_location  != ''} at {$event_location}{/if}
+				{if $event_location  != ''} @ {$event_location}{/if}
 				<br>
-				{if $all_day_event}<br>All Day Event<br><br>{/if}
+				{if $all_day_event}<br>{$all_day_event}<br><br>{/if}
 				{$event_recurs}
 				</span>
 				</p>

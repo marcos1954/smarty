@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.27, created on 2013-08-23 19:08:25
+<?php /* Smarty version 2.6.27, created on 2013-10-22 09:59:10
          compiled from ggv10_listing_dir.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'nl2br', 'ggv10_listing_dir.tpl', 45, false),)), $this); ?>

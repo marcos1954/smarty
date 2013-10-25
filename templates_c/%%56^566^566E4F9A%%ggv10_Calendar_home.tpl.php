@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2012-05-25 23:14:30
+<?php /* Smarty version 2.6.27, created on 2013-10-22 10:06:49
          compiled from ggv10_Calendar_home.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'config_load', 'ggv10_Calendar_home.tpl', 3, false),)), $this); ?>

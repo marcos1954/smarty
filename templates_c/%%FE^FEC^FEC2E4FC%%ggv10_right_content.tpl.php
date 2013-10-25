@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2012-10-10 07:44:16
+<?php /* Smarty version 2.6.27, created on 2013-10-22 09:59:10
          compiled from ggv10_right_content.tpl */ ?>
 <?php echo ''; ?><?php if (( $this->_tpl_vars['right_content'] == NULL )): ?><?php echo '<div id="right_content"><center><div style="width: 180; margin-left:14px;">'; ?><?php $_from = $this->_tpl_vars['TOPads180x400']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
     foreach ($_from as $this->_tpl_vars['ad']):

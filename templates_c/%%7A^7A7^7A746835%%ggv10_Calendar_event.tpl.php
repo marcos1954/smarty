@@ -1,7 +1,8 @@
-<?php /* Smarty version 2.6.26, created on 2013-04-15 19:58:50
+<?php /* Smarty version 2.6.27, created on 2013-10-22 10:40:42
          compiled from ggv10_Calendar_event.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'config_load', 'ggv10_Calendar_event.tpl', 2, false),array('modifier', 'nl2br', 'ggv10_Calendar_event.tpl', 64, false),)), $this); ?>
+ 
 <?php echo smarty_function_config_load(array('file' => "ggv_search.conf"), $this);?>
 
 <?php $_smarty_tpl_vars = $this->_tpl_vars;

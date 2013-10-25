@@ -93,7 +93,7 @@
      			</div>
                 <br clear="all" />
      		</div>  <!-- end of Listing_header -->
-	<br clear="all" />
+	        <br clear="all" />
 
 			<div id="ggv_combobox">
 	     		<div id="ggv_control">
