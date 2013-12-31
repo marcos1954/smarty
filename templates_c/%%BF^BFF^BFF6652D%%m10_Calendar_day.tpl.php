@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2012-10-10 07:43:51
+<?php /* Smarty version 2.6.27, created on 2013-11-04 11:53:54
          compiled from m10_Calendar_day.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'config_load', 'm10_Calendar_day.tpl', 1, false),)), $this); ?>

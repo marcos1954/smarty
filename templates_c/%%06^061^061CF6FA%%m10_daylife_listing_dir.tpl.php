@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2012-10-10 07:47:09
+<?php /* Smarty version 2.6.27, created on 2013-11-04 11:44:48
          compiled from m10_daylife_listing_dir.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'nl2br', 'm10_daylife_listing_dir.tpl', 41, false),)), $this); ?>

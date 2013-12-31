@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.27, created on 2013-07-30 05:43:57
+<?php /* Smarty version 2.6.27, created on 2013-11-04 11:17:54
          compiled from m10_listing_single.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'nl2br', 'm10_listing_single.tpl', 53, false),)), $this); ?>

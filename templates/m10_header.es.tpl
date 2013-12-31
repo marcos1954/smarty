@@ -7,6 +7,13 @@
 <link rel="stylesheet" type="text/css" href="{$DIR_WS_BASE}includes/m.GayGuideVallarta.css" media="all" />
 {#extraCSS#}
 {$headerExtra}
+
+
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png" />
+
 <meta name="google-site-verification" content="oVWtUoxAz0oHmc7Ul2pjLnh5-RC-ej95h71EyU98omc" />
 </head>
 <body>

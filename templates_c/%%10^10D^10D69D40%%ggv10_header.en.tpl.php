@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.27, created on 2013-10-22 09:59:10
+<?php /* Smarty version 2.6.27, created on 2013-11-30 10:59:14
          compiled from ggv10_header.en.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'default', 'ggv10_header.en.tpl', 5, false),)), $this); ?>
@@ -15,6 +15,12 @@ includes/GayGuideVallarta.css" media="all" />
 <?php echo $this->_tpl_vars['headerExtra']; ?>
 
 <script language="JavaScript1.2" src="../includes/ggv.js" type="text/javascript"></script>
+
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png" />
+
 <meta name="google-site-verification" content="oVWtUoxAz0oHmc7Ul2pjLnh5-RC-ej95h71EyU98omc" />
 </head>
 <body>

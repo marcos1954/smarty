@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.26, created on 2013-02-20 01:57:18
+<?php /* Smarty version 2.6.27, created on 2013-11-04 10:45:25
          compiled from ggv10_simple.tpl */ ?>
 
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
