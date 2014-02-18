@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.27, created on 2014-01-29 14:15:05
+<?php /* Smarty version 2.6.27, created on 2014-02-13 23:41:10
          compiled from ggv10_Calendar_event.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('function', 'config_load', 'ggv10_Calendar_event.tpl', 2, false),array('modifier', 'nl2br', 'ggv10_Calendar_event.tpl', 64, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('function', 'config_load', 'ggv10_Calendar_event.tpl', 2, false),array('modifier', 'nl2br', 'ggv10_Calendar_event.tpl', 79, false),)), $this); ?>
  
 <?php echo smarty_function_config_load(array('file' => "ggv_search.conf"), $this);?>
 
@@ -88,18 +88,35 @@ unset($_smarty_tpl_vars);
 </small></a>
 				<br />
 				<?php if ($this->_tpl_vars['category_name'] != ''): ?><br><span class="eventcategory"><?php echo $this->_tpl_vars['category_name']; ?>
-&nbsp;</span><?php endif; ?>
-				<span class="eventtimes">
-				<?php if (! $this->_tpl_vars['all_day_event']): ?><?php echo $this->_tpl_vars['event_times']; ?>
-&nbsp;<?php endif; ?>
-				<?php if ($this->_tpl_vars['event_location'] != ''): ?> @ <?php echo $this->_tpl_vars['event_location']; ?>
-<?php endif; ?>
-				<br>
-				<?php if ($this->_tpl_vars['all_day_event']): ?><br><?php echo $this->_tpl_vars['all_day_event']; ?>
-<br><br><?php endif; ?>
-				<?php echo $this->_tpl_vars['event_recurs']; ?>
+&nbsp;</span><br><?php endif; ?>
+                
+                <?php $_from = $this->_tpl_vars['dates']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
+    foreach ($_from as $this->_tpl_vars['dateblock']):
+?>
+                
+                    <span class="eventtimes">
+                    <br>
+                        @ <?php echo $this->_tpl_vars['dateblock']['event_location']; ?>
 
-				</span>
+                    <br>
+                    <strong>
+                        <?php if ($this->_tpl_vars['dateblock']['day_event'] == 0): ?>
+                            <?php echo $this->_tpl_vars['dateblock']['event_times']; ?>
+
+                        <?php else: ?> 
+                            <?php echo $this->_tpl_vars['dateblock']['all_day_event']; ?>
+
+                        <?php endif; ?></strong> 
+                    &nbsp;
+                    <?php echo $this->_tpl_vars['dateblock']['event_recurs']; ?>
+
+                    <br>
+                    </span>
+                
+                
+                
+                <?php endforeach; endif; unset($_from); ?>
+                
 				</p>
 				<p class="eventdescshort"><?php echo ((is_array($_tmp=$this->_tpl_vars['event_desc_short'])) ? $this->_run_mod_handler('nl2br', true, $_tmp) : smarty_modifier_nl2br($_tmp)); ?>
 </p>

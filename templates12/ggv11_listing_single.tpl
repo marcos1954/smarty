@@ -1,5 +1,6 @@
 {config_load file="ggv_dayCal.conf"}
 {strip}
+{*debug*}
 {include file=$headerfilename}
 {if $dd_minus_one} <script>selectedIndex = {$dd_minus_one};</script>{/if}
      	<div id="main_content">
@@ -163,18 +164,31 @@
 		     	 	<h2 >Events Calendar</h2>
 	     			{if $list_rows_cal != array()}
 		 				{foreach from=$list_rows_cal item="entry"}
+                        
+                        
+                        
 							<div  class="eventOne">
 								<div class="eventOneFlyer">
 								{if isset($entry.flyer)}<img src="http://www.gayguidevallarta.com/img.io/timthumb.php?w=150&src={$entry.flyer}" /> {/if}
 								</div>
 								<div class="eventOneInfo">
 									<div  class="eventOneCat">{$entry.category_name}</div>
+ 
 									{if $entry.nameEvent != ''}<div class="eventOneName">{$entry.nameEvent}</div>{/if}
 									<br />
-									{if $entry.timesEvent != ''}<strong>{$entry.timesEvent}</strong>
-									<br />{/if}
-									{$entry.event_recurs}
-									<br />
+                                    
+                                    
+                                    {foreach from=$entry.dates item="dateblock"}
+                                        <br />
+                                        {$dateblock.locationEvent}
+                                        <br />
+                                        {if $dateblock.timesEvent != ''}{/if}<strong>{$dateblock.timesEvent}</strong>
+                                        <br />
+                                        {$dateblock.event_recurs}
+                                        <br />
+                                    
+                                    
+                                    {/foreach}
 									{if $entry.moreEventLink != ''}<br />{$entry.moreEventLink}
 									<br />{/if}<br /><i>
 									{$entry.descEvent}
@@ -185,6 +199,8 @@
 								</div>
 								<br clear="left" />
 							</div>
+                            
+                            
 						{/foreach}
 
 					{else}

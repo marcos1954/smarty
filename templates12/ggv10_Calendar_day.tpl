@@ -63,12 +63,14 @@
 						<div style="margin-left:10pt">
 							<b><span class="eventdaycat">{$evnt.catnameEvent}</span></b>
 							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-							{$evnt.moreEventLink} <br />
+							{$evnt.moreEventLink} 
 	 						{if  $evnt.timesEvent != ''}
-	 							<span class="eventdaytime">{$evnt.timesEvent} <br></span>
+	 							<br /><span class="eventdaytime">{$evnt.timesEvent} </span>
 	 						{/if}
-							<span class="eventdaydesc">{$evnt.descEvent}</span>
-							&nbsp;</div>
+                            {if  $evnt.descEvent != ''}
+                                <br><span class="eventdaydesc">{$evnt.descEvent}</span>
+                            {/if}
+						</div>
 						</td>
 					</tr></table>
 				  {/foreach}

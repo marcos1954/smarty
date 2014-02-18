@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.27, created on 2014-01-29 11:23:02
+<?php /* Smarty version 2.6.27, created on 2014-02-13 23:37:03
          compiled from ggv10_Calendar_home.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'config_load', 'ggv10_Calendar_home.tpl', 3, false),)), $this); ?>
@@ -106,16 +106,16 @@ unset($_smarty_tpl_vars);
 " align="left">
 					<?php endif; ?>
 				</td>
-				<td class="dayeventname" height="1%" align="left">
+				<td class="dayeventname" height="10%" align="left">
 					<b><?php echo $this->_tpl_vars['evnt']['event_name']; ?>
 </b>
 					<?php if ($this->_tpl_vars['evnt']['event_location'] != ''): ?>
-						<span class="eventdaylocation">  &nbsp;&nbsp;at <?php echo $this->_tpl_vars['evnt']['event_location']; ?>
+						<br><span class="eventdaylocation">  &nbsp;&nbsp;at <?php echo $this->_tpl_vars['evnt']['event_location']; ?>
 </span>
 					<?php endif; ?>
 				</td>
 				</tr><tr>
-				<td class="eventdaytime" valign=top height="99%">
+				<td class="eventdaytime" valign=top height="90%">
 					<?php if ($this->_tpl_vars['evnt']['event_dates'] != ''): ?>
 						<span class="eventtimes"><?php echo $this->_tpl_vars['evnt']['event_dates']; ?>
 </span><br /><br />
