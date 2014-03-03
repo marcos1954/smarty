@@ -131,4 +131,5 @@ border: none;
                 {$BREAD_CRUMBS_STRING}
 				</p>
 			</div>
+			<br clear="right" />
 			{*/strip*}

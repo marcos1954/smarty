@@ -175,12 +175,16 @@
 									<div  class="eventOneCat">{$entry.category_name}</div>
  
 									{if $entry.nameEvent != ''}<div class="eventOneName">{$entry.nameEvent}</div>{/if}
-									<br />
                                     
+                                    {if $entry.moreEventLink != ''}<br />{$entry.moreEventLink}
+									<br />{/if}
+									<br /><i>
+									{$entry.descEvent}
+									</i><br />                                    
                                     
                                     {foreach from=$entry.dates item="dateblock"}
-                                        <br />
-                                        {$dateblock.locationEvent}
+
+                                        {if $dateblock.locationEvent != ''}<br />@ {$dateblock.locationEvent}{/if}
                                         <br />
                                         {if $dateblock.timesEvent != ''}{/if}<strong>{$dateblock.timesEvent}</strong>
                                         <br />
@@ -189,10 +193,7 @@
                                     
                                     
                                     {/foreach}
-									{if $entry.moreEventLink != ''}<br />{$entry.moreEventLink}
-									<br />{/if}<br /><i>
-									{$entry.descEvent}
-									</i><br />
+
 								</div>
 								<div  class="eventOneDesc">
 									{$entry.descEventLong}
