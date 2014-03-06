@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.27, created on 2014-01-29 11:45:57
+<?php /* Smarty version 2.6.27, created on 2014-03-05 11:53:04
          compiled from ggv10_header.en.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'default', 'ggv10_header.en.tpl', 5, false),)), $this); ?>
@@ -108,7 +108,7 @@ Daylife/" title="Daylife at the beach and on gay day tours"> Daylife</a></div>
 	  			<div class="submenuentry"> &#187; <a href="<?php echo $this->_tpl_vars['DIR_WS_BASE']; ?>
 Nightlife/" title="Vallarta's gay nightlife is rich and varied."> Nightlife</a></div>
 	  			<div class="submenuentry"> &#187; <a href="<?php echo $this->_tpl_vars['DIR_WS_BASE']; ?>
-Acts/" title="Vallarta's featured Entertainers."> Live Acts</a></div>
+Acts/" title="Vallarta's featured Entertainers."> Shows</a></div>
 	  			<div class="submenuentry"> &#187; <a href="<?php echo $this->_tpl_vars['DIR_WS_BASE']; ?>
 Restaurants/" title="PV has some fabulous places to eat."> Restaurants</a></div>
 	  			<div class="submenuentry"> &#187; <a href="<?php echo $this->_tpl_vars['DIR_WS_BASE']; ?>

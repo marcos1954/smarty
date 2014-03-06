@@ -78,14 +78,14 @@
 						<img border="0" src="{$evnt.logosrc}" width="{$evnt.logowidth}" height="{$evnt.logoheight}" align="left">
 					{/if}
 				</td>
-				<td class="dayeventname" height="10%" align="left">
+				<td class="dayeventname" height="20%" align="left">
 					<b>{$evnt.event_name}</b>
 					{if $evnt.event_location != ''}
 						<br><span class="eventdaylocation">  &nbsp;&nbsp;at {$evnt.event_location}</span>
 					{/if}
 				</td>
 				</tr><tr>
-				<td class="eventdaytime" valign=top height="90%">
+				<td class="eventdaytime" valign=top height="80%">
 					{if $evnt.event_dates != ''}
 						<span class="eventtimes">{$evnt.event_dates}</span><br /><br />
 					{/if}
