@@ -67,15 +67,28 @@
 					<strong>{$entry.category_name}</strong>
 					<br />
 					{if $entry.nameEvent != ''}{$entry.nameEvent}
-					<br />{/if}<br />
-					{if $entry.timesEvent != ''}<strong>{$entry.timesEvent}</strong>
 					<br />{/if}
-					{$entry.event_recurs}
+                    <br />
+                    <br />
+					{$entry.descEvent|nl2br}
 					<br />
 
+                    
+                    {foreach from=$entry.dates item="dateblock"}
+
+                        {if $dateblock.locationEvent != ''}<br />@ {$dateblock.locationEvent}{/if}
+                        <br />
+                        {if $dateblock.timesEvent != ''}{/if}<strong>{$dateblock.timesEvent}</strong>
+                        <br />
+                        {$dateblock.event_recurs}
+                        <br />
+                    
+                    
+                    {/foreach}
+                    
+
 					<br />
-					{$entry.descEvent}
-					<br />
+
 					</div>
 					<hr />
 				{/foreach}

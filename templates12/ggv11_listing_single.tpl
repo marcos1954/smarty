@@ -133,30 +133,31 @@
 	     			
 <!--	     		<div id="ggv_fb"  class="ggv-ctlbox-content">
 							  
-<div style="margin: 5px  0 10px  25px ; float: right; clear: right; height: 500px !important"
-	 class="fb-like-box" data-href="{$list_fb_url_href}" data-width="730" data-height="500"
-	 data-show-faces="false" data-stream="true" data-header="true"></div>
-<div id="fb-root"></div>
-{if $list_fb_url_href}
-<script type="text/javascript">
-{literal}
-(function(d, s, id) {
-		  var js, fjs = d.getElementsByTagName(s)[0];
-		  if (d.getElementById(id)) return;
-		  js = d.createElement(s); js.id = id;
-		  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-		  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
-{/literal}
-</script>
-{/if}
+                        <div style="margin: 5px  0 10px  25px ; float: right; clear: right; height: 500px !important"
+                             class="fb-like-box" data-href="{$list_fb_url_href}" data-width="730" data-height="500"
+                             data-show-faces="false" data-stream="true" data-header="true"></div>
+                        <div id="fb-root"></div>
+                        {if $list_fb_url_href}
+                        <script type="text/javascript">
+                        {literal}
+                        (function(d, s, id) {
+                                  var js, fjs = d.getElementsByTagName(s)[0];
+                                  if (d.getElementById(id)) return;
+                                  js = d.createElement(s); js.id = id;
+                                  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+                                  fjs.parentNode.insertBefore(js, fjs);
+                        }(document, 'script', 'facebook-jssdk'));
+                        {/literal}
+                        </script>
+                        {/if}
 	    
         
         
-                <iframe src="//player.vimeo.com/video/68375821" width="722" height="406"
-                        frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-                </iframe>
-                </div>  -->
+                    <iframe src="//player.vimeo.com/video/68375821" width="722" height="406"
+                            frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                    </iframe>
+                </div>
+-->
 
 				<div id="ggv_events"  class="ggv-ctlbox-content">
 					<div class="eventBox">
