@@ -107,7 +107,7 @@
 			<div id="ggv_combobox">
 	     		<div id="ggv_control">
 					<div id="ggv_flyer_link" class="linkbox{if $flyer_url == ''} empty{/if}"  onclick="chooseCtlBoxItem('ggv_flyer')">{$flyer_text|default:"flyer"}</a></div>
-					<div id="ggv_videos_link" class="linkbox{if $pix == array()} empty{/if}"  onclick="chooseCtlBoxItem('ggv_videos')">{$videos_text|default:"video"}</a></div>
+					<div id="ggv_videos_link" class="linkbox{if $list_video == '0'} empty{/if}"  onclick="chooseCtlBoxItem('ggv_videos')">{$videos_text|default:"video"}</a></div>
 					<div id="ggv_photos_link" class="linkbox{if $pix == array()} empty{/if}"  onclick="chooseCtlBoxItem('ggv_photos')">{$photos_text|default:"photos"}</a></div>
 					<div id="ggv_mapa_link"	class="linkbox{if $list_map == ''} empty{/if}"  onclick="chooseCtlBoxItem('ggv_mapa')">{$map_text|default:"map"}</a></div>
  				    <div id="ggv_events_link" class="linkbox{if $list_rows_cal == array()} empty{/if}"  onclick="chooseCtlBoxItem('ggv_events')">{$events_text|default:"events"}</a></div>
@@ -269,9 +269,11 @@
 				</div>
                 
 				<div id="ggv_videos"  class="ggv-ctlbox-content">
-                <!--<iframe src="//player.vimeo.com/video/68375821" width="722" height="406"
+                {if $list_video}
+                <iframe src="//player.vimeo.com/video/{$list_video}" width="722" height="406"
                         frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-                </iframe>-->
+                </iframe>
+                {/if}
 				</div> 
 
 			</div>

@@ -251,9 +251,9 @@
 				</div>
                 
 				<div id="ggv_videos"  class="ggv-ctlbox-content">
-                <!--<iframe src="//player.vimeo.com/video/68375821" width="722" height="406"
+                <iframe src="//player.vimeo.com/video/88451045" width="722" height="406"
                         frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-                </iframe>-->
+                </iframe>
 				</div> 
 
 			</div>
