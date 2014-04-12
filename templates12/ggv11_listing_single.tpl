@@ -23,6 +23,7 @@
 						
 					    {if $list_tagsicons != ''}
 							{$list_tagsicons}
+                            
 					    {/if}
 						{if $list_fb_url != ''}
 							  <img src="/images/facebookIcon.png" height=24 width=auto title="Facebook" />
@@ -34,8 +35,13 @@
                         {if $list_ol_url != ''}
 							  <img src="/images/icon_delivery.png" height=24 width=auto title="Delivery" />
 						{/if}
+                        
+                        {if $list_url != ''}
+                              <img style="margin:1px;"src="/images/www.png" height=20 width=auto title="Has a Website" />
+                        {/if}
 					</p>
-						
+					
+                    {if $list_addr1 != '' || $list_addr2 != '' || $list_addr3 != '' || 	$list_phone != '' || $list_cell != '' || $list_intlphone != '' }
 					<div class="links" ><span>{$locationPhones|default:'location & phone'}</span></div>
 					
 					<p  class="listing_address">
@@ -55,9 +61,13 @@
 						{if $list_intlphone != ''}
      						<br /> US/Can. {$list_intlphone}
      					{/if}
-                   </p>
+                    </p>
+                    {/if}
+                    
+                    {if $list_url != '' || $list_fb_url != '' || $list_ta_url != '' || 	$list_ol_url != ''  }
+					
 					<div class="links" ><span>{$websitesListings|default:'website & listings'}</span></div>
-							 
+					{/if}		 
 
                         {if $list_url != ''}
      	                    <a class="listlink" href="{$list_url}">{$list_url_text}</a>&nbsp;&nbsp;
