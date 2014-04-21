@@ -60,7 +60,7 @@
 						<td class="eventdaytime" valign=top height="99%">
 						<div style="margin-left:10pt">
 							<b><span class="eventdaycat">{$evnt.catnameEvent}</span></b>
-							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<br />
 							{$evnt.moreEventLink} <br />
 	 						{if  $evnt.timesEvent != ''} 
 	 							<span class="eventdaytime">{$evnt.timesEvent} <br></span>
@@ -87,7 +87,7 @@
 						<td class="eventdaytime" valign=top height="99%">
 						<div style="margin-left:10pt">
 							<b><span class="eventdaycat">{$evnt.catnameEvent}</span></b>
-							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<br />
 							{$evnt.moreEventLink} <br />
 	 						{if  $evnt.timesEvent != ''} 
 	 							<span class="eventdaytime">{$evnt.timesEvent} <br></span>
@@ -114,7 +114,7 @@
 						<td class="eventdaytime" valign=top height="99%">
 						<div style="margin-left:10pt">
 							<b><span class="eventdaycat">{$evnt.catnameEvent}</span></b>
-							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<br />
 							{$evnt.moreEventLink} <br />
 	 						{if  $evnt.timesEvent != ''} 
 	 							<span class="eventdaytime">{$evnt.timesEvent} <br></span>
@@ -139,7 +139,7 @@
 						<td class="eventdaytime" valign=top height="99%">
 							<div style="margin-left:10pt">
 							<b><span class="eventdaycat">{$evnt.catnameEvent}</span></b>
-							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<br />
 							{$evnt.moreEventLink} <br />
 	 						{if  $evnt.timesEvent != ''} 
 	 							<span class="eventdaytime">{$evnt.timesEvent} <br></span>
@@ -163,7 +163,7 @@
 						<td class="eventdaytime" valign=top height="99%">
 							<div style="margin-left:10pt">
 							<b><span class="eventdaycat">{$evnt.catnameEvent}</span></b>
-							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<br />
 							{$evnt.moreEventLink} <br />
 	 						{if  $evnt.timesEvent != ''} 
 	 							<span class="eventdaytime">{$evnt.timesEvent} <br></span>
@@ -193,7 +193,7 @@
 						<td class="eventdaytime" valign=top height="99%">
 							<div style="margin-left:10pt">
 							<b><span class="eventdaycat">{$evnt.catnameEvent}</span></b>
-							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<br />
 							{$evnt.moreEventLink} <br />
 	 						{if  $evnt.timesEvent != ''} 
 	 							<span class="eventdaytime">{$evnt.timesEvent} <br></span>
@@ -220,7 +220,7 @@
 						<td class="eventdaytime" valign=top height="99%">
 							<div style="margin-left:10pt">
 							<b><span class="eventdaycat">{$evnt.catnameEvent}</span></b>
-							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<br />
 							{$evnt.moreEventLink} <br />
 	 						{if  $evnt.timesEvent != ''} 
 	 							<span class="eventdaytime">{$evnt.timesEvent} <br></span>
