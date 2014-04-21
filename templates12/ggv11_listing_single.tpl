@@ -130,7 +130,7 @@
 	     		<div id="ggv_underline" ></div>
 
 	     		<div id="ggv_flyer"  style="text-align: center;" class="ggv-ctlbox-content">
-	     		{if $flyer_url != ''} <img src="http://www.gayguidevallarta.com/img.io/timthumb.php?w=722&src={$flyer_url}" > {/if}
+	     		{if $flyer_url != ''} <img src="/img.io/timthumb.php?w=722&src={$flyer_url}" > {/if}
 	     		</div>
 				
 				<div id="ggv_about"  class="ggv-ctlbox-content">
@@ -180,7 +180,7 @@
                         
 							<div  class="eventOne">
 								<div class="eventOneFlyer">
-								{if isset($entry.flyer)}<img src="http://www.gayguidevallarta.com/img.io/timthumb.php?w=150&src={$entry.flyer}" /> {/if}
+								{if isset($entry.flyer)}<img src="/img.io/timthumb.php?w=150&src={$entry.flyer}" /> {/if}
 								</div>
 								<div class="eventOneInfo">
 									<div  class="eventOneCat">{$entry.category_name}</div>
@@ -241,7 +241,7 @@
 					  <ul class="slides">
 					  {foreach from=$menus item=picture}
 					   {if $picture != ''}
-					   	<li><img src="http://www.gayguidevallarta.com/img.io/timthumb.php?w=702&src={$picture.src}" /></li>
+					   	<li><img src="/img.io/timthumb.php?w=702&src={$picture.src}" /></li>
                        {/if}
 					  {/foreach}
 					  </ul>
@@ -265,7 +265,7 @@
 					  <ul class="slides">
 					  {foreach from=$pix item=picture}
 					  {if $picture != ''}
-					  <li><img src="http://www.gayguidevallarta.com/img.io/timthumb.php?w=722&src={$picture.src}" /></li>
+					  <li><img src="/img.io/timthumb.php?w=722&src={$picture.src}" /></li>
 					  {/if}
 					  {/foreach}
 					  </ul>
