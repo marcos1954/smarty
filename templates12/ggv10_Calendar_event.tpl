@@ -52,14 +52,29 @@
 				<br>
 				<a  href="{$event_cal_url}"><small>{$Calendar}</small></a>
 				<br />
-				{if $category_name != ''}<br><span class="eventcategory">{$category_name}&nbsp;</span>{/if}
-				<span class="eventtimes">
-				{if !$all_day_event}{$event_times}&nbsp;{/if}
-				{if $event_location  != ''} @ {$event_location}{/if}
-				<br>
-				{if $all_day_event}<br>{$all_day_event}<br><br>{/if}
-				{$event_recurs}
-				</span>
+				{if $category_name != ''}<br><span class="eventcategory">{$category_name}&nbsp;</span><br>{/if}
+                
+                {foreach from=$dates item="dateblock"}
+                
+                    <span class="eventtimes">
+                    <br>
+                        @ {$dateblock.event_location}
+                    <br>
+                    <strong>
+                        {if $dateblock.day_event == 0}
+                            {$dateblock.event_times}
+                        {else} 
+                            {$dateblock.all_day_event}
+                        {/if}</strong> 
+                    &nbsp;
+                    {$dateblock.event_recurs}
+                    <br>
+                    </span>
+                
+                
+                
+                {/foreach}
+                
 				</p>
 				<p class="eventdescshort">{$event_desc_short|nl2br}</p>
 			  </td></tr>

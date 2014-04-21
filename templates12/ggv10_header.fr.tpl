@@ -76,6 +76,7 @@
 	  			<div class="submenugroup"> GUIDE GAY</div>
 	  			<div class="submenuentry"> &#187; <a href="{$DIR_WS_BASE}Daylife/" title="Vie quotidienne de la plage et de randonn�s gaies">Vie Quotidienne</a></div>
 	  			<div class="submenuentry"> &#187; <a href="{$DIR_WS_BASE}Nightlife/" title="La vie nocturne gaie de Vallarta est riche et diversifi�e">Vie Nocturne</a></div>
+	  			<div class="submenuentry"> &#187; <a href="{$DIR_WS_BASE}Acts/" title="Vallarta's featured Entertainers."> Spectacles</a></div>
 	  			<div class="submenuentry"> &#187; <a href="{$DIR_WS_BASE}Restaurants/" title="De nombreux et fantastiques endroits � manger"> Restaurants</a></div>
 	  			<div class="submenuentry"> &#187; <a href="{$DIR_WS_BASE}GymSpa/" title="�num�rations de gyms, spas et masseurs"> Gym et Spa</a></div>
 	  			<div class="submenuentry"> &#187; <a href="{$DIR_WS_BASE}Galleries/" title="Galerie d�art � travers Puerto Vallarta"> Galerie d'Arts</a></div>
@@ -131,4 +132,5 @@ border: none;
                 {$BREAD_CRUMBS_STRING}
 				</p>
 			</div>
+			<br clear="right" />
 			{/strip}

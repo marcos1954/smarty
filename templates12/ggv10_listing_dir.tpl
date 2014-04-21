@@ -18,16 +18,17 @@
 			 {/if}
 		  </div>
 		  <div class="listing_info">
-			{if $entry.list_tagsicons != '' || $entry.EDIT != ''}
+			{if $entry.list_tagsicons != '' || $entry.EDIT != '' || $entry.list_fb != '' || $entry.list_ta != '' || $entry.list_ol != ''|| $entry.list_www != ''}
 				   <div style="float: right;margin-top:.7em;" >
 						{if $entry.EDIT != ''}
 						   <a href="{$entry.EDIT}">EDIT</a> &nbsp;
 						{/if}
 					   {$entry.list_tagsicons}
-					   {if $entry.list_fb}<img src="/images/facebookIcon.png" height=22 width=auto title="Listed on Facebook" />{/if}
+                       {if $entry.list_fb}<img src="/images/facebookIcon.png" height=22 width=auto title="Listed on Facebook" />{/if}
 					   {if $entry.list_ta}<img src="/images/tripadvisor2.png" height=22 width=auto title="Reviewed on Tripadvisor" />{/if}
 					   {if $entry.list_ol}<img src="/images/icon_delivery.png" height=22 width=auto title="Delivery" />{/if}
-
+                       {if $entry.list_www}<img style="margin:1px;"src="/images/www.png" height=20 width=auto title="Has a Website" />{/if}
+					   
 					   {if $list_lastupdate != '' && $EDIT != ''}
 						   <div style="text-align: center; color: gray; font-size: .8em;" >{$list_lastupdate}</div>
 					   {/if}
@@ -67,15 +68,18 @@
 				 {/if}
 			  </div>
 			  <div class="listing_info">
-			   {if $entry.list_tagsicons != '' || $entry.EDIT != ''}
-					   <div style="float: right;margin-top:.7em;" >
+			   {if $entry.list_tagsicons != '' || $entry.EDIT != '' || $entry.list_fb != '' || $entry.list_ta != '' || $entry.list_ol != ''|| $entry.list_www != ''}
+				   <div style="float: right;margin-top:.7em;" >
 							{if $entry.EDIT != ''}
 							   <div style="text-align:right; color: gray; font-size: .8em;"><a href="{$entry.EDIT}">EDIT</a> &nbsp;{$entry.list_lastupdate}</div>
 							{/if}
 						   {$entry.list_tagsicons}
-						   {if $entry.list_fb}<img src="/images/facebookIcon.png" height=22 width=auto title="Listed on Facebook" />{/if}
-						   {if $entry.list_ta}<img src="/images/tripadvisor2.png" height=22 width=auto title="Reviewed on Tripadvisor" />{/if}
-					   </div>
+                       {if $entry.list_fb}<img src="/images/facebookIcon.png" height=22 width=auto title="Listed on Facebook" />{/if}
+					   {if $entry.list_ta}<img src="/images/tripadvisor2.png" height=22 width=auto title="Reviewed on Tripadvisor" />{/if}
+					   {if $entry.list_ol}<img src="/images/icon_delivery.png" height=22 width=auto title="Delivery" />{/if}
+                       {if $entry.list_www}<img style="margin:1px;"src="/images/www.png" height=20 width=auto title="Has a Website" />{/if}
+					   
+   </div>
 			   {/if}
 			   <p class="listing_name" onclick="location" >{$entry.list_name}</p>
 			   {if $entry.list_tags != ''}

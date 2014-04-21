@@ -2,7 +2,7 @@
 {include file=$headerfilename}
 <div id="main_content">
 <br />
-<div style="float:left; width: 110px; padding: 0px 0px 10px 5px;">
+<div style="float:left; margin-left: 10px; width: 110px; padding: 0px 0px 10px 5px;">
 {if $event_src != ''}
 <img border="0" src="{$event_src}" width="{$event_width}" height="{$event_height}" align="left">
 {else}
@@ -31,6 +31,10 @@
 
 {if $category_name != ''}<span class="eventcategory">{$category_name}&nbsp;</span>{/if}
 <br />
+
+
+
+<!---
 <span class="eventtimes">
 {if !$all_day_event}{$event_times}&nbsp;{/if}
 {if $event_location  != ''} @ {$event_location}{/if}
@@ -38,6 +42,37 @@
 {if $all_day_event}<br />All Day Event<br /><br />{/if}
 {$event_recurs}
 </span>
+--->
+
+                {foreach from=$dates item="dateblock"}
+                
+                    <span class="eventtimes">
+                    <br>
+                        @ {$dateblock.event_location}
+                    <br>
+                    <strong>
+                        {if $dateblock.day_event == 0}
+                            {$dateblock.event_times}
+                        {else} 
+                            {$dateblock.all_day_event}
+                        {/if}</strong> 
+                    &nbsp;
+                    {$dateblock.event_recurs}
+                    <br>
+                    </span>
+                
+                
+                
+                {/foreach}
+
+
+
+
+
+
+
+
+
 
 <p class="eventdescshort">{$event_desc_short|nl2br}</p>
 <p class="eventdesclong">

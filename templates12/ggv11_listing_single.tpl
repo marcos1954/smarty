@@ -1,5 +1,6 @@
 {config_load file="ggv_dayCal.conf"}
 {strip}
+{*debug*}
 {include file=$headerfilename}
 {if $dd_minus_one} <script>selectedIndex = {$dd_minus_one};</script>{/if}
      	<div id="main_content">
@@ -22,6 +23,7 @@
 						
 					    {if $list_tagsicons != ''}
 							{$list_tagsicons}
+                            
 					    {/if}
 						{if $list_fb_url != ''}
 							  <img src="/images/facebookIcon.png" height=24 width=auto title="Facebook" />
@@ -33,8 +35,13 @@
                         {if $list_ol_url != ''}
 							  <img src="/images/icon_delivery.png" height=24 width=auto title="Delivery" />
 						{/if}
+                        
+                        {if $list_url != ''}
+                              <img style="margin:1px;"src="/images/www.png" height=20 width=auto title="Has a Website" />
+                        {/if}
 					</p>
-						
+					
+                    {if $list_addr1 != '' || $list_addr2 != '' || $list_addr3 != '' || 	$list_phone != '' || $list_cell != '' || $list_intlphone != '' }
 					<div class="links" ><span>{$locationPhones|default:'location & phone'}</span></div>
 					
 					<p  class="listing_address">
@@ -54,9 +61,13 @@
 						{if $list_intlphone != ''}
      						<br /> US/Can. {$list_intlphone}
      					{/if}
-                   </p>
+                    </p>
+                    {/if}
+                    
+                    {if $list_url != '' || $list_fb_url != '' || $list_ta_url != '' || 	$list_ol_url != ''  }
+					
 					<div class="links" ><span>{$websitesListings|default:'website & listings'}</span></div>
-							 
+					{/if}		 
 
                         {if $list_url != ''}
      	                    <a class="listlink" href="{$list_url}">{$list_url_text}</a>&nbsp;&nbsp;
@@ -106,7 +117,7 @@
 			<div id="ggv_combobox">
 	     		<div id="ggv_control">
 					<div id="ggv_flyer_link" class="linkbox{if $flyer_url == ''} empty{/if}"  onclick="chooseCtlBoxItem('ggv_flyer')">{$flyer_text|default:"flyer"}</a></div>
-					<div id="ggv_videos_link" class="linkbox{if $pix == array()} empty{/if}"  onclick="chooseCtlBoxItem('ggv_videos')">{$videos_text|default:"video"}</a></div>
+					<div id="ggv_videos_link" class="linkbox{if $list_video == '0'} empty{/if}"  onclick="chooseCtlBoxItem('ggv_videos')">{$videos_text|default:"video"}</a></div>
 					<div id="ggv_photos_link" class="linkbox{if $pix == array()} empty{/if}"  onclick="chooseCtlBoxItem('ggv_photos')">{$photos_text|default:"photos"}</a></div>
 					<div id="ggv_mapa_link"	class="linkbox{if $list_map == ''} empty{/if}"  onclick="chooseCtlBoxItem('ggv_mapa')">{$map_text|default:"map"}</a></div>
  				    <div id="ggv_events_link" class="linkbox{if $list_rows_cal == array()} empty{/if}"  onclick="chooseCtlBoxItem('ggv_events')">{$events_text|default:"events"}</a></div>
@@ -119,7 +130,7 @@
 	     		<div id="ggv_underline" ></div>
 
 	     		<div id="ggv_flyer"  style="text-align: center;" class="ggv-ctlbox-content">
-	     		{if $flyer_url != ''} <img src="http://www.gayguidevallarta.com/img.io/timthumb.php?w=722&src={$flyer_url}" > {/if}
+	     		{if $flyer_url != ''} <img src="/img.io/timthumb.php?w=722&src={$flyer_url}" > {/if}
 	     		</div>
 				
 				<div id="ggv_about"  class="ggv-ctlbox-content">
@@ -132,30 +143,31 @@
 	     			
 <!--	     		<div id="ggv_fb"  class="ggv-ctlbox-content">
 							  
-<div style="margin: 5px  0 10px  25px ; float: right; clear: right; height: 500px !important"
-	 class="fb-like-box" data-href="{$list_fb_url_href}" data-width="730" data-height="500"
-	 data-show-faces="false" data-stream="true" data-header="true"></div>
-<div id="fb-root"></div>
-{if $list_fb_url_href}
-<script type="text/javascript">
-{literal}
-(function(d, s, id) {
-		  var js, fjs = d.getElementsByTagName(s)[0];
-		  if (d.getElementById(id)) return;
-		  js = d.createElement(s); js.id = id;
-		  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-		  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
-{/literal}
-</script>
-{/if}
+                        <div style="margin: 5px  0 10px  25px ; float: right; clear: right; height: 500px !important"
+                             class="fb-like-box" data-href="{$list_fb_url_href}" data-width="730" data-height="500"
+                             data-show-faces="false" data-stream="true" data-header="true"></div>
+                        <div id="fb-root"></div>
+                        {if $list_fb_url_href}
+                        <script type="text/javascript">
+                        {literal}
+                        (function(d, s, id) {
+                                  var js, fjs = d.getElementsByTagName(s)[0];
+                                  if (d.getElementById(id)) return;
+                                  js = d.createElement(s); js.id = id;
+                                  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+                                  fjs.parentNode.insertBefore(js, fjs);
+                        }(document, 'script', 'facebook-jssdk'));
+                        {/literal}
+                        </script>
+                        {/if}
 	    
         
         
-                <iframe src="//player.vimeo.com/video/68375821" width="722" height="406"
-                        frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-                </iframe>
-                </div>  -->
+                    <iframe src="//player.vimeo.com/video/68375821" width="722" height="406"
+                            frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                    </iframe>
+                </div>
+-->
 
 				<div id="ggv_events"  class="ggv-ctlbox-content">
 					<div class="eventBox">
@@ -163,28 +175,44 @@
 		     	 	<h2 >Events Calendar</h2>
 	     			{if $list_rows_cal != array()}
 		 				{foreach from=$list_rows_cal item="entry"}
+                        
+                        
+                        
 							<div  class="eventOne">
 								<div class="eventOneFlyer">
-								{if isset($entry.flyer)}<img src="http://www.gayguidevallarta.com/img.io/timthumb.php?w=150&src={$entry.flyer}" /> {/if}
+								{if isset($entry.flyer)}<img src="/img.io/timthumb.php?w=150&src={$entry.flyer}" /> {/if}
 								</div>
 								<div class="eventOneInfo">
 									<div  class="eventOneCat">{$entry.category_name}</div>
+ 
 									{if $entry.nameEvent != ''}<div class="eventOneName">{$entry.nameEvent}</div>{/if}
-									<br />
-									{if $entry.timesEvent != ''}<strong>{$entry.timesEvent}</strong>
+                                    
+                                    {if $entry.moreEventLink != ''}<br />{$entry.moreEventLink}
 									<br />{/if}
-									{$entry.event_recurs}
-									<br />
-									{if $entry.moreEventLink != ''}<br />{$entry.moreEventLink}
-									<br />{/if}<br /><i>
+									<br /><i>
 									{$entry.descEvent}
-									</i><br />
+									</i><br />                                    
+                                    
+                                    {foreach from=$entry.dates item="dateblock"}
+
+                                        {if $dateblock.locationEvent != ''}<br />@ {$dateblock.locationEvent}{/if}
+                                        <br />
+                                        {if $dateblock.timesEvent != ''}{/if}<strong>{$dateblock.timesEvent}</strong>
+                                        <br />
+                                        {$dateblock.event_recurs}
+                                        <br />
+                                    
+                                    
+                                    {/foreach}
+
 								</div>
 								<div  class="eventOneDesc">
-									{$entry.descEventLong}
+									{$entry.descEventLong|nl2br}
 								</div>
 								<br clear="left" />
 							</div>
+                            
+                            
 						{/foreach}
 
 					{else}
@@ -213,7 +241,7 @@
 					  <ul class="slides">
 					  {foreach from=$menus item=picture}
 					   {if $picture != ''}
-					   	<li><img src="http://www.gayguidevallarta.com/img.io/timthumb.php?w=702&src={$picture.src}" /></li>
+					   	<li><img src="/img.io/timthumb.php?w=702&src={$picture.src}" /></li>
                        {/if}
 					  {/foreach}
 					  </ul>
@@ -237,7 +265,7 @@
 					  <ul class="slides">
 					  {foreach from=$pix item=picture}
 					  {if $picture != ''}
-					  <li><img src="http://www.gayguidevallarta.com/img.io/timthumb.php?w=722&src={$picture.src}" /></li>
+					  <li><img src="/img.io/timthumb.php?w=722&src={$picture.src}" /></li>
 					  {/if}
 					  {/foreach}
 					  </ul>
@@ -251,9 +279,11 @@
 				</div>
                 
 				<div id="ggv_videos"  class="ggv-ctlbox-content">
-                <!--<iframe src="//player.vimeo.com/video/68375821" width="722" height="406"
+                {if $list_video}
+                <iframe src="//player.vimeo.com/video/{$list_video}" width="722" height="406"
                         frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-                </iframe>-->
+                </iframe>
+                {/if}
 				</div> 
 
 			</div>
