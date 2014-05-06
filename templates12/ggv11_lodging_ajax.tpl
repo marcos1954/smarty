@@ -1,7 +1,7 @@
 <html>
 <head></head>
 <body>
-   
+
 <form method="POST" action="{$action}" name="f1">
     <input id="hid" type="hidden" name="id" value="{$hotel_id}">
      <div class="dateform" >

@@ -280,9 +280,9 @@
                 
 				<div id="ggv_videos"  class="ggv-ctlbox-content">
                 {if $list_video}
-                <iframe src="//player.vimeo.com/video/{$list_video}" width="722" height="406"
+                <!-- <iframe src="//player.vimeo.com/video/{$list_video}" width="722" height="406"
                         frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-                </iframe>
+                </iframe> -->{$list_video}
                 {/if}
 				</div> 
 
