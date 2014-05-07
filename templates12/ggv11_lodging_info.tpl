@@ -1,5 +1,6 @@
 {config_load file="ggv_dayCal.conf"}
 {*strip*}
+{*debug*}
 {include file=$headerfilename}
 
      	<div id="main_content">
@@ -98,14 +99,14 @@
 			<div id="ggv_combobox">
 	     		<div id="ggv_control">
 					<div id="ggv_flyer_link" class="linkbox{if $flyer_url == ''} empty{/if}"  onclick="chooseCtlBoxItem('ggv_flyer')">{$flyer_text|default:"flyer"}</a></div>
+					<div id="ggv_videos_link" class="linkbox{if !$list_video } empty{/if}"  onclick="chooseCtlBoxItem('ggv_videos')">{$videos_text|default:"video"}</a></div>
 					<div id="ggv_photos_link" class="linkbox{if $pix == array()} empty{/if}"  onclick="chooseCtlBoxItem('ggv_photos')">{$photos_text|default:"photos"}</a></div>
 					<div id="ggv_mapa_link"	class="linkbox{if $list_map == ''} empty{/if}"  onclick="chooseCtlBoxItem('ggv_mapa')">{$map_text|default:"map"}</a></div>
  				    <div id="ggv_events_link" class="linkbox{if $list_rows_cal == array()} empty{/if}"  onclick="chooseCtlBoxItem('ggv_events')">{$events_text|default:"events"}</a></div>
 					<div id="ggv_cal_link" class="linkbox{if $list_rows_cal == array()} empty{/if}"  onclick="chooseCtlBoxItem('ggv_cal')">{$calendar_text|default:"calendar"}</a></div>
 					<div id="ggv_rooms_link" class="linkbox"  onclick="chooseCtlBoxItem('ggv_rooms')">{$room_text|default:"prices"}</a></div>
 					<div id="ggv_about_link" class="linkbox{if $lodging_desclong == ''} empty{/if}"  onclick="chooseCtlBoxItem('ggv_about')">{$about_text|default:"about"}</a></div>
-					<div id="ggv_fb_link" class="linkbox{if $list_fb_url_href == ''} empty{/if}"  onclick="chooseCtlBoxItem('ggv_fb')">{$fb_text|default:"news feed"}</a></div>
-				</div>
+					</div>
 	     		<br clear="all" />
 	     		<div id="ggv_underline" ></div>
 
@@ -253,6 +254,12 @@
 				<div id="lodging_ajax"></div>
 			  </div>
 			</div>
+				
+			<div id="ggv_videos"  class="ggv-ctlbox-content">
+                {if $list_video}
+                {$list_video}
+                {/if}
+			</div> 
 
 			
 		</div>

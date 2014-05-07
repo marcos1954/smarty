@@ -7,17 +7,19 @@
 			  			<a href="{$biz_mapbig}"><img width="200" height="300" src="{$biz_map}" /></a>
 			  			<br />
      		  		{/if}
-			  		{if $event_pix1_src != ''}
-			  			<img border="0" src="{$event_pix1_src}" width="{$event_pix1_width}" height="{$event_pix1_height}">
-			  		{/if}
-			  		{if $event_pix2_src != ''}
-			  			<br />
-			  			<img border="0" src="{$event_pix2_src}" width="{$event_pix2_width}" height="{$event_pix2_height}">
-			  		{/if}
-			  		{if $event_pix3_src != ''}
-			  			<br />
-			  			<img border="0" src="{$event_pix3_src}" width="{$event_pix3_width}" height="{$event_pix3_height}">
-			  		{/if}
+					{if $event_video == ''}
+						{if $event_pix1_src != ''}
+							<img border="0" src="{$event_pix1_src}" width="{$event_pix1_width}" height="{$event_pix1_height}">
+						{/if}
+						{if $event_pix2_src != ''}
+							<br />
+							<img border="0" src="{$event_pix2_src}" width="{$event_pix2_width}" height="{$event_pix2_height}">
+						{/if}
+						{if $event_pix3_src != ''}
+							<br />
+							<img border="0" src="{$event_pix3_src}" width="{$event_pix3_width}" height="{$event_pix3_height}">
+						{/if}
+					{/if}
 			  	</p>
 			  	<p>&nbsp;</p>
 	</div>
@@ -81,7 +83,11 @@
 			  </table>
 
 			  <br clear="left">
-
+						
+			  {if $event_video != ''}
+			  <br clear="all">
+			  <div>{$event_video}</div>		
+			  {/if}	
 			  <p class="eventdesclong">
 			  {$event_desclong|nl2br}
 			  </p>

@@ -1,7 +1,8 @@
-<?php /* Smarty version 2.6.27, created on 2014-02-13 23:41:10
+<?php /* Smarty version 2.6.27, created on 2014-05-07 07:40:14
          compiled from ggv10_Calendar_event.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('function', 'config_load', 'ggv10_Calendar_event.tpl', 2, false),array('modifier', 'nl2br', 'ggv10_Calendar_event.tpl', 79, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('function', 'debug', 'ggv10_Calendar_event.tpl', 1, false),array('function', 'config_load', 'ggv10_Calendar_event.tpl', 2, false),array('modifier', 'nl2br', 'ggv10_Calendar_event.tpl', 79, false),)), $this); ?>
+<?php echo smarty_function_debug(array(), $this);?>
  
 <?php echo smarty_function_config_load(array('file' => "ggv_search.conf"), $this);?>
 
@@ -124,7 +125,11 @@ unset($_smarty_tpl_vars);
 			  </table>
 
 			  <br clear="left">
-
+						
+			  <?php if ($this->_tpl_vars['event_video'] != ''): ?>
+			  <div><?php echo $this->_tpl_vars['event_video']; ?>
+</div>		
+			  <?php endif; ?>	
 			  <p class="eventdesclong">
 			  <?php echo ((is_array($_tmp=$this->_tpl_vars['event_desclong'])) ? $this->_run_mod_handler('nl2br', true, $_tmp) : smarty_modifier_nl2br($_tmp)); ?>
 
