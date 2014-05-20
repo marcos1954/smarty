@@ -33,7 +33,7 @@
 		     	&nbsp;
 		   	  {/if}
 			  </td><td>
-				<p><font face="Arial" color="#0099CC" size="5"><b>{$biz_name}
+				<p style="text-align: left;" ><font face="Arial" color="#0099CC" size="5"><b>{$biz_name}
 				{if $biz_name != $event_name}<br /><br />{$event_name}{/if}</b></font>
 				<br /><br />
      			{$biz_addr1}
