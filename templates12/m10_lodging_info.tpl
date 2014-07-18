@@ -17,7 +17,7 @@
     {if $lodging_addr3 != ''}<br /> {$lodging_addr3}{/if}
     {if $lodging_phone != ''}<br /> Tel. {$lodging_phone}{/if}
     <br />
-    {if $lodging_link_url != ''}<br /><a class="listlink" href="{$lodging_link_url}">website</a>&nbsp;&nbsp;{/if}
+    {if $lodging_link_url != ''}<br /><a class="listlink" rel="nofollow" href="{$lodging_link_url}">website</a>&nbsp;&nbsp;{/if}
     </p>
    {if $features ne ""}
    <p>

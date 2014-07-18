@@ -330,7 +330,7 @@ function getYearsX() {
              &nbsp;&nbsp;&nbsp;
               <a href="{$entry.hotelrate_URL}" class="srchHlink">rate table</a>
               &nbsp;&nbsp;&nbsp;
-               <a href="{$entry.hotellink_URL}" class="srchHlink">website</a>
+               <a href="{$entry.hotellink_URL}" rel="nofollow" class="srchHlink">website</a>
              </td>
              <td  colspan="2" class="srchHdr1" align="right">
               {$numAdults} Adult{if $numAdults ne 1}s{/if}              &nbsp;/&nbsp;

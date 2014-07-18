@@ -58,7 +58,7 @@
 							 
 
                         {if $lodging_link_url != ''}
-     	                    <a class="listlink" href="{$lodging_link_url}">website</a>&nbsp;&nbsp;
+     	                    <a class="listlink" rel="nofollow" href="{$lodging_link_url}">website</a>&nbsp;&nbsp;
      	                {/if}
 						{if $list_fb_url != ''}
      	                    <a class="listlink" href="{$list_fb_url}">{$list_fb_text}</a>&nbsp;&nbsp;

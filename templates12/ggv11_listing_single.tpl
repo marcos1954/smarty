@@ -70,7 +70,7 @@
 					{/if}		 
 
                         {if $list_url != ''}
-     	                    <a class="listlink" href="{$list_url}">{$list_url_text}</a>&nbsp;&nbsp;
+     	                    <a class="listlink" rel="nofollow" href="{$list_url}">{$list_url_text}</a>&nbsp;&nbsp;
      	                {/if}
 						{if $list_fb_url != ''}
      	                    <a class="listlink" href="{$list_fb_url}">{$list_fb_text}</a>&nbsp;&nbsp;

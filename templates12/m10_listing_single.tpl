@@ -38,7 +38,7 @@
 						
      					<br />
                         {if $list_url != ''}
-     	                    <a class="listlink" href="{$list_url}">{$website}</a>&nbsp;&nbsp;
+     	                    <a class="listlink" rel="nofollow" href="{$list_url}">{$website}</a>&nbsp;&nbsp;
      	                {/if}
      	               {if $list_rows_cal != array()}
      	                	<a class="listlink" href="#Calendar">{$calendar}</a>

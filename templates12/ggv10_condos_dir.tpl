@@ -82,7 +82,7 @@
         {/if}
                 <tr bgcolor={cycle values="`$smarty.config.searchcycleBgColor`" name="`$grpid`"}>
                  <td class="condoZ" nowrap>
-                 {if $entry.acct_url ne ""}<a href="{$entry.acct_url}" class="condoZlink">{$entry.acct_name|truncate:10}</a>
+                 {if $entry.acct_url ne ""}<a rel="nofollow" href="{$entry.acct_url}" class="condoZlink">{$entry.acct_name|truncate:10}</a>
                  {else}
                   {$entry.acct_name|truncate:10}
                   {/if}
