@@ -1,4 +1,4 @@
-{*debug*} 
+{debug} 
 {config_load file="ggv_search.conf"}
 {include file=$headerfilename}
  	<div id="Listing_right_column_pix">

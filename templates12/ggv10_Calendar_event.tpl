@@ -1,4 +1,4 @@
-{*debug*} 
+{*debug*}
 {config_load file="ggv_search.conf"}
 {include file=$headerfilename}
  	<div id="Listing_right_column_pix">
@@ -9,15 +9,15 @@
      		  		{/if}
 					{if $event_video == ''}
 						{if $event_pix1_src != ''}
-							<img border="0" src="{$event_pix1_src}" width="{$event_pix1_width}" height="{$event_pix1_height}">
+							<img border="0" src="{$event_pix1_src}">
 						{/if}
 						{if $event_pix2_src != ''}
 							<br />
-							<img border="0" src="{$event_pix2_src}" width="{$event_pix2_width}" height="{$event_pix2_height}">
+							<img border="0" src="{$event_pix2_src}">
 						{/if}
 						{if $event_pix3_src != ''}
 							<br />
-							<img border="0" src="{$event_pix3_src}" width="{$event_pix3_width}" height="{$event_pix3_height}">
+							<img border="0" src="{$event_pix3_src}">
 						{/if}
 					{/if}
 			  	</p>

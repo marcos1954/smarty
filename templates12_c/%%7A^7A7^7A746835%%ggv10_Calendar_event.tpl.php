@@ -1,9 +1,7 @@
-<?php /* Smarty version 2.6.27, created on 2014-05-07 07:40:14
+<?php /* Smarty version 2.6.27, created on 2014-09-29 06:23:10
          compiled from ggv10_Calendar_event.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('function', 'debug', 'ggv10_Calendar_event.tpl', 1, false),array('function', 'config_load', 'ggv10_Calendar_event.tpl', 2, false),array('modifier', 'nl2br', 'ggv10_Calendar_event.tpl', 79, false),)), $this); ?>
-<?php echo smarty_function_debug(array(), $this);?>
- 
+smarty_core_load_plugins(array('plugins' => array(array('function', 'config_load', 'ggv10_Calendar_event.tpl', 2, false),array('modifier', 'nl2br', 'ggv10_Calendar_event.tpl', 81, false),)), $this); ?>
 <?php echo smarty_function_config_load(array('file' => "ggv_search.conf"), $this);?>
 
 <?php $_smarty_tpl_vars = $this->_tpl_vars;
@@ -19,26 +17,22 @@ unset($_smarty_tpl_vars);
 " /></a>
 			  			<br />
      		  		<?php endif; ?>
-			  		<?php if ($this->_tpl_vars['event_pix1_src'] != ''): ?>
-			  			<img border="0" src="<?php echo $this->_tpl_vars['event_pix1_src']; ?>
-" width="<?php echo $this->_tpl_vars['event_pix1_width']; ?>
-" height="<?php echo $this->_tpl_vars['event_pix1_height']; ?>
+					<?php if ($this->_tpl_vars['event_video'] == ''): ?>
+						<?php if ($this->_tpl_vars['event_pix1_src'] != ''): ?>
+							<img border="0" src="<?php echo $this->_tpl_vars['event_pix1_src']; ?>
 ">
-			  		<?php endif; ?>
-			  		<?php if ($this->_tpl_vars['event_pix2_src'] != ''): ?>
-			  			<br />
-			  			<img border="0" src="<?php echo $this->_tpl_vars['event_pix2_src']; ?>
-" width="<?php echo $this->_tpl_vars['event_pix2_width']; ?>
-" height="<?php echo $this->_tpl_vars['event_pix2_height']; ?>
+						<?php endif; ?>
+						<?php if ($this->_tpl_vars['event_pix2_src'] != ''): ?>
+							<br />
+							<img border="0" src="<?php echo $this->_tpl_vars['event_pix2_src']; ?>
 ">
-			  		<?php endif; ?>
-			  		<?php if ($this->_tpl_vars['event_pix3_src'] != ''): ?>
-			  			<br />
-			  			<img border="0" src="<?php echo $this->_tpl_vars['event_pix3_src']; ?>
-" width="<?php echo $this->_tpl_vars['event_pix3_width']; ?>
-" height="<?php echo $this->_tpl_vars['event_pix3_height']; ?>
+						<?php endif; ?>
+						<?php if ($this->_tpl_vars['event_pix3_src'] != ''): ?>
+							<br />
+							<img border="0" src="<?php echo $this->_tpl_vars['event_pix3_src']; ?>
 ">
-			  		<?php endif; ?>
+						<?php endif; ?>
+					<?php endif; ?>
 			  	</p>
 			  	<p>&nbsp;</p>
 	</div>
@@ -55,7 +49,7 @@ unset($_smarty_tpl_vars);
 		     	&nbsp;
 		   	  <?php endif; ?>
 			  </td><td>
-				<p><font face="Arial" color="#0099CC" size="5"><b><?php echo $this->_tpl_vars['biz_name']; ?>
+				<p style="text-align: left;" ><font face="Arial" color="#0099CC" size="5"><b><?php echo $this->_tpl_vars['biz_name']; ?>
 
 				<?php if ($this->_tpl_vars['biz_name'] != $this->_tpl_vars['event_name']): ?><br /><br /><?php echo $this->_tpl_vars['event_name']; ?>
 <?php endif; ?></b></font>
@@ -127,6 +121,7 @@ unset($_smarty_tpl_vars);
 			  <br clear="left">
 						
 			  <?php if ($this->_tpl_vars['event_video'] != ''): ?>
+			  <br clear="all">
 			  <div><?php echo $this->_tpl_vars['event_video']; ?>
 </div>		
 			  <?php endif; ?>	
