@@ -191,18 +191,18 @@
 									<br />{/if}
 									<br /><i>
 									{$entry.descEvent}
-									</i><br />                                    
+									</i><br /><br />
                                     
                                     {foreach from=$entry.dates item="dateblock"}
 
-                                        {if $dateblock.locationEvent != ''}<br />@ {$dateblock.locationEvent}{/if}
-                                        <br />
-                                        {if $dateblock.timesEvent != ''}{/if}<strong>{$dateblock.timesEvent}</strong>
-                                        <br />
+                                        {if $dateblock.timesEvent != ''}{/if}<strong>{$dateblock.timesEvent}</strong> 
+                                          &nbsp;
                                         {$dateblock.event_recurs}
-                                        <br />
-                                    
-                                    
+										  &nbsp;
+										
+										{if $dateblock.locationEvent != ''} @ {$dateblock.locationEvent}{/if}
+                                        <br /><br />
+
                                     {/foreach}
 
 								</div>
