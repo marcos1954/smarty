@@ -130,7 +130,20 @@
 	     		<div id="ggv_underline" ></div>
 
 	     		<div id="ggv_flyer"  style="text-align: center;" class="ggv-ctlbox-content">
-	     		{if $flyer_url != ''} <img src="/img.io/timthumb.php?w=722&src={$flyer_url}" > {/if}
+	     		{if $flyer_url != ''}
+				
+				  
+						{if $flyer_width < 722 && $flyer_width > 100 }
+					  <!---  <li><img src="/img.io/timthumb.php?w={$flyer_width}&src={$flyer_url}" /></li> --->
+					  <li><img src="{$flyer_url}" /></li>
+						{else}
+					  <li><img src="/img.io/timthumb.php?w=722&src={$flyer_url}" /></li>
+						{/if}
+				
+				  <!-- <img src="/img.io/timthumb.php?w=722&src={$flyer_url}" >  -->
+					
+					
+				{/if}
 	     		</div>
 				
 				<div id="ggv_about"  class="ggv-ctlbox-content">
@@ -241,7 +254,11 @@
 					  <ul class="slides">
 					  {foreach from=$menus item=picture}
 					   {if $picture != ''}
-					   	<li><img src="/img.io/timthumb.php?w=702&src={$picture.src}" /></li>
+						{if $picture.width < 702 }
+					   <li><img src="{$picture.src}" /></li> 
+						{else}
+					  <li><img src="/img.io/timthumb.php?w=702&src={$picture.src}" /></li>
+						{/if}
                        {/if}
 					  {/foreach}
 					  </ul>
@@ -265,7 +282,13 @@
 					  <ul class="slides">
 					  {foreach from=$pix item=picture}
 					  {if $picture != ''}
+					  
+						{if $picture.width < 722 }
+					   <li><img src="{$picture.src}" /></li> 
+						{else}
 					  <li><img src="/img.io/timthumb.php?w=722&src={$picture.src}" /></li>
+						{/if}
+						
 					  {/if}
 					  {/foreach}
 					  </ul>
