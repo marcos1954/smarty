@@ -28,6 +28,11 @@
 						{if $list_fb_url != ''}
 							  <img src="/images/facebookIcon.png" height=24 width=auto title="Facebook" />
 						{/if}
+						
+						{if $list_tw_url != ''}
+							  <img src="/images/twitter.png" height=24 width=auto title="Twitter" />
+						{/if}
+						
 						{if $list_ta_url != ''}
 							  <img src="/images/tripadvisor2.png" height=24 width=auto title="Reviewed on Tripadvisor" />
 						{/if}
@@ -64,7 +69,7 @@
                     </p>
                     {/if}
                     
-                    {if $list_url != '' || $list_fb_url != '' || $list_ta_url != '' || 	$list_ol_url != ''  }
+                    {if $list_url != '' || $list_fb_url != '' || $list_tw_url != '' || $list_ta_url != '' || 	$list_ol_url != ''  }
 					
 					<div class="links" ><span>{$websitesListings|default:'website & listings'}</span></div>
 					{/if}		 
@@ -74,6 +79,10 @@
      	                {/if}
 						{if $list_fb_url != ''}
      	                    <a class="listlink" href="{$list_fb_url}">{$list_fb_text}</a>&nbsp;&nbsp;
+     	                {/if}
+						
+						{if $list_tw_url != ''}
+     	                    <a class="listlink" href="{$list_tw_url}">{$list_tw_text}</a>&nbsp;&nbsp;
      	                {/if}
 						
 						{if $list_ta_url != ''}
@@ -131,18 +140,11 @@
 
 	     		<div id="ggv_flyer"  style="text-align: center;" class="ggv-ctlbox-content">
 	     		{if $flyer_url != ''}
-				
-				  
 						{if $flyer_width < 722 && $flyer_width > 100 }
-					  <!---  <li><img src="/img.io/timthumb.php?w={$flyer_width}&src={$flyer_url}" /></li> --->
-					  <li><img src="{$flyer_url}" /></li>
+					  <img src="{$flyer_url}" />
 						{else}
-					  <li><img src="/img.io/timthumb.php?w=722&src={$flyer_url}" /></li>
+					  <img src="/img.io/timthumb.php?w=722&src={$flyer_url}" />
 						{/if}
-				
-				  <!-- <img src="/img.io/timthumb.php?w=722&src={$flyer_url}" >  -->
-					
-					
 				{/if}
 	     		</div>
 				
@@ -153,44 +155,13 @@
 	     			</div>
 				</div>
 
-	     			
-<!--	     		<div id="ggv_fb"  class="ggv-ctlbox-content">
-							  
-                        <div style="margin: 5px  0 10px  25px ; float: right; clear: right; height: 500px !important"
-                             class="fb-like-box" data-href="{$list_fb_url_href}" data-width="730" data-height="500"
-                             data-show-faces="false" data-stream="true" data-header="true"></div>
-                        <div id="fb-root"></div>
-                        {if $list_fb_url_href}
-                        <script type="text/javascript">
-                        {literal}
-                        (function(d, s, id) {
-                                  var js, fjs = d.getElementsByTagName(s)[0];
-                                  if (d.getElementById(id)) return;
-                                  js = d.createElement(s); js.id = id;
-                                  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-                                  fjs.parentNode.insertBefore(js, fjs);
-                        }(document, 'script', 'facebook-jssdk'));
-                        {/literal}
-                        </script>
-                        {/if}
-	    
-        
-        
-                    <iframe src="//player.vimeo.com/video/68375821" width="722" height="406"
-                            frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-                    </iframe>
-                </div>
--->
-
 				<div id="ggv_events"  class="ggv-ctlbox-content">
 					<div class="eventBox">
 		     	 	<a name="Calendar"></a>
 		     	 	<h2 >Events Calendar</h2>
 	     			{if $list_rows_cal != array()}
 		 				{foreach from=$list_rows_cal item="entry"}
-                        
-                        
-                        
+
 							<div  class="eventOne">
 								<div class="eventOneFlyer">
 								{if isset($entry.flyer)}<img src="/img.io/timthumb.php?w=150&src={$entry.flyer}" /> {/if}
@@ -199,12 +170,14 @@
 									<div  class="eventOneCat">{$entry.category_name}</div>
  
 									{if $entry.nameEvent != ''}<div class="eventOneName">{$entry.nameEvent}</div>{/if}
-                                    
+                                    <div class="dates">
+									  
                                     {if $entry.moreEventLink != ''}<br />{$entry.moreEventLink}
 									<br />{/if}
 									<br /><i>
 									{$entry.descEvent}
 									</i><br /><br />
+									
                                     
                                     {foreach from=$entry.dates item="dateblock"}
 
@@ -217,7 +190,10 @@
                                         <br /><br />
 
                                     {/foreach}
-
+                                    </div>
+									<div class="oflowmsg" style="display: none; ">
+									  <a href="{$entry.moreEventLinkHref}">..... SEE MORE DATES</a>
+									</div>
 								</div>
 								<div  class="eventOneDesc">
 									{$entry.descEventLong|nl2br}
@@ -278,6 +254,7 @@
 					</div>
 
 					<div class="slider-navcontrols"></div>
+					
 					<div id="slider" class="flexslider">
 					  <ul class="slides">
 					  {foreach from=$pix item=picture}
