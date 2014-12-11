@@ -4,7 +4,7 @@
  	<center>
  	<div style="width: 180; margin-left:14px;">
 					{foreach from=$TOPads180x400 item=ad}
-						{$ad}<br /><br />
+						{$ad}<br /><br /><br />
 					{/foreach}
 				</div>
 
@@ -28,7 +28,7 @@
 	{/if}
 	<div style="width: 180; margin-left:14px;">
 					{foreach from=$ads180x400 item=ad}
-						{$ad}<br /><br />
+						{$ad}<br /><br /><br />
 					{/foreach}
 				</div>
 	</div>
