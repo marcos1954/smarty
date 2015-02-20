@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.27, created on 2014-02-01 18:20:59
+<?php /* Smarty version 2.6.27, created on 2015-01-17 01:23:27
          compiled from ggv10_prices.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'config_load', 'ggv10_prices.tpl', 1, false),array('function', 'html_options', 'ggv10_prices.tpl', 83, false),array('function', 'html_radios', 'ggv10_prices.tpl', 144, false),array('function', 'html_checkboxes', 'ggv10_prices.tpl', 210, false),array('function', 'counter', 'ggv10_prices.tpl', 343, false),array('function', 'cycle', 'ggv10_prices.tpl', 347, false),array('modifier', 'upper', 'ggv10_prices.tpl', 349, false),array('modifier', 'capitalize', 'ggv10_prices.tpl', 352, false),array('modifier', 'escape', 'ggv10_prices.tpl', 352, false),)), $this); ?>
@@ -410,7 +410,7 @@ if ($this->_foreach['mainloop']['total'] > 0):
 " class="srchHlink">rate table</a>
               &nbsp;&nbsp;&nbsp;
                <a href="<?php echo $this->_tpl_vars['entry']['hotellink_URL']; ?>
-" class="srchHlink">website</a>
+" rel="nofollow" class="srchHlink">website</a>
              </td>
              <td  colspan="2" class="srchHdr1" align="right">
               <?php echo $this->_tpl_vars['numAdults']; ?>
