@@ -3,10 +3,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <title>{$PAGE_TITLE|default:"gayguide Vallarta"}</title>
-<link rel="stylesheet" type="text/css" href="{$DIR_WS_BASE}includes/GayGuideVallarta.css" media="all" />
+<link rel="stylesheet" type="text/css" href="{$DIR_WS_BASE}css/GayGuideVallarta.css" media="all" />
 {#extraCSS#}
 {$headerExtra}
-<script language="JavaScript1.2" src="../includes/ggv.js" type="text/javascript"></script>
+<script language="JavaScript1.2" src="../js/ggv_dates.js" type="text/javascript"></script>
 
 <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png" />
 <link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png" />

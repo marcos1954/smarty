@@ -6,10 +6,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
 <title>{$PAGE_TITLE|default:"gayguide Vallarta"}</title>
-<link rel="stylesheet" type="text/css" href="{$DIR_WS_BASE}includes/GayGuideVallarta.css" media="all" />
+<link rel="stylesheet" type="text/css" href="{$DIR_WS_BASE}css/GayGuideVallarta.css" media="all" />
 {#extraCSS#}
 {$headerExtra}
-<script src="../includes/ggv.js" type="text/javascript"></script>
+<script src="../js/ggv_dates.js" type="text/javascript"></script>
 <meta name="google-site-verification" content="oVWtUoxAz0oHmc7Ul2pjLnh5-RC-ej95h71EyU98omc" />
 <style>
 #mobileToolbar {

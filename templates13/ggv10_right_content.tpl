@@ -1,5 +1,7 @@
-{strip}
+{*strip*}
+
 {if ($right_content == NULL) }
+
 	<div id="right_content">
  	<center>
  	<div style="width: 180; margin-left:14px;">
@@ -33,8 +35,9 @@
 				</div>
 	</div>
 {else}
+
 	<div id="right_content">
 		{$right_content}
 	</div>
 {/if}
-{/strip}
+{*/strip*}

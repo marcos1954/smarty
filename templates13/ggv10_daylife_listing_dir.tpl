@@ -67,7 +67,7 @@
 
           {foreach from=$sub.listing item="entry"}
 
-                 <div  class="sublisting_box">
+                 <div  class="sub listing_box">
                 	<div class="listinglogo">
                 	  <a name="{$entry.list_dirref}"></a>
                       {if $entry.list_src != ''}

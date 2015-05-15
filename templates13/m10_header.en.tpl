@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=1" />
 <title>{$PAGE_TITLE|default:"Gay Guide Vallarta"}</title>
-<link rel="stylesheet" type="text/css" href="{$DIR_WS_BASE}includes/m.GayGuideVallarta.css" media="all" />
+<link rel="stylesheet" type="text/css" href="{$DIR_WS_BASE}css/m.GayGuideVallarta.css" media="all" />
 {#extraCSS#}
 {$headerExtra}
 

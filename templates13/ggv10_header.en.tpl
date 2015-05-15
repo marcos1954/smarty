@@ -3,10 +3,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <title>{$PAGE_TITLE|default:"gayguide Vallarta"}</title>
-<link rel="stylesheet" type="text/css" href="{$DIR_WS_BASE}includes/GayGuideVallarta.css" media="all" />
+<link rel="stylesheet" type="text/css" href="{$DIR_WS_BASE}css/GayGuideVallarta.css" media="all" />
 {#extraCSS#}
 {$headerExtra}
-<script language="JavaScript1.2" src="../includes/ggv.js" type="text/javascript"></script>
+<script language="JavaScript1.2" src="../js/ggv_dates.js" type="text/javascript"></script>
 
 <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png" />
 <link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png" />
@@ -21,6 +21,9 @@
 	<a href="http://i.gpvr.mx">iPhone App</a>  &nbsp;&nbsp;&nbsp;
 	<a href="http://i.gpvr.mx">iPad App</a>  &nbsp;&nbsp;&nbsp;
 	<a href="http://i.gpvr.mx">Android App</a>
+	<div class="lang-links">
+		{$LANG_FLAGS}&nbsp;{$translatemenulink}
+	</div>
 </div>
 	
 <div id="main">
@@ -35,23 +38,25 @@
     	</a>
    		</div>
      {/if}
-	<div id="GayGuideVallarta_r1_c1">
-    	<div id="tagline">Puerto Vallarta's official gay guide</div>
-    	<div id="GayGuideVallarta_topmenu">
-        	<a href="{$DIR_WS_BASE}" title="Home - Gay Guide Vallarta">Gay Vallarta</a>
-        	&nbsp;&nbsp;|&nbsp;&nbsp;
-        	<a href="{$DIR_WS_BASE}Calendar/" title="Gay Vallarta's Calendar">Calendar</a>
-        	&nbsp;&nbsp;|&nbsp;&nbsp;
-        	<a href="{$DIR_WS_BASE}GayPVMap/" title="Maps of Gay Puerto Vallarta">Map</a>
-        	&nbsp;&nbsp;|&nbsp;&nbsp;
-        	<a href="{$DIR_WS_BASE}ggv_links.php" title="List of all gay Vallarta businesses, agents, groups and links to their websites">Links</a>
-        	&nbsp;&nbsp;|&nbsp;&nbsp;
-        	<a href="{$DIR_WS_BASE}gayPVguide/" title="Our printed edition.  Download or find advertising information.">Guidebook</a>
-        	&nbsp;&nbsp;|&nbsp;&nbsp;<a href="{$DIR_WS_BASE}/?forcemobile=true" title="mobile version of our website">Mobile</a>
-        	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        	{$LANG_FLAGS}&nbsp;{$translatemenulink}
-        </div>
-    </div>
+	<div id="GayGuideVallarta"></div>
+	
+
+	<div id="GayGuideVallarta_topmenu">
+		<div class="topmenu-text">
+		<a href="{$DIR_WS_BASE}" title="Home - Gay Guide Vallarta">Gay Vallarta</a>
+		&nbsp;&nbsp;|&nbsp;&nbsp;
+		<a href="{$DIR_WS_BASE}Calendar/" title="Gay Vallarta's Calendar">Calendar</a>
+		&nbsp;&nbsp;|&nbsp;&nbsp;
+		<a href="{$DIR_WS_BASE}GayPVMap/" title="Maps of Gay Puerto Vallarta">Map</a>
+		&nbsp;&nbsp;|&nbsp;&nbsp;
+		<a href="{$DIR_WS_BASE}ggv_links.php" title="List of all gay Vallarta businesses, agents, groups and links to their websites">Links</a>
+		&nbsp;&nbsp;|&nbsp;&nbsp;
+		<a href="{$DIR_WS_BASE}gayPVguide/" title="Our printed edition.  Download or find advertising information.">Guidebook</a>
+		&nbsp;&nbsp;|&nbsp;&nbsp;<a href="{$DIR_WS_BASE}/?forcemobile=true" title="mobile version of our website">Mobile</a>
+		
+		</div>
+	</div>
+
 	<br class="clearfloat" />
   	<div id="underheader">
 
@@ -84,28 +89,23 @@
 	  			<div class="submenuentry"> &#187; <a href="{$DIR_WS_BASE}Services/" title="Misc services of interest."> Services</a></div>
 	  			<div class="mainmenuentry"> &#187; <a href="{$DIR_WS_BASE}GeneralInfo/" title="Some orientation on the non-gay part of Vallarta."> General Info</a></div>
 	  		</div>
-			<div id="GayGuideVallarta_r3_c1">
-			</div>
-			<div id="LeftColumnContent" ><center>
+			<div id="GayGuideVallarta_r3_c1"></div>
+			<div id="LeftColumnContent" >
+				<a href="{$DIR_WS_BASE}gayPVguide/" title=""><img style="width: 180px;height: auto;" src="{$DIR_WS_BASE}includes/Images/GetPrintEdition.jpg" /></a>
+<!--				<a href="{$DIR_WS_BASE}Admin/"><img width="75" height="75" border="0" src="{$DIR_WS_BASE}images/IGGWlogo.gif" /></a>
+-->			</div>
+			{include file="ggv10_right_content.tpl"}</div></div>
 
-				 <a href="{$DIR_WS_BASE}gayPVguide/" title="">
-					<img src="{$DIR_WS_BASE}includes/Images/GetPrintEdition.jpg" />
-				</a>
-				<br />
-				 <a href="{$DIR_WS_BASE}Admin/">
-					<img width="75" height="75" border="0" src="{$DIR_WS_BASE}images/IGGWlogo.gif" />
-				 </a>
-			</center></div>
 		</div>
 
 
-		<div id="main_container">
-			<div style="width:300px; height: 30px;float: right">
+		<div class="main_container">
+			<div id="searchbox">
 
-				{literal}
+{literal}
 <style>
 .cse .gsc-control-cse, .gsc-control-cse {
-background-color: rgb(255, 249, 245)!important;
+/*background-color: rgb(255, 249, 245)!important;*/
 border: none;
 }
 </style>
@@ -121,7 +121,7 @@ border: none;
 })();
 </script>
 <gcse:search  linkTarget="_self"></gcse:search>
-				{/literal}
+{/literal}
 
 			</div>
 			<div id="breadcrumbs">

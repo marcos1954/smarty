@@ -1,11 +1,10 @@
 {*strip*}
 {include file=$headerfilename}
 
-<div id="topcontent">
+<div id="topcontent" >
 		{$TXT_MAIN_DESCRIPTION}
 	</div>
-	<br clear="all" />
-	<br class="clearfloats" />
+
     <div id="main_content">
      {foreach from=$MAIN_LISTINGS item="entry"}
 		<div  class="listing_box"  onclick="location.href='{$entry.list_more_url}';">
@@ -19,7 +18,7 @@
 		  </div>
 		  <div class="listing_info">
 			{if $entry.list_tagsicons != '' || $entry.EDIT != '' || $entry.list_fb != '' || $entry.list_ta != '' || $entry.list_ol != ''|| $entry.list_www != ''}
-				   <div style="float: right;margin-top:.7em;" >
+				   <div class="tagicons" >
 						{if $entry.EDIT != ''}
 						   <a href="{$entry.EDIT}">EDIT</a> &nbsp;
 						{/if}
@@ -49,9 +48,10 @@
 			   <p style="margin-top: 4px;" ><a class="listlink" href="{$entry.list_more_url}">{$more_info}</a></p>
 		   {/if}
 
-		   <p>{$entry.list_descshort|nl2br}</p>
+		   <p class="descShort">{$entry.list_descshort|nl2br}</p>
 		  </div>
 		  <br clear="left" />
+		  <br />
 		</div>
      {/foreach}
 
@@ -66,7 +66,7 @@
 		    {if $entry.listing_nodates == 'noevents' }
 				{php}continue;{/php}
 		    {/if}
-			<div  class="sublisting_box"  onclick="location.href='{$entry.list_more_url}';">
+			<div  class="sub listing_box"  onclick="location.href='{$entry.list_more_url}';">
 			   <div class="listinglogo">
 				 <a name="{$entry.list_dirref}"></a>
 				 {if $entry.list_src != ''}
@@ -77,7 +77,7 @@
 			  </div>
 			  <div class="listing_info">
 			   {if $entry.list_tagsicons != '' || $entry.EDIT != '' || $entry.list_fb != '' || $entry.list_ta != '' || $entry.list_ol != ''|| $entry.list_www != ''}
-				   <div style="float: right;margin-top:.7em;" >
+				   <div class="tagicons">
 							{if $entry.EDIT != ''}
 							   <div style="text-align:right; color: gray; font-size: .8em;"><a href="{$entry.EDIT}">EDIT</a> &nbsp;{$entry.list_lastupdate}</div>
 							{/if}
@@ -89,11 +89,10 @@
 					   {if $entry.list_ol}<img src="/images/icon_delivery.png" height=22 width=auto title="Delivery" />{/if}
                        {if $entry.list_www}<img style="margin:1px;"src="/images/www.png" height=20 width=auto title="Has a Website" />{/if}
 					   
-   </div>
+				    </div>
 			   {/if}
 			   <p class="listing_name" onclick="location" >{$entry.list_name}</p>
-			   
-			   
+
 				{if $entry.listing_from_date != '' && $entry.listing_to_date}
 					 <p class="tags">{$entry.listing_from_date} - {$entry.listing_to_date}</p>
 				{/if}
@@ -108,7 +107,7 @@
 				   {/if}
 				   </p>
 			   {/if}
-			   <p>{$entry.list_descshort|nl2br}</p>
+			   <p class="descShort">{$entry.list_descshort|nl2br}</p>
 			  </div>
 			  <br clear="left" />
 			  <br />
@@ -117,7 +116,7 @@
      {/foreach}
 	 <br clear="all"  />
    </div>
-{include file="ggv10_right_content.tpl"}
+{*include file="ggv10_right_content.tpl"*}
 {include file="ggv10_footer.tpl"}
 {*/strip*}
 
