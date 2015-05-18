@@ -12,7 +12,7 @@
 {*/strip*}
 
 {if not ( false && $bottomAd == NULL )}
-  <div id = "dv" style = "z-index:2 !important; display: none; position:fixed; bottom:0;left:0px;width: 100%; height:0px; ">
+  <div id = "dv" style = "z-index:3 !important; display: none; position:fixed; bottom:0;left:0px;width: 100%; height:0px; ">
 	<div style=" width: 950px; margin: 0px auto 0px auto;">
 	  {if $bottomAd != ''}
 		{$bottomAd}

@@ -75,22 +75,22 @@
 					{/if}		 
 
                         {if $list_url != ''}
-     	                    <a class="listlink" rel="nofollow" href="{$list_url}">{$list_url_text}</a>&nbsp;&nbsp;
+     	                    <a class="listlink" rel="nofollow" href="{$list_url}">{$list_url_text}</a>
      	                {/if}
 						{if $list_fb_url != ''}
-     	                    <a class="listlink" href="{$list_fb_url}">{$list_fb_text}</a>&nbsp;&nbsp;
+     	                    <a class="listlink" href="{$list_fb_url}">{$list_fb_text}</a>
      	                {/if}
 						
 						{if $list_tw_url != ''}
-     	                    <a class="listlink" href="{$list_tw_url}">{$list_tw_text}</a>&nbsp;&nbsp;
+     	                    <a class="listlink" href="{$list_tw_url}">{$list_tw_text}</a>
      	                {/if}
 						
 						{if $list_ta_url != ''}
-     	                    <a class="listlink" href="{$list_ta_url}">{$list_ta_text}</a>&nbsp;&nbsp;
+     	                    <a class="listlink" href="{$list_ta_url}">{$list_ta_text}</a>
      	                {/if}
                         
                         {if $list_ol_url != ''}
-     	                    <a class="listlink" href="{$list_ol_url}">{$list_ol_text}</a>&nbsp;&nbsp;
+     	                    <a class="listlink" href="{$list_ol_url}">{$list_ol_text}</a>
      	                {/if}
 						
 					    {if $list_closed != ''}
@@ -119,9 +119,8 @@
 
                  	<div id="ggv_descshort">{$list_descshort}</div>
      			</div>
-                <br clear="all" />
      		</div>  <!-- end of Listing_header -->
-	        <br clear="all" />
+	        
 
 			<div id="ggv_combobox">
 	     		<div id="ggv_control">
@@ -135,7 +134,6 @@
 					<div id="ggv_about_link" class="linkbox{if $list_desclong == ''} empty{/if}"  onclick="chooseCtlBoxItem('ggv_about')">{$about_text|default:"about"}</a></div>
 					<!--<div id="ggv_fb_link" class="linkbox{if $list_fb_url_href == ''} empty{/if}"  onclick="chooseCtlBoxItem('ggv_fb')">{$fb_text|default:"news feed"}</a></div>-->
 				</div>
-	     		<br clear="all" />
 	     		<div id="ggv_underline" ></div>
 
 	     		<div id="ggv_flyer"  style="text-align: center;" class="ggv-ctlbox-content">

@@ -1,12 +1,21 @@
-{*strip*}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+{strip}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <title>{$PAGE_TITLE|default:"gayguide Vallarta"}</title>
+
 <link rel="stylesheet" type="text/css" href="{$DIR_WS_BASE}css/GayGuideVallarta.css" media="all" />
+
 {#extraCSS#}
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js"></script>
+<script language="JavaScript" type="text/javascript" src="../js/ggv_main.js"></script> 
+<script language="JavaScript" src="../js/ggv_dates.js" type="text/javascript"></script>
+
 {$headerExtra}
-<script language="JavaScript1.2" src="../js/ggv_dates.js" type="text/javascript"></script>
 
 <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png" />
 <link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png" />
@@ -17,12 +26,48 @@
 </head>
 <body>
 <div class="mobileToolbar">
-	<a href="http://i.gpvr.mx">Download Gay Guide App</a> &nbsp;&nbsp;&nbsp;
-	<a href="http://i.gpvr.mx">iPhone App</a>  &nbsp;&nbsp;&nbsp;
-	<a href="http://i.gpvr.mx">iPad App</a>  &nbsp;&nbsp;&nbsp;
-	<a href="http://i.gpvr.mx">Android App</a>
-	<div class="lang-links">
+	<div id="undermenu-link">
+		<a>menu</a>
+	</div>
+		<div class="lang-links">
 		{$LANG_FLAGS}&nbsp;{$translatemenulink}
+	</div>
+	<div id="app-links">
+		<a href="http://i.gpvr.mx">Download Gay Guide App</a> &nbsp;&nbsp;&nbsp;
+		<a href="http://i.gpvr.mx">iPhone App</a>  &nbsp;&nbsp;&nbsp;
+		<a href="http://i.gpvr.mx">iPad App</a>  &nbsp;&nbsp;&nbsp;
+		<a href="http://i.gpvr.mx">Android App</a>
+	</div>
+
+</div>
+<div id="under_menu">
+	hello
+	<div>
+	{if $whatmenu eq "short"}
+		<div class="mainmenuentry"> &#187; <a href="{$DIR_WS_BASE}Lodging/gay.html" title="Lodging information for tourists staying in gay Puerto Vallarta."> Lodging</a></div>
+	{else}
+		<div class="submenugroup"> LODGING</div>
+		<div class="submenuentry"> &#187; <a href="{$DIR_WS_BASE}Search/" title="Find all lodging by price for given dates."> Prices</a></div>
+		<div class="submenuentry"> &#187; <a href="{$DIR_WS_BASE}Lodging/gay.html" title="Gay oriented and gay owned places to stay in Puerto Vallarta."> Gay</a></div>
+		<div class="submenuentry"> &#187; <a href="{$DIR_WS_BASE}Lodging/resorts.html" title="Resort options."> Resorts</a></div>
+		<div class="submenuentry"> &#187; <a href="{$DIR_WS_BASE}Lodging/hotels.html" title="Hotel scale places."> Hotels</a></div>
+		<!-- <div class="submenuentry"> &#187; <a href="{$DIR_WS_BASE}Lodging/bnb.html"> B&amp;Bs</a></div>  -->
+		<div class="submenuentry"> &#187; <a href="{$DIR_WS_BASE}Lodging/budget.html" title="The most cost effective places."> Budget</a></div>
+		<div class="submenuentry"> &#187; <a href="{$DIR_WS_BASE}Lodging/condos.html" title="Hundreds of condos conviently located."> Condos</a></div>
+		<div class="submenuentry"> &#187; <a href="{$DIR_WS_BASE}Lodging/villas.html" title="Villas fit for celebrities and groups."> Villas</a></div>
+		<!-- <div class="submenuentry"> &#187; <a href="{$DIR_WS_BASE}Lodging/agents.html"> Agents</a></div>  -->
+		<div class="submenuentry"> &#187; <a href="{$DIR_WS_BASE}Lodging/sidetrips.html" title="Great places to visit in this region of Mexico."> Regional</a></div>
+	{/if}
+		<div class="submenugroup"> GAYGUIDE</div>
+		<div class="submenuentry"> &#187; <a href="{$DIR_WS_BASE}Daylife/" title="Daylife at the beach and on gay day tours"> Daylife</a></div>
+		<div class="submenuentry"> &#187; <a href="{$DIR_WS_BASE}Nightlife/" title="Vallarta's gay nightlife is rich and varied."> Nightlife</a></div>
+		<div class="submenuentry"> &#187; <a href="{$DIR_WS_BASE}Acts/" title="Vallarta's featured Entertainers."> Shows</a></div>
+		<div class="submenuentry"> &#187; <a href="{$DIR_WS_BASE}Restaurants/" title="PV has some fabulous places to eat."> Restaurants</a></div>
+		<div class="submenuentry"> &#187; <a href="{$DIR_WS_BASE}GymSpa/" title="Our list of gyms, spas and masseurs."> Gym &amp; Spa</a></div>
+		<div class="submenuentry"> &#187; <a href="{$DIR_WS_BASE}Galleries/" title="Fine art galleries abound in Puerto Vallarta"> Art Galleries</a></div>
+		<div class="submenuentry"> &#187; <a href="{$DIR_WS_BASE}Shopping/" title="From beachware to home decorating"> Shopping</a></div>
+		<div class="submenuentry"> &#187; <a href="{$DIR_WS_BASE}Services/" title="Misc services of interest."> Services</a></div>
+		<div class="mainmenuentry"> &#187; <a href="{$DIR_WS_BASE}GeneralInfo/" title="Some orientation on the non-gay part of Vallarta."> General Info</a></div>
 	</div>
 </div>
 	
@@ -61,7 +106,7 @@
   	<div id="underheader">
 
 
-		<div id="colwrap1">
+		<div id="LeftSide">
 	  		<div id="GayGuideVallarta_sidemenu">
 	  		{if $whatmenu eq "short"}
 	  			<div class="mainmenuentry"> &#187; <a href="{$DIR_WS_BASE}Lodging/gay.html" title="Lodging information for tourists staying in gay Puerto Vallarta."> Lodging</a></div>
@@ -94,7 +139,7 @@
 				<a href="{$DIR_WS_BASE}gayPVguide/" title=""><img style="width: 180px;height: auto;" src="{$DIR_WS_BASE}includes/Images/GetPrintEdition.jpg" /></a>
 <!--				<a href="{$DIR_WS_BASE}Admin/"><img width="75" height="75" border="0" src="{$DIR_WS_BASE}images/IGGWlogo.gif" /></a>
 -->			</div>
-			{include file="ggv10_right_content.tpl"}</div></div>
+			{include file="ggv10_right_content.tpl"}
 
 		</div>
 
@@ -130,4 +175,4 @@ border: none;
 				</p>
 			</div>
 			<br clear="right" />
-			{*/strip*}
+			{/strip}

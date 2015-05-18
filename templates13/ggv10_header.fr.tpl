@@ -56,7 +56,7 @@
     </div>
 	<br class="clearfloat" />
   	<div id="underheader">
-		<div id="colwrap1">
+		<div id="LeftSide">
 	  		<div id="GayGuideVallarta_sidemenu">
 	  		{if $whatmenu eq "short"}
 	  			<div class="mainmenuentry"> &#187; <a href="{$DIR_WS_BASE}Lodging/gay.html" title="Renseignements de logements touristiques � gay Puerto Vallarta"> Logement</a></div>
