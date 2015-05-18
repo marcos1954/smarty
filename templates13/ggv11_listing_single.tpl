@@ -196,7 +196,6 @@
 								<div  class="eventOneDesc">
 									{$entry.descEventLong|nl2br}
 								</div>
-								<br clear="left" />
 							</div>
                             
                             
