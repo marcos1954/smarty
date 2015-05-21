@@ -8,7 +8,7 @@
 {/if}
 
 {if not ($main_content == NULL) }
-<div id="main_content" style="width: 705px">
+<div id="main_content">
 	{$rightside}
 	{$main_content}
 </div>

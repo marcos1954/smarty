@@ -1,273 +1,226 @@
 {config_load file="ggv_dayCal.conf"}
 {include file=$headerfilename}
-<div id="topcontent">
-<h1>{$H1}</h1>
-
-<div style="padding: 0px 0px 0px 20px;">
-	<table  border="0">
-		<tr>
-			<td width=170 height=160 align="center" nowrap valign="top">
-				<div ><img style="padding: 0 !important;" src="Images/Lobby-Sunset-Rain.jpg" width=170 height=130 /></div>
-				<center>
-					<span class="eventdaysunset" style="color:black;">
-						View Sunset today at
-				<br />
-						Signature Lounge
-					<br />
-					{$sunset_today}.</span>
-				</center>
-			</td>
-			<td width="360" align="center" valign="bottom" nowrap><br />
-				<a href="{$yesterdayHREF}"><img style="padding-left: 0px;" class="buttons" border="0"   src="Images/leftbutton.gif"  width="10" height="15"></a>
-					&nbsp;
-				<span class="dayviewdate">{$dateformatted}</span>
-					&nbsp;
-				<a href="{$tommorrowHREF}"><img style="padding-left: 0px;"  class="buttons" border="0"   src="Images/rightbutton.gif" width="10" height="15"></a>
-					<br /><br />
-					{$date_picker}
-			</td>
-
-			<td nowrap width="170" align="right" valign="bottom">
-				<span style="font-family: Arial; font-size: 10pt; font-weight: bold">
-				Other Calendar Info</span><span style="font-family: Arial; font-size: 10pt; font-weight: normal"><br>
-				{$monthlyCalendarLink}
-				<br>
-				{$pdfCalendarLink}
-				</span>
-			</td>
-		</tr>
-	</table>
+<div id="topcontent" class="dayCalendar">
+	<h1>{$H1}</h1>
+	
+	<div id="dayCalControlBlock">
+		<ul>
+			<li id="day_events_link" >events</li>
+			<li id="day_tours_link"  >tours</li>
+			<li id="day_promo_link"  >promos</li>
+			<li id="day_rest_link"   >restaurant specials</li>
+			<li id="day_feliz_link"  >happy hours</li>
+			<li id="day_bars_link"   >bar specials</li>
+			<li id="day_all_link" class="selected"   >all</li>
+		</ul>
+		 
+	</div>
+	<div id="ggv_underline" ></div> 
 </div>
-</div>
-
-<br clear="all" />
-<br class="clearfloats" />
 
 <div id="main_content">
-	<div id="calday_leftcolumn">
-				{if not ($special_events == NULL) }
-				 <h4>{$transSpecialEvent}</h4>
-				  {foreach from=$special_events item=evnt}
-					{$evnt.eidAnchor}
-					<table><tr>
-						<td class="dayeventname" height="1%" align="left">
-							<b>{$evnt.nameEvent}</b>
-							{if $evnt.locationEvent != ''}
-								<span class="eventdaylocation"><br />  &nbsp;&nbsp;@ {$evnt.locationEvent}</span>
-							{/if}
-						</td>
-					</tr><tr>
-						<td class="eventdaytime" valign=top height="99%">
-						<div style="margin-left:10pt">
-							<b><span class="eventdaycat">{$evnt.catnameEvent}</span></b>
-							
-	 						{if  $evnt.timesEvent != ''}
-	 							<br /><span class="eventdaytime">{$evnt.timesEvent} </span>
-	 						{/if}<br />
-							{$evnt.moreEventLink} 
-                            {if  $evnt.descEvent != ''}
-                                <br><span class="eventdaydesc">{$evnt.descEvent}</span>
-                            {/if}
-						</div>
-						</td>
-					</tr></table>
-				  {/foreach}
-				{/if}
+	<div class="eventDayColumn">
+		{if not ($special_events == NULL) }
 
-				{if not ($tour_events == NULL) }
-				  <h4>{$transGayToursToday}</h4>
-				  {foreach from=$tour_events item=evnt}
-					{$evnt.eidAnchor}
-					<table><tr>
-						<td class="dayeventname" height="1%" align="left">
-							<b>{$evnt.nameEvent}</b>
-							{if $evnt.locationEvent != ''}
-								<span class="eventdaylocation"><br />  &nbsp;&nbsp;@ {$evnt.locationEvent}</span>
-							{/if}
-						</td>
-					</tr><tr>
-						<td class="eventdaytime" valign=top height="99%">
-						<div style="margin-left:10pt">
-							<b><span class="eventdaycat">{$evnt.catnameEvent}</span></b>
-							 <br />
-	 						{if  $evnt.timesEvent != ''}
-	 							<span class="eventdaytime">{$evnt.timesEvent} <br></span>
-	 						{/if}
-							{$evnt.moreEventLink}<br />
-							<span class="eventdaydesc">{$evnt.descEvent}</span>
-							&nbsp;</div>
-						</td>
-					</tr></table>
-				  {/foreach}
-				{/if}
+		<div id="eventDaySpecialEvents" class="eventDayGroup">
+			<h4>{$transSpecialEvent}</h4>{foreach from=$special_events item=evnt} {$evnt.eidAnchor}
 
-				{if not ($today_events == NULL) }
-				  <h4>{$transEventsNoStartTime}</h4>
-				  {foreach from=$today_events item=evnt}
-					{$evnt.eidAnchor}
-					<table><tr>
-						<td class="dayeventname" height="1%" align="left">
-							<b>{$evnt.nameEvent}</b>
-							{if $evnt.locationEvent != ''}
-								<span class="eventdaylocation"><br />  &nbsp;&nbsp;@ {$evnt.locationEvent}</span>
-							{/if}
-						</td>
-					</tr><tr>
-						<td class="eventdaytime" valign=top height="99%">
-						<div style="margin-left:10pt">
-							<b><span class="eventdaycat">{$evnt.catnameEvent}</span></b>
-							<br />
-							{$evnt.moreEventLink} <br />
-	 						{if  $evnt.timesEvent != ''}
-	 							<span class="eventdaytime">{$evnt.timesEvent} <br></span>
-	 						{/if}
-							<span class="eventdaydesc">{$evnt.descEvent}</span>
-							&nbsp;</div>
-						</td>
-					</tr></table>
-				  {/foreach}
-				{/if}
+			<div class="eventDayName">
+				{$evnt.nameEvent}
+			</div>{if $evnt.locationEvent != ''}
 
-				{if not ($events == NULL) }
-				  <h4>{$transEventsByStartTime}</h4>
-				  {foreach from=$events item=evnt}
-					{$evnt.eidAnchor}
-					<table><tr>
-						<td class="dayeventname" height="1%" align="left">
-							<b>{$evnt.nameEvent}</b>
-							{if $evnt.locationEvent != ''}<span class="eventdaylocation"><br />  &nbsp;&nbsp;@ {$evnt.locationEvent}</span>{/if}
-						</td>
-					</tr><tr>
-						<td class="eventdaytime" valign=top height="99%">
-							<div style="margin-left:10pt">
-							<b><span class="eventdaycat">{$evnt.catnameEvent}</span></b>
-							<br />
-							
-	 						{if  $evnt.timesEvent != ''}
-	 							<span class="eventdaytime">{$evnt.timesEvent} <br></span>
-	 						{/if}
-							{$evnt.moreEventLink} <br />
-							<span class="eventdaydesc">{$evnt.descEvent}</span>
-							&nbsp;</div>
-						</td>
-					</tr></table>
-				  {/foreach}
-				{/if}
+			<div class="eventDayLocation">
+				&nbsp;&nbsp;@ {$evnt.locationEvent}
+			</div>{/if}
 
-				{if not ($restaurant_events == NULL) }
-				  <h4>{$transRestaurantSpecials}</h4>
-				  {foreach from=$restaurant_events item=evnt}
-					{$evnt.eidAnchor}
-					<table><tr>
-						<td class="dayeventname" height="1%" align="left">
-							<b>{$evnt.nameEvent}</b>
-							{if $evnt.locationEvent != ''}<span class="eventdaylocation"><br />  &nbsp;&nbsp;@ {$evnt.locationEvent}</span>{/if}
-						</td>
-					</tr><tr>
-						<td class="eventdaytime" valign=top height="99%">
-							<div style="margin-left:10pt">
-							<b><span class="eventdaycat">{$evnt.catnameEvent}</span></b>
-							<br />
-							
-	 						{if  $evnt.timesEvent != ''}
-	 							<span class="eventdaytime">{$evnt.timesEvent} <br></span>
-	 						{/if}
-							{$evnt.moreEventLink} <br />
-							<span class="eventdaydesc">{$evnt.descEvent}</span>
-							&nbsp;</div>
-						</td>
-					</tr></table>
-				  {/foreach}
-				{/if}
+			<div class="eventDayCat">
+				{$evnt.catnameEvent}
+			</div>{if $evnt.timesEvent != ''}
 
-				{if not ($closed_list == NULL) }
-				  <h4>{$transClosedToday}</h4>
-				  {foreach from=$closed_list item=evnt}
-					{$evnt.eidAnchor}
-					<table><tr>
-						<td class="dayeventname" height="1%" align="left">
-							<b>{$evnt.locationEvent}</b>
-						</td>
-					</tr><tr>
-						<td class="eventdaytime" valign=top height="99%">
-							<div style="margin-left:10pt">
-							<b><span class="eventdaycat">{$evnt.catnameEvent}</span></b>
-							<br />
-							
-	 						{if  $evnt.timesEvent != ''}
-	 							<span class="eventdaytime">{$evnt.timesEvent} <br></span>
-	 						{/if}
-							{$evnt.moreEventLink} <br />
-							<span class="eventdaydesc">{$evnt.descEvent}</span>
-							&nbsp;</div>
-						</td>
-					</tr></table>
-				  {/foreach}
-				{/if}
+			<div class="eventDayTime">
+				{$evnt.timesEvent}
+			</div>{/if} {$evnt.moreEventLink} {if $evnt.descEvent != ''}
 
-	</div>
+			<div class="eventDayDesc">
+				{$evnt.descEvent}
+			</div>{/if} {/foreach}
+		</div>{/if} {if not ($tour_events == NULL) }
 
-	<div id="calday_rightcolumn">
+		<div id="eventDayTours" class="eventDayGroup">
+			<h4>{$transGayToursToday}</h4>{foreach from=$tour_events item=evnt} {$evnt.eidAnchor}
 
-				{if ($bars_events != NULL) }
-				  <h4>{$transBarSpecialsToday}</h4>
+			<div class="eventDayName">
+				{$evnt.nameEvent}
+			</div>{if $evnt.locationEvent != ''}
 
-				  {foreach from=$bars_events item=evnt}
-					{$evnt.eidAnchor}
-					<table><tr>
-						<td class="dayeventname" height="1%" align="left">
-							<b>{$evnt.nameEvent}</b>
-							{if $evnt.locationEvent != ''}
-								<span class="eventdaylocation"><br />  &nbsp;&nbsp;@ {$evnt.locationEvent}</span>
-							{/if}
-						</td>
-					</tr><tr>
-						<td class="eventdaytime" valign=top height="99%">
-							<div style="margin-left:10pt">
-							<b><span class="eventdaycat">{$evnt.catnameEvent}</span></b>
-							<br />
-							
-	 						{if  $evnt.timesEvent != ''}
-	 							<span class="eventdaytime">{$evnt.timesEvent} <br></span>
-	 						{/if}
-							{$evnt.moreEventLink} <br />
-							<span class="eventdaydesc">{$evnt.descEvent}</span>
-							&nbsp;</div>
-						</td>
-					</tr></table>
-				  {/foreach}
-				{/if}
+			<div class="eventDayLocation">
+				&nbsp;&nbsp;@ {$evnt.locationEvent}
+			</div>{/if}
 
-				{if ($bars_events != NULL) || ($happy_events != NULL) }
-				  <h4>{$transHappyHoursToday}</h4>
-				  {foreach from=$happy_events item=evnt}
-					{$evnt.eidAnchor}
-					<table><tr>
-						<td class="dayeventname" height="1%" align="left">
-							<b>{$evnt.nameEvent}</b>
-							{if $evnt.locationEvent != ''}
-								<span class="eventdaylocation"><br />  &nbsp;&nbsp;@ {$evnt.locationEvent}</span>
-							{/if}
-						</td>
-					</tr><tr>
-						<td class="eventdaytime" valign=top height="99%">
-							<div style="margin-left:10pt">
-							<b><span class="eventdaycat">{$evnt.catnameEvent}</span></b>
-							<br />
-							
-	 						{if  $evnt.timesEvent != ''}
-	 							<span class="eventdaytime">{$evnt.timesEvent} <br></span>
-	 						{/if}
-							{$evnt.moreEventLink} <br />
-							<span class="eventdaydesc">{$evnt.descEvent}</span>
-							&nbsp;</div>
-						</td>
-					</tr></table>
-				  {/foreach}
-				{/if}
+			<div class="eventDayCat">
+				{$evnt.catnameEvent}
+			</div>{if $evnt.timesEvent != ''}
 
-	</div> <!-- end right column of center -->
-</div>  <!-- end center -->
+			<div class="eventDayTime">
+				{$evnt.timesEvent}
+			</div>{/if} {$evnt.moreEventLink} {if $evnt.descEvent != ''}
+
+			<div class="eventDayDesc">
+				{$evnt.descEvent}
+			</div>{/if} {/foreach}
+		</div>{/if} {if not ($today_events == NULL) }
+
+		<div id="eventDayNoStart" class="eventDayGroup">
+			<h4>{$transEventsNoStartTime}</h4>
+			
+			{foreach from=$today_events item=evnt} {$evnt.eidAnchor}
+
+			<div class="eventDayName">
+				{$evnt.nameEvent}
+			</div>{if $evnt.locationEvent != ''}
+
+			<div class="eventDayLocation">
+				&nbsp;&nbsp;@ {$evnt.locationEvent}
+			</div>{/if}
+
+			<div class="eventDayCat">
+				{$evnt.catnameEvent}
+			</div>{if $evnt.timesEvent != ''}
+
+			<div class="eventDayTime">
+				{$evnt.timesEvent}
+			</div>{/if} {$evnt.moreEventLink} {if $evnt.descEvent != ''}
+
+			<div class="eventDayDesc">
+				{$evnt.descEvent}
+			</div>{/if} {/foreach}
+		</div>{/if}
+		
+		{if not ($events == NULL) }
+
+		<div id="eventDayStart" class="eventDayGroup">
+			<h4>{$transEventsByStartTime}</h4>{foreach from=$events item=evnt} {$evnt.eidAnchor}
+
+			<div class="eventDayName">
+				{$evnt.nameEvent}
+			</div>{if $evnt.locationEvent != ''}
+
+			<div class="eventDayLocation">
+				&nbsp;&nbsp;@ {$evnt.locationEvent}
+			</div>{/if}
+
+			<div class="eventDayCat">
+				{$evnt.catnameEvent}
+			</div>{if $evnt.timesEvent != ''}
+
+			<div class="eventDayTime">
+				{$evnt.timesEvent}
+			</div>{/if} {$evnt.moreEventLink} {if $evnt.descEvent != ''}
+
+			<div class="eventDayDesc">
+				{$evnt.descEvent}
+			</div>{/if} {/foreach}
+		</div>{/if} {if not ($closed_list == NULL) }
+
+		<div id="eventDayClosed" class="eventDayGroup">
+			<h4>{$transClosedToday}</h4>{foreach from=$closed_list item=evnt} {$evnt.eidAnchor}
+
+			<div class="eventDayName">
+				{$evnt.nameEvent}
+			</div>{if $evnt.locationEvent != ''}
+
+			<div class="eventDayLocation">
+				&nbsp;&nbsp;@ {$evnt.locationEvent}
+			</div>{/if}
+
+			<div class="eventDayCat">
+				{$evnt.catnameEvent}
+			</div>{if $evnt.timesEvent != ''}
+
+			<div class="eventDayTime">
+				{$evnt.timesEvent}
+			</div>{/if} {$evnt.moreEventLink} {if $evnt.descEvent != ''}
+
+			<div class="eventDayDesc">
+				{$evnt.descEvent}
+			</div>{/if} {/foreach}
+		</div>{/if}
+
+		{if not ($restaurant_events == NULL) }
+		<div id="eventDayRest" class="eventDayGroup">
+			<h4>{$transRestaurantSpecials}</h4>{foreach from=$restaurant_events item=evnt} {$evnt.eidAnchor}
+
+			<div class="eventDayName">
+				{$evnt.nameEvent}
+			</div>{if $evnt.locationEvent != ''}
+
+			<div class="eventDayLocation">
+				&nbsp;&nbsp;@ {$evnt.locationEvent}
+			</div>{/if}
+
+			<div class="eventDayCat">
+				{$evnt.catnameEvent}
+			</div>{if $evnt.timesEvent != ''}
+
+			<div class="eventDayTime">
+				{$evnt.timesEvent}
+			</div>{/if} {$evnt.moreEventLink} {if $evnt.descEvent != ''}
+
+			<div class="eventDayDesc">
+				{$evnt.descEvent}
+			</div>{/if} {/foreach}
+		</div>{/if} {if ($bars_events != NULL) }
+
+		<div id="eventDayBarSpecials" class="eventDayGroup">
+			<h4>{$transBarSpecialsToday}</h4>{foreach from=$bars_events item=evnt} {$evnt.eidAnchor}
+
+			<div class="eventDayName">
+				{$evnt.nameEvent}
+			</div>{if $evnt.locationEvent != ''}
+
+			<div class="eventDayLocation">
+				&nbsp;&nbsp;@ {$evnt.locationEvent}
+			</div>{/if}
+
+			<div class="eventDayCat">
+				{$evnt.catnameEvent}
+			</div>{if $evnt.timesEvent != ''}
+
+			<div class="eventDayTime">
+				{$evnt.timesEvent}
+			</div>{/if} {$evnt.moreEventLink} {if $evnt.descEvent != ''}
+
+			<div class="eventDayDesc">
+				{$evnt.descEvent}
+			</div>{/if} {/foreach}
+		</div>{/if} {if ($bars_events != NULL) || ($happy_events != NULL) }
+
+		<div id="eventDayFeliz" class="eventDayGroup">
+			<h4>{$transHappyHoursToday}</h4>{foreach from=$happy_events item=evnt} {$evnt.eidAnchor}
+
+			<div class="eventDayName">
+				{$evnt.nameEvent}
+			</div>{if $evnt.locationEvent != ''}
+
+			<div class="eventDayLocation">
+				&nbsp;&nbsp;@ {$evnt.locationEvent}
+			</div>{/if}
+
+			<div class="eventDayCat">
+				{$evnt.catnameEvent}
+			</div>{if $evnt.timesEvent != ''}
+
+			<div class="eventDayTime">
+				{$evnt.timesEvent}
+			</div>{/if} {$evnt.moreEventLink} {if $evnt.descEvent != ''}
+
+			<div class="eventDayDesc">
+				{$evnt.descEvent}
+			</div>{/if} {/foreach}
+		</div>{/if}
+	</div><!-- end right column of center -->
+</div><!-- end center -->
+
 <!-- end core -->
 
 {if not ($ads180x400 == NULL) }
@@ -279,10 +232,6 @@
 			<br /><br />
 		{/foreach}
 	</div>
-{else}
-    <p>
-     	<img 	src="{$DIR_WS_BASE}includes/Images/GayGuideVallarta_r2_c3.gif"  id="GayGuideVallarta_r2_c3"  alt="" />
-    </p>
 {/if}
 
 

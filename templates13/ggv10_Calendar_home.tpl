@@ -23,7 +23,7 @@
 		
 <div id="Listing_right_column_pix" style="background-color: none;"> 
 				
-				<div style="margin-left: 14px;"	>
+				<div class="lodgingSearchBox" style="margin-left: 14px;"	>
 				<a href="../pdf" title="Print your calendar" ><img src="../includes/Images/print_your_calendar.gif" alt="Print your calendar" /></a>
 				</div>	
 				
@@ -46,10 +46,11 @@
 					And, you'll find a detailed and compact printout of everything going on during your vacation
 					<a href="{$URL_PDF_CALENDAR}">here</a>.
 					</p>
-				</div>
+					
+º				</div>
 				-->
 
-				<br clear="all" />
+				<br clear="right" />
 
 				<br />
 				<div style="width: 180; margin-left:14px;">

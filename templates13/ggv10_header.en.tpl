@@ -24,10 +24,11 @@
 
 <meta name="google-site-verification" content="oVWtUoxAz0oHmc7Ul2pjLnh5-RC-ej95h71EyU98omc" />
 </head>
+
 <body>
 <div class="mobileToolbar">
 	<div id="undermenu-link">
-		<a>menu</a>
+		<a><img src="/includes/Images/download.png" height=25 width=auto></a>
 	</div>
 		<div class="lang-links">
 		{$LANG_FLAGS}&nbsp;{$translatemenulink}
@@ -41,8 +42,7 @@
 
 </div>
 <div id="under_menu">
-	hello
-	<div>
+	<div id="undermenu-box">
 	{if $whatmenu eq "short"}
 		<div class="mainmenuentry"> &#187; <a href="{$DIR_WS_BASE}Lodging/gay.html" title="Lodging information for tourists staying in gay Puerto Vallarta."> Lodging</a></div>
 	{else}
@@ -68,8 +68,15 @@
 		<div class="submenuentry"> &#187; <a href="{$DIR_WS_BASE}Shopping/" title="From beachware to home decorating"> Shopping</a></div>
 		<div class="submenuentry"> &#187; <a href="{$DIR_WS_BASE}Services/" title="Misc services of interest."> Services</a></div>
 		<div class="mainmenuentry"> &#187; <a href="{$DIR_WS_BASE}GeneralInfo/" title="Some orientation on the non-gay part of Vallarta."> General Info</a></div>
+		<div class="submenugroup"> EVENTS</div>
+		<div class="submenuentry"> &#187; <a href="{$DIR_WS_BASE}Calendar/" title="Gay Vallarta's Major Events">Major</a></div>
+		<div class="submenuentry"> &#187; <a href="{$DIR_WS_BASE}Calendar/index.php?display=day" title="Gay Vallarta's Events Today">Today</a></div>
+		<div class="submenugroup"> MAP</div>
+		<div class="submenuentry"> &#187; <a href="{$DIR_WS_BASE}GayPVMap/" title="Gay Vallarta's Full Map">Gay PVR Map</a></div>
 	</div>
 </div>
+
+<div id="scrollableBlock">
 	
 <div id="main">
 	{if $TOPads950x150 != ''}
@@ -88,17 +95,16 @@
 
 	<div id="GayGuideVallarta_topmenu">
 		<div class="topmenu-text">
-		<a href="{$DIR_WS_BASE}" title="Home - Gay Guide Vallarta">Gay Vallarta</a>
-		&nbsp;&nbsp;|&nbsp;&nbsp;
-		<a href="{$DIR_WS_BASE}Calendar/" title="Gay Vallarta's Calendar">Calendar</a>
-		&nbsp;&nbsp;|&nbsp;&nbsp;
-		<a href="{$DIR_WS_BASE}GayPVMap/" title="Maps of Gay Puerto Vallarta">Map</a>
-		&nbsp;&nbsp;|&nbsp;&nbsp;
-		<a href="{$DIR_WS_BASE}ggv_links.php" title="List of all gay Vallarta businesses, agents, groups and links to their websites">Links</a>
-		&nbsp;&nbsp;|&nbsp;&nbsp;
-		<a href="{$DIR_WS_BASE}gayPVguide/" title="Our printed edition.  Download or find advertising information.">Guidebook</a>
-		&nbsp;&nbsp;|&nbsp;&nbsp;<a href="{$DIR_WS_BASE}/?forcemobile=true" title="mobile version of our website">Mobile</a>
-		
+			<a href="{$DIR_WS_BASE}" title="Home - Gay Guide Vallarta">Gay Vallarta</a>
+			&nbsp;&nbsp;|&nbsp;&nbsp;
+			<a href="{$DIR_WS_BASE}Calendar/" title="Gay Vallarta's Calendar">Calendar</a>
+			&nbsp;&nbsp;|&nbsp;&nbsp;
+			<a href="{$DIR_WS_BASE}GayPVMap/" title="Maps of Gay Puerto Vallarta">Map</a>
+			&nbsp;&nbsp;|&nbsp;&nbsp;
+			<a href="{$DIR_WS_BASE}ggv_links.php" title="List of all gay Vallarta businesses, agents, groups and links to their websites">Links</a>
+			&nbsp;&nbsp;|&nbsp;&nbsp;
+			<a href="{$DIR_WS_BASE}gayPVguide/" title="Our printed edition.  Download or find advertising information.">Guidebook</a>
+			&nbsp;&nbsp;|&nbsp;&nbsp;<a href="{$DIR_WS_BASE}/?forcemobile=true" title="mobile version of our website">Mobile</a>
 		</div>
 	</div>
 
@@ -133,14 +139,13 @@
 	  			<div class="submenuentry"> &#187; <a href="{$DIR_WS_BASE}Shopping/" title="From beachware to home decorating"> Shopping</a></div>
 	  			<div class="submenuentry"> &#187; <a href="{$DIR_WS_BASE}Services/" title="Misc services of interest."> Services</a></div>
 	  			<div class="mainmenuentry"> &#187; <a href="{$DIR_WS_BASE}GeneralInfo/" title="Some orientation on the non-gay part of Vallarta."> General Info</a></div>
+
 	  		</div>
 			<div id="GayGuideVallarta_r3_c1"></div>
 			<div id="LeftColumnContent" >
 				<a href="{$DIR_WS_BASE}gayPVguide/" title=""><img style="width: 180px;height: auto;" src="{$DIR_WS_BASE}includes/Images/GetPrintEdition.jpg" /></a>
-<!--				<a href="{$DIR_WS_BASE}Admin/"><img width="75" height="75" border="0" src="{$DIR_WS_BASE}images/IGGWlogo.gif" /></a>
--->			</div>
+			</div>
 			{include file="ggv10_right_content.tpl"}
-
 		</div>
 
 
@@ -150,7 +155,6 @@
 {literal}
 <style>
 .cse .gsc-control-cse, .gsc-control-cse {
-/*background-color: rgb(255, 249, 245)!important;*/
 border: none;
 }
 </style>
@@ -170,9 +174,7 @@ border: none;
 
 			</div>
 			<div id="breadcrumbs">
-        		<p class="breadcrumbs">
-                {$BREAD_CRUMBS_STRING}
-				</p>
+        		<p class="breadcrumbs">{$BREAD_CRUMBS_STRING}</p>
 			</div>
 			<br clear="right" />
 			{*/strip*}
