@@ -1,7 +1,20 @@
 {config_load file="ggv_dayCal.conf"}
 {include file=$headerfilename}
 <div id="topcontent" class="dayCalendar">
+
 	<h1>{$H1}</h1>
+	
+    <form id="eventDayDate">
+		<input type="hidden" name="eventDayDate" id="eventDayDate" />
+	</form>	
+	
+	<div id="eventDaySunset">
+		<div id="eventDaySunsetText">{$dateformatted}<br>Sunset today is at {$sunset_today}</div>
+		<div id="eventDaySunsetTease">Everyday in Gay Puerto Vallarta you will find so many things to do.</div>
+		<img id="eventDaySunsetImage" src="../images/sunset.jpg" />
+	</div>
+		
+
 	
 	<div id="dayCalControlBlock">
 		<ul>
@@ -70,10 +83,11 @@
 			</div>{/if} {/foreach}
 		</div>{/if} {if not ($today_events == NULL) }
 
-		<div id="eventDayNoStart" class="eventDayGroup">
-			<h4>{$transEventsNoStartTime}</h4>
+		<div id="eventDayStart" class="eventDayGroup">
+			<h4>{$transEventsByStartTime}</h4>
 			
-			{foreach from=$today_events item=evnt} {$evnt.eidAnchor}
+			{foreach from=$today_events item=evnt}
+			{$evnt.eidAnchor}
 
 			<div class="eventDayName">
 				{$evnt.nameEvent}
@@ -94,12 +108,8 @@
 			<div class="eventDayDesc">
 				{$evnt.descEvent}
 			</div>{/if} {/foreach}
-		</div>{/if}
-		
-		{if not ($events == NULL) }
 
-		<div id="eventDayStart" class="eventDayGroup">
-			<h4>{$transEventsByStartTime}</h4>{foreach from=$events item=evnt} {$evnt.eidAnchor}
+			{foreach from=$events item=evnt} {$evnt.eidAnchor}
 
 			<div class="eventDayName">
 				{$evnt.nameEvent}

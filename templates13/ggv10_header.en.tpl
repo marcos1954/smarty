@@ -10,10 +10,9 @@
 
 {#extraCSS#}
 
-<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="../js/jquery.js"></script>
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js"></script>
 <script language="JavaScript" type="text/javascript" src="../js/ggv_main.js"></script> 
-<script language="JavaScript" src="../js/ggv_dates.js" type="text/javascript"></script>
 
 {$headerExtra}
 
