@@ -3,10 +3,9 @@
 <div id="topcontent" class="dayCalendar">
 
 	<h1>{$H1}</h1>
-	
-    <form id="eventDayDate">
-		<input type="hidden" name="eventDayDate" id="eventDayDate" />
-	</form>	
+	     
+	<input type="hidden" name="eventDayDate" id="eventDayDateField" value="{$datevalue}" />
+    <div id="eventDayDate"></div>	
 	
 	<div id="eventDaySunset">
 		<div id="eventDaySunsetText">{$dateformatted}<br>Sunset today is at {$sunset_today}</div>
