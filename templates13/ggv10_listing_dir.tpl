@@ -41,7 +41,16 @@
 		   {/if}
 		   
 		   {if $entry.list_tags != ''}
-			  <p class="tags" >{$entry.list_tags}</p>
+			  <p class="tags" >
+				{if $entry.list_tags != ''}
+						{$entry.list_tags}
+				{/if}
+			  	{if $entry.list_tags != '' && $entry.features != ''}, {/if}
+						
+				{if $entry.features != ''}
+				   {$entry.features}
+				{/if}
+			  </p>
 		   {/if}
 
 		   {if $entry.list_more_url != ''}

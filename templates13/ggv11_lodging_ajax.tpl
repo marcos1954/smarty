@@ -1,96 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
-<head></head>
+<head>
+	<title></title>
+</head>
+
 <body>
+	<form method="post" action="{$action}" name="f1" id="f1">
+		<input id="hid" type="hidden" name="id" value="{$hotel_id}">
 
-<form method="POST" action="{$action}" name="f1">
-    <input id="hid" type="hidden" name="id" value="{$hotel_id}">
-     <div class="dateform" >
-       <table border="0"  cellpadding="2" cellspacing="0">
-         
-         <tr>
-           <td colspan="3">
-            <font face="Verdana" size="1">
-             <b>arrival date in Puerto Vallarta</b>
-            </font>
-           </td>
-           <td>
-            <font face="Verdana" size="1">
-             <b>nights</b>
-            </font>
-           </td>
-           <td>
-            <font face="Verdana" size="1">
-             <b>adults</b>
-            </font>
-           </td>
-           <td>
-           </td>
-         </tr>
-         
-         <tr>
-			<td colspan="3">
-			 <SELECT id=month NAME="month"  ONCHANGE="populate(this.form,this.selectedIndex);">
-			   {html_options options=$months selected=$mm}
-             </select>
-             <SELECT id=days NAME="day" >
-                {html_options options=$days selected=$dd}
-             </select>
-             <SELECT id=year NAME="year"  ONCHANGE="populate(this.form,this.form.month.selectedIndex);">
-              {html_options options=$years selected=$yy}
-             </SELECT>
-           &nbsp;&nbsp;&nbsp;
-          </td>
-          <td>
-           <select id=numDays size="1" name="stay_numDays" >
-            {html_options options=$day_choices selected=$stay_numDays}
-           </select>
-          </td>
-          <td>
-           <select id=numAdults size="1" name="stay_numAdults" >
-            {html_options options=$pax_choices selected=$stay_numAdults}
-           </select>
-          </td>
-          <td>
-           <input type="button"
-                  onclick="fetchLodgingInfo();"
-                class="submit1"
-                name="Fetch"
-                Value="refresh"
-               
-               >
-          </td>
-         </tr>
-        </table>
-       </center>
-      </div>
+		<div id="lodgingPrices-date-status">
+			<div id="vacation_calendar">{$vacation_calendar}</div>
 
-      <div class="radiobuttons" >
-            {html_radios name="R1" options=$currency1 selected=$ucurrency separator="&nbsp;"}
-            <br>
-            {html_radios name="R1" options=$currency2 selected=$ucurrency separator="&nbsp;"}
-      </div>
-     </form>
+			<div class="main">
+				<span class="name">{$hotel_name1}</span>
+				<br><br>
+				check-in: {$stay_checkin}
+				<br>
+				check-out: {$stay_checkout}
+				<br>
+				staying {$stay_numDays} nights
+				<br>
+				{$stay_numAdults} adults
+				<div class="currency" >
+					{$all_prices_in_currency}
+				</div>
+				<a class="change-dates" href="" >change vacation dates </a>
+			</div>
+		</div>
 
-     <div align="center">
-      <table width="600" border="0" cellspacing="3" >
-       <tr>
-        <td class="label center">room ref</td>
-        <td class="label left">room description</td>
-        <td class="label center amount" > avg day price<br>with tax</td>
-        <td class="label center amount" >total price<br>with tax</td>
-       </tr>
+		<div class="dateform">
+			<div class="numDays"> stay number of nights: <input id="numDays" size="2" value="{$stay_numDays}" name="stay_numDays"></div>
+			<div class="numAdults"> number of adults: <input id="numAdults" size="2" value="{$stay_numAdults}" name="stay_numAdults"></div>
 
-       {foreach from=$room_info_data item=entry}
-       
-       <tr>
-        <td class="data center">{$entry.room_label}</td>
-        <td class="data left">{$entry.room_desc}</td>
-        <td class="data right">{$entry.room_avg_price}</td>
-        <td class="data right">{$entry.room_total}</td>
-       </tr>
-       {/foreach}
-       
-      </table>
-     </div>
+			<div class="label"> select your check-in date: </div>
+			<input type="hidden" name="lodgingStartDate" id="lodgingStartDateField" value="{$stay_checkin}" />
+			<div id="lodgingStartDate" class="start_date"></div>
+			
+			<div class="label"> select your currency: </div>
+			<div class="radiobuttons">
+				{html_radios name="R1" options=$currency1 selected=$ucurrency separator="&nbsp;"}
+				{html_radios name="R1" options=$currency2 selected=$ucurrency separator="&nbsp;"}
+			</div>
+			
+
+			<div class="submit"><input type="button" onclick="fetchLodgingInfo();" class="submit1" name="Fetch" value="refresh"></div>
+
+		</div>
+	</form>
+
+	<div id="lodgingPrices">
+		{foreach from=$room_info_data item=entry}
+
+		<div class="results">
+			<div class="pricebox">
+				<div class="total">
+					{$entry.room_total}
+				</div>
+
+				<div class="avg">
+					<span>per&nbsp;day:</span> {$entry.room_avg_price}
+				</div>
+			</div>
+
+			<div class="roomlabel">
+				<span>room type:</span> {$entry.room_label}
+			</div>
+
+			<div class="desc">
+				<span>room desc:</span> {$entry.room_desc}
+			</div>
+		</div>{/foreach}
+	</div>
 </body>
 </html>

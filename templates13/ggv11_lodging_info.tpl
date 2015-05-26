@@ -1,6 +1,4 @@
-{config_load file="ggv_dayCal.conf"}
 {*strip*}
-{*debug*}
 {include file=$headerfilename}
 
      	<div id="main_content">
@@ -92,9 +90,7 @@
 					</p>
                  	<div id="ggv_descshort">{$lodging_descshort}</div>
      			</div>
-                <br clear="all" />
      		</div>  <!-- end of Listing_header -->
-	<br clear="all" />
 
 			<div id="ggv_combobox">
 	     		<div id="ggv_control">
@@ -107,7 +103,6 @@
 					<div id="ggv_rooms_link" class="linkbox"  onclick="chooseCtlBoxItem('ggv_rooms')">{$room_text|default:"prices"}</a></div>
 					<div id="ggv_about_link" class="linkbox{if $lodging_desclong == ''} empty{/if}"  onclick="chooseCtlBoxItem('ggv_about')">{$about_text|default:"about"}</a></div>
 					</div>
-	     		<br clear="all" />
 	     		<div id="ggv_underline" ></div>
 
 	     		<div id="ggv_flyer"  style="text-align: center;" class="ggv-ctlbox-content">
@@ -156,9 +151,6 @@
 		     	 	<h2 >Events Calendar</h2>
 	     			{if $list_rows_cal != array()}
 		 				{foreach from=$list_rows_cal item="entry"}
-                        
-                        
-                        
 							<div  class="eventOne">
 								<div class="eventOneFlyer">
 								{if isset($entry.flyer)}<img src="http://www.gayguidevallarta.com/img.io/timthumb.php?w=150&src={$entry.flyer}" /> {/if}
@@ -246,14 +238,15 @@
 					</div>
 
 					<div class="slider-navcontrols"></div>
+					
 					<div id="slider" class="flexslider">
 					  <ul class="slides">
 					  {foreach from=$pix item=picture}
 					  {if $picture != ''}
 						{if $picture.width < 722 }
-					   <li><img src="/img.io/timthumb.php?w={$picture.width}&src={$picture.src}" /></li> 
+					     <li><img src="/img.io/timthumb.php?w={$picture.width}&src={$picture.src}" /></li> 
 						{else}
-					  <li><img src="/img.io/timthumb.php?w=722&src={$picture.src}" /></li>
+					     <li><img src="/img.io/timthumb.php?w=722&src={$picture.src}" /></li>
 						{/if}
 					  {/if}
 					  {/foreach}
@@ -267,18 +260,15 @@
 				{/if}
 				</div>
 				
-			<div id="ggv_rooms" class="ggv-ctlbox-content">
-				<div id="lodging_ajax"></div>
-			  </div>
-			</div>
-				
-			<div id="ggv_videos"  class="ggv-ctlbox-content">
-                {if $list_video}
-                {$list_video}
-                {/if}
-			</div> 
-
-			
+				<div id="ggv_rooms" class="ggv-ctlbox-content">
+					<div id="lodging_ajax"></div>
+				</div>
+					
+				<div id="ggv_videos"  class="ggv-ctlbox-content">
+					{if $list_video}
+					{$list_video}
+					{/if}
+				</div> 
 		</div>
 	</div>
 {include file="ggv10_footer.tpl"}

@@ -1,4 +1,4 @@
-{*strip*}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+{strip}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
@@ -8,7 +8,7 @@
 
 <link rel="stylesheet" type="text/css" href="{$DIR_WS_BASE}css/GayGuideVallarta.css" media="all" />
 
-{#extraCSS#}
+{$cssExtra}
 
 <script type="text/javascript" src="../js/jquery.js"></script>
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js"></script>
@@ -147,33 +147,12 @@
 			{include file="ggv10_right_content.tpl"}
 		</div>
 
-
 		<div class="main_container">
 			<div id="searchbox">
-
-{literal}
-<style>
-.cse .gsc-control-cse, .gsc-control-cse {
-border: none;
-}
-</style>
-<script>
-(function() {
-  var cx = '016564231495750127829:fnjmdswjnro';
-  var gcse = document.createElement('script'); gcse.type = 'text/javascript';
-  gcse.async = true;
-  gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
-      '//www.google.com/cse/cse.js?cx=' + cx;
-  var s = document.getElementsByTagName('script')[0];
-  s.parentNode.insertBefore(gcse, s);
-})();
-</script>
-<gcse:search  linkTarget="_self"></gcse:search>
-{/literal}
-
+				{include file="googleSearch.tpl"}
 			</div>
 			<div id="breadcrumbs">
         		<p class="breadcrumbs">{$BREAD_CRUMBS_STRING}</p>
 			</div>
 			<br clear="right" />
-			{*/strip*}
+			{/strip}

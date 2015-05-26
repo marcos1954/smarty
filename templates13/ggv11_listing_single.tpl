@@ -1,5 +1,5 @@
 {config_load file="ggv_dayCal.conf"}
-{strip}
+{*strip*}
 {*debug*}
 {include file=$headerfilename}
 {if $dd_minus_one} <script>selectedIndex = {$dd_minus_one};</script>{/if}
@@ -285,4 +285,4 @@
 		</div>
 	</div>
 {include file="ggv10_footer.tpl"}
-{/strip}
+{*/strip*}
