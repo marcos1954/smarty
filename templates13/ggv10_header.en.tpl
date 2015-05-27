@@ -100,10 +100,19 @@
 			&nbsp;&nbsp;|&nbsp;&nbsp;
 			<a href="{$DIR_WS_BASE}GayPVMap/" title="Maps of Gay Puerto Vallarta">Map</a>
 			&nbsp;&nbsp;|&nbsp;&nbsp;
-			<a href="{$DIR_WS_BASE}ggv_links.php" title="List of all gay Vallarta businesses, agents, groups and links to their websites">Links</a>
+			
+			
+			<a href="{$DIR_WS_BASE}Photos/" title="Photos of Gay Puerto Vallarta">Photos & Videos</a>
 			&nbsp;&nbsp;|&nbsp;&nbsp;
+			
+						
+			<a href="{$DIR_WS_BASE}Social/" title="Gay Puerto Vallarta">Social</a>
+			&nbsp;&nbsp;|&nbsp;&nbsp;
+			
 			<a href="{$DIR_WS_BASE}gayPVguide/" title="Our printed edition.  Download or find advertising information.">Guidebook</a>
-			&nbsp;&nbsp;|&nbsp;&nbsp;<a href="{$DIR_WS_BASE}/?forcemobile=true" title="mobile version of our website">Mobile</a>
+			&nbsp;&nbsp;|&nbsp;&nbsp;
+			
+			<a href="{$DIR_WS_BASE}Advertise/" title=".">Advertise</a>
 		</div>
 	</div>
 

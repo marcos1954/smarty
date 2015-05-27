@@ -25,10 +25,15 @@
 							{$list_tagsicons}
 					    {/if}
 						{if $list_fb_url != ''}
-							  <img src="/images/facebookIcon.png" height=24 width=auto title="Facebook" />
+							  <a href="{$list_fb_url}"><img src="/images/facebookIcon.png" height=24 width=auto title="Facebook" /></a>
 						{/if}
+						
+						{if $list_tw_url != ''}
+							  <a href="{$list_tw_url}"><img src="/images/twitter.png" height=24 width=auto title="Facebook" /></a>
+						{/if}
+						
 						{if $list_ta_url != ''}
-							  <img src="/images/tripadvisor2.png" height=24 width=auto title="Reviewed on Tripadvisor" />
+							  <a href="{$list_ta_url}"><img src="/images/tripadvisor2.png" height=24 width=auto title="Reviewed on Tripadvisor" /></a>
 						{/if}
 					</p>
 						
@@ -60,6 +65,10 @@
      	                {/if}
 						{if $list_fb_url != ''}
      	                    <a class="listlink" href="{$list_fb_url}">{$list_fb_text}</a>&nbsp;&nbsp;
+     	                {/if}
+						
+						{if $list_tw_url != ''}
+     	                    <a class="listlink" href="{$list_tw_url}">{$list_tw_text}</a>&nbsp;&nbsp;
      	                {/if}
 						
 						{if $list_ta_url != ''}
