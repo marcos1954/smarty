@@ -1,4 +1,3 @@
-{*debug*}
 {include file=$headerfilename}
 
 <div id="Listing_right_column_pix">
@@ -88,6 +87,4 @@
 	<br clear="all">
 
 </div>
-
-
 {include file="ggv10_footer.tpl"}

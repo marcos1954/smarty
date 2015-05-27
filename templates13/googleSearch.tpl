@@ -17,4 +17,3 @@ border: none;
 </script>
 <gcse:search  linkTarget="_self"></gcse:search>
 {/literal}
-

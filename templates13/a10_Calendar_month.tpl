@@ -1,11 +1,10 @@
-{*debug*}
 {config_load file="ggv_dayCal.conf"}
 <html>
 <head>
 {$headerExtra}
 </head>
 <body>
-{strip}
+
 <div style="width: {$tablewidth}">
 	<div style="text-align: center; ">
 		<form name="jump-category" >
@@ -32,4 +31,3 @@
 		{$month_calendar}
 		</div>
 </div>
-{/strip}

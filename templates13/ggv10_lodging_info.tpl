@@ -305,4 +305,3 @@ function getYearsX() {
      {**********************  END MEAT  ************************}
 </div></div>
 {include file="ggv10_footer.tpl"}
-{*debug*}

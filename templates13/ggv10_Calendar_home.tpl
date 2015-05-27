@@ -1,9 +1,7 @@
-{*debug*}
 
 {config_load file="ggv_dayCal.conf"}
 {include file=$headerfilename}
 
-{*strip*}
 <div id="topcontent">
 	
 	<div style="float: right; display: inline; margin-right: 10px; width: 150px; background-color: white; margin-left: 20px; padding: 10px; text-align: center; line-height: 1.8em; border: solid black 1px;">
@@ -113,6 +111,4 @@
 		</tr></table>
 <br clear="all">
 </div> 
-{*/strip*}
-
 {include file="ggv10_footer.tpl"}

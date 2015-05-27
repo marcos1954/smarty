@@ -1,4 +1,3 @@
-{strip}
 {include file=$headerfilename}
 
 {if not ($topcontent == NULL) }
@@ -14,4 +13,3 @@
 </div>
 {/if}
 {include file="ggv10_footer.tpl"}
-{/strip}

@@ -1,4 +1,4 @@
-{strip}
+
 <div id="topcontent">
 		{$TXT_MAIN_DESCRIPTION}
 	</div>
@@ -110,4 +110,3 @@
    </div>
 
 {include file="ggv10_right_content.tpl"}
-{/strip}

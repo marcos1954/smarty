@@ -1,4 +1,4 @@
-{strip}
+
 {config_load file="ggv_dayCal.conf"}
 {include file="ggv_header.tpl"}
 <center>
@@ -247,5 +247,4 @@
 </table>
 </center>
 {include file="ggv_footer.tpl"}
-{/strip}
-{*debug*}   
+  

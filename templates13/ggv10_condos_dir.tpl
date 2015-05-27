@@ -1,6 +1,6 @@
 {config_load file="ggv_search.conf"}
 {include file=$headerfilename}
-{strip}
+
 <div id="topcontent" style="margin-bottom: 20px;">
 	<div style="float: right;" id="remote_search_box">
 		<div id="remote_search_form">
@@ -125,5 +125,5 @@
 
 
 {include file="ggv10_footer.tpl"}
-{/strip}
+
 {*debug*}

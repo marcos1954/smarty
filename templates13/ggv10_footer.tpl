@@ -1,4 +1,4 @@
-{*strip*}		<br clear="all" />
+		<br clear="all" />
 		</div>
 	</div>
 	<br clear="all" />

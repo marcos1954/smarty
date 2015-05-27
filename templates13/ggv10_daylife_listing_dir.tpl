@@ -1,4 +1,4 @@
-{strip}
+
 {include file=$headerfilename}
 
 	<div id="main_content">
@@ -126,4 +126,3 @@
 {include file="ggv10_right_content.tpl"}
 
 {include file="ggv10_footer.tpl"}
-{/strip}

@@ -1,6 +1,4 @@
 {config_load file="ggv_dayCal.conf"}
-{*strip*}
-{*debug*}
 {include file=$headerfilename}
 {if $dd_minus_one} <script>selectedIndex = {$dd_minus_one};</script>{/if}
      	<div id="main_content">
@@ -26,23 +24,19 @@
                             
 					    {/if}
 						{if $list_fb_url != ''}
-							  <img src="/images/facebookIcon.png" height=24 width=auto title="Facebook" />
+							  <a href="{$list_fb_url}"><img src="/images/facebookIcon.png" height=24 width=auto title="Facebook" /></a>
 						{/if}
 						
 						{if $list_tw_url != ''}
-							  <img src="/images/twitter.png" height=24 width=auto title="Twitter" />
+							  <a href="{$list_tw_url}"><img src="/images/twitter.png" height=24 width=auto title="Twitter" /></a>
 						{/if}
 						
 						{if $list_ta_url != ''}
-							  <img src="/images/tripadvisor2.png" height=24 width=auto title="Reviewed on Tripadvisor" />
-						{/if}
-                        
-                        {if $list_ol_url != ''}
-							  <img src="/images/icon_delivery.png" height=24 width=auto title="Delivery" />
+							  <a href="{$list_ta_url}"><img src="/images/tripadvisor2.png" height=24 width=auto title="Reviewed on Tripadvisor" /></a>
 						{/if}
                         
                         {if $list_url != ''}
-                              <img style="margin:1px;"src="/images/www.png" height=20 width=auto title="Has a Website" />
+                              <a href="{$list_url}"><img style="margin:1px;"src="/images/www.png" height=20 width=auto title="Has a Website" /></a>
                         {/if}
 					</p>
 					
@@ -285,4 +279,3 @@
 		</div>
 	</div>
 {include file="ggv10_footer.tpl"}
-{*/strip*}
