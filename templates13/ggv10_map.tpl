@@ -1,7 +1,7 @@
 {include file=$headerfilename}
 
 {if not ($topcontent == NULL) }
-	<div id="topcontent">
+	<div id="topcontent" class="gmap">
 		{$topcontent}
 	</div>
 {/if}
