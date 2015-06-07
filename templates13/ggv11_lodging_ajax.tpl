@@ -9,9 +9,9 @@
 		<input id="hid" type="hidden" name="id" value="{$hotel_id}">
 
 		<div id="lodgingPrices-date-status">
-			<div id="vacation_calendar">{$vacation_calendar}</div>
+			<div id="vacation_calendar"  {if $monthcount == 2}class="doublemonth"{/if}>{$vacation_calendar}</div>
 
-			<div class="main">
+			<div {if $monthcount == 2}class="main doublemonth"{else}class="main" {/if} >
 				<span class="name">{$hotel_name1}</span>
 				<br><br>
 				check-in: {$stay_checkin}
@@ -41,10 +41,8 @@
 				{html_radios name="R1" options=$currency1 selected=$ucurrency separator="&nbsp;"}
 				{html_radios name="R1" options=$currency2 selected=$ucurrency separator="&nbsp;"}
 			</div>
-			
 
-			<div class="submit"><input type="button" onclick="fetchLodgingInfo();" class="submit1" name="Fetch" value="refresh"></div>
-
+			<div class="submit"><input type="button" class="submit1" name="Fetch" value="refresh"></div>
 		</div>
 	</form>
 

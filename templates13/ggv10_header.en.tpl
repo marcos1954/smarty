@@ -10,9 +10,9 @@
 
 {$cssExtra}
 
-<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.1.js"></script>
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js"></script>
-<script language="JavaScript" type="text/javascript" src="../js/ggv_main.js"></script> 
+<script language="JavaScript" type="text/javascript" src="/js/ggv_main.js"></script> 
 
 {$headerExtra}
 
@@ -153,12 +153,12 @@
 			<div id="LeftColumnContent" >
 				<a href="{$DIR_WS_BASE}gayPVguide/" title=""><img style="width: 180px;height: auto;" src="{$DIR_WS_BASE}includes/Images/GetPrintEdition.jpg" /></a>
 			</div>
-			{include file="ggv10_right_content.tpl"}
+			{include file="ggv10_right_content.tpl" }
 		</div>
 
 		<div class="main_container">
 			<div id="searchbox">
-				{include file="googleSearch.tpl"}
+				{* include file="googleSearch.tpl" *}
 			</div>
 			<div id="breadcrumbs">
         		<p class="breadcrumbs">{$BREAD_CRUMBS_STRING}</p>

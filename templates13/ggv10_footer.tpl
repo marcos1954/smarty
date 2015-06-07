@@ -23,11 +23,11 @@
 	  {/if}
 	</div>
   </div>
-  
+<!--  
   {if not $NOjquery}
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
   {/if}
-  
+  -->
   <script type="text/javascript">
 	{literal}
 	  $().ready(function () {
