@@ -13,8 +13,9 @@
 		 </td>
 		 <td  width="200"  class="header" align="right">
 		  {$pdfCalendarLink}
-		 </td></tr></table>
-		 <br />
+		 </td></tr>
+		</table>
+		<br />
 
 		<div class="loader">{$ajaxOutput}</div>
 

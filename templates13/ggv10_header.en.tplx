@@ -27,7 +27,7 @@
 <body>
 <div class="mobileToolbar">
 	<div id="undermenu-link">
-		<a><img src="/includes/Images/download.png" height=25 width=auto></a>
+		<a><img src="/includes/Images/download.png" height="25" width="auto" /></a>
 	</div>
 		<div class="lang-links">
 		{$LANG_FLAGS}&nbsp;{$translatemenulink}
@@ -40,86 +40,8 @@
 	</div>
 
 </div>
-<div id="under_menu" class="{if $frontpage}{$frontpage}{/if}">
+<div id="under_menu">
 	<div id="undermenu-box">
-		
-	
-		<div align="center" style="padding-top:10px">
-			<a href="/"><img src="/m/gPVR.png" width="187" height="115" /></a>
-		</div>
-	
-		
-		
-		<div style="margin: 30px"></div>
-		<div class="button"  onclick="location.href='/Calendar/index.php?display=day';">
-			<a href="/Calendar/index.php?display=day" >Today</span>
-		</div>
-		
-		<div class="button"  onclick="location.href='/Mapa/gmap.php?cat=bars,rest,shop,hotel,atm,other&lang=en&cookieprefix=mGGV&target=_top';">
-			<a href="/Mapa/gmap.php?cat=bars,rest,shop,hotel,atm,other&lang=en&cookieprefix=mGGV&target=_top" >Map</span>
-		</div>
-		
-		<div class="button"  onclick="location.href='/Daylife/?forcemobile=true';">
-			<a href="/Daylife/" >Daylife</span>
-		</div>
-		
-		<div class="button"  onclick="location.href='/Nightlife/?forcemobile=true';">
-			<a href="/Nightlife/" >Nightlife</span>
-		</div>
-		
-		<div class="button"  onclick="location.href='/Acts/?forcemobile=true';">
-			<a href="/Acts/" >Shows</span>
-		</div>
-		
-		<div class="button"  onclick="location.href='/Restaurants/?forcemobile=true';">
-			<a href="/Restaurants/" >Restaurants</span>
-		</div>
-		
-		<div class="button"  onclick="location.href='/GymSpa/?forcemobile=true';">
-			<a href="/GymSpa/" >Gym &amp; Spa</span>
-		</div>
-		
-		<div class="button"  onclick="location.href='/Shopping/?forcemobile=true';">
-			<a href="/Shopping/" >Shopping</span>
-		</div>
-		
-		<div class="button"  onclick="location.href='/Services/?forcemobile=true';">
-			<a href="/Services/" >Services</span>
-		</div>
-		
-		<div style="margin-top: 50px;"></div>
-		
-		<div class="button"  onclick="location.href='/index.php?menu=true';">
-			<a href="/index.php?menu=true" >Gay PVR Intro</span>
-		</div>
-		
-		<div class="button"  onclick="location.href='/Lodging/gay.html?forcemobile=true';">
-			<a href="/Lodging/gay.html" >Lodging</span>
-		</div>
-		
-		<div class="button"  onclick="location.href='/?forcemobile=false';">
-			<a href="/?forcemobile=false" >Full Site</span>
-		</div>
-		
-		<div class="button"  onclick="location.href='http://i.gpvr.mx';">
-			<a href="http://i.gpvr.mx" >Web App</span>
-		</div>
-	
-	</div>
-	
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-	<!--	
 	{if $whatmenu eq "short"}
 		<div class="mainmenuentry"> &#187; <a href="{$DIR_WS_BASE}Lodging/gay.html" title="Lodging information for tourists staying in gay Puerto Vallarta."> Lodging</a></div>
 	{else}
@@ -151,10 +73,9 @@
 		<div class="submenugroup"> MAP</div>
 		<div class="submenuentry"> &#187; <a href="{$DIR_WS_BASE}GayPVMap/" title="Gay Vallarta's Full Map">Gay PVR Map</a></div>
 	</div>
--->
 </div>
 
-<div id="scrollableBlock" class="{if $frontpage}{$frontpage}{/if}">
+<div id="scrollableBlock">
 	
 <div id="main">
 	{if $TOPads950x150 != ''}
@@ -243,3 +164,9 @@
         		<p class="breadcrumbs">{$BREAD_CRUMBS_STRING}</p>
 			</div>
 			<br clear="right"/>
+			
+			
+			
+			
+			
+			

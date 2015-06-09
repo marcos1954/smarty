@@ -29,5 +29,7 @@
 			</div>
 		</form>
 		{$month_calendar}
-		</div>
+	</div>
 </div>
+</body>
+</html>
