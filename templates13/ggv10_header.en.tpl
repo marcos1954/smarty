@@ -9,7 +9,7 @@
 {$cssExtra}
 <link rel="stylesheet" type="text/css" href="{$DIR_WS_BASE}css/GayGuideVallarta.css" media="all" />
 
-<script type="text/javascript" src="//code.jquery.com/jquery-1.11.1.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js"></script>
 <script language="JavaScript" type="text/javascript" src="/js/ggv_main.js"></script> 
 
@@ -42,14 +42,12 @@
 <div id="under_menu" class="{if $frontpage}{$frontpage}{/if}">
 	<div id="undermenu-box">
 		
-	
 		<div align="center" style="padding-top:10px">
 			<a href="/"><img src="/m/gPVR.png" width="187" height="115" /></a>
 		</div>
-	
-		
 		
 		<div style="margin: 30px"></div>
+		
 		<div class="button"  onclick="location.href='/Calendar/index.php?display=day';">
 			<a href="/Calendar/index.php?display=day" >Today</span>
 		</div>
@@ -67,7 +65,6 @@
 		</div>
 		
 		<div style="margin-top: 50px;"></div>
-		
 		
 		<div class="button"  onclick="location.href='/Daylife/?forcemobile=true';">
 			<a href="/Daylife/" >Daylife</span>
@@ -210,10 +207,10 @@
 		</div>
 
 		<div class="main_container">
-			<div id="searchbox">
+<!--			<div id="searchbox">
 				{include file="googleSearch.tpl" }
 			</div>
 			<div id="breadcrumbs">
-        		<p class="breadcrumbs">{$BREAD_CRUMBS_STRING}</p>
+        		 <p class="breadcrumbs">{$BREAD_CRUMBS_STRING}</p>
 			</div>
-			<br clear="right"/>
+			<br clear="right"/>-->

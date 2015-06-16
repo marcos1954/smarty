@@ -25,15 +25,15 @@
 							{$list_tagsicons}
 					    {/if}
 						{if $list_fb_url != ''}
-							  <a href="{$list_fb_url}"><img src="/images/facebookIcon.png" height=24 width=auto title="Facebook" /></a>
+							  <a href="{$list_fb_url}"><img  class="tagicon" src="/images/facebookIcon.png"title="Facebook" /></a>
 						{/if}
 						
 						{if $list_tw_url != ''}
-							  <a href="{$list_tw_url}"><img src="/images/twitter.png" height=24 width=auto title="Facebook" /></a>
+							  <a href="{$list_tw_url}"><img  class="tagicon" src="/images/twitter.png" title="Facebook" /></a>
 						{/if}
 						
 						{if $list_ta_url != ''}
-							  <a href="{$list_ta_url}"><img src="/images/tripadvisor2.png" height=24 width=auto title="Reviewed on Tripadvisor" /></a>
+							  <a href="{$list_ta_url}"><img  class="tagicon" src="/images/tripadvisor2.png" title="Reviewed on Tripadvisor" /></a>
 						{/if}
 					</p>
 						

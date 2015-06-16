@@ -18,50 +18,11 @@
 	<h2>{$H2}</h2>	
 	{$topcontent}
 </div>  <!-- end topcontent -->
-		
-<div id="Listing_right_column_pix" style="background-color: none;"> 
-				
-				<div class="lodgingSearchBox" style="margin-left: 14px;"	>
-				<a href="../pdf" title="Print your calendar" ><img src="../includes/Images/print_your_calendar.gif" alt="Print your calendar" /></a>
-				</div>	
-				
-				<!---
-				<div style="width: 173px; background-color: white; margin-left: 15px;  text-align: left; line-height: 1.1em; border: solid black 1px;">
-
-					<p style="font-size:11px; padding:12px">
-					<b>More Detailed Calendar Info</b>
-					<br /><br />
-					Our calendar system has detailed information on everything we can find about upcoming Vallarta events.  
-					From the happy hours and drink specials to the show schedules, gay tours, major holidays, etc. 
-					you'll find all the details in our daily and monthly calendars.
-					<br /><br />
-					You'll find detailed information about today's events
-					<a href="{$URL_TODAYS_CALENDAR}">here</a>.
-					<br /><br />
-					You'll find a detailed monthly calendar of events  
-					<a href="{$URL_MONTH_CALENDAR}">here</a>.
-					<br /><br />
-					And, you'll find a detailed and compact printout of everything going on during your vacation
-					<a href="{$URL_PDF_CALENDAR}">here</a>.
-					</p>
-					
-º				</div>
-				-->
-
-				<br clear="right" />
-
-				<br />
-				<div style="width: 180; margin-left:14px;">
-					{foreach from=$ads180x400 item=ad}
-						{$ad}<br />
-					{/foreach}
-				</div>
-</div>
-		
+	
 <div id="main_content"  >
-		<table cellspacing="0" cellpadding="0">
+		<table cellspacing="0" cellpadding="0" class="calHome">
 		<tr valign="top">
-		<td width="510">
+		<td width="100%">
 			<!----begin loop of items ---->
 			{if $major_events == NULL}
 				<hr>

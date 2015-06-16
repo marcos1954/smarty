@@ -1,5 +1,5 @@
 {include file=$headerfilename}
-hello
+
 		<div id="Listing_right_column_pix">
 			  {if $list_map != ''}
 			  	<center><span style="font-size: 9px;">{$list_map_explain}</span></center>

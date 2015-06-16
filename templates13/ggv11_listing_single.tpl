@@ -24,19 +24,19 @@
                             
 					    {/if}
 						{if $list_fb_url != ''}
-							  <a href="{$list_fb_url}"><img src="/images/facebookIcon.png" height=24 width=auto title="Facebook" /></a>
+							  <a href="{$list_fb_url}"><img class="tagicon" src="/images/facebookIcon.png" width=auto title="Facebook" /></a>
 						{/if}
 						
 						{if $list_tw_url != ''}
-							  <a href="{$list_tw_url}"><img src="/images/twitter.png" height=24 width=auto title="Twitter" /></a>
+							  <a href="{$list_tw_url}"><img class="tagicon" src="/images/twitter.png" title="Twitter" /></a>
 						{/if}
 						
 						{if $list_ta_url != ''}
-							  <a href="{$list_ta_url}"><img src="/images/tripadvisor2.png" height=24 width=auto title="Reviewed on Tripadvisor" /></a>
+							  <a href="{$list_ta_url}"><img class="tagicon" src="/images/tripadvisor2.png" title="Reviewed on Tripadvisor" /></a>
 						{/if}
                         
                         {if $list_url != ''}
-                              <a href="{$list_url}"><img style="margin:1px;"src="/images/www.png" height=20 width=auto title="Has a Website" /></a>
+                              <a href="{$list_url}"><img class="tagicon" style="margin:1px;" src="/images/www.png" title="Has a Website" /></a>
                         {/if}
 					</p>
 					
@@ -156,7 +156,7 @@
 
 							<div  class="eventOne">
 								<div class="eventOneFlyer">
-								{if isset($entry.flyer)}<img src="/img.io/timthumb.php?w=150&src={$entry.flyer}" /> {/if}
+								{if isset($entry.flyer)}<img src="/img.io/timthumb.php?w=250&src={$entry.flyer}" /> {/if}
 								</div>
 								<div class="eventOneInfo">
 									<div  class="eventOneCat">{$entry.category_name}</div>
