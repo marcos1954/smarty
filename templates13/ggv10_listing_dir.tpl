@@ -22,11 +22,11 @@
 						   <a href="{$entry.EDIT}">EDIT</a> &nbsp;
 						{/if}
 					   {$entry.list_tagsicons}
-                       {if $entry.list_fb}<a href="{$entry.list_fb}"><img src="/images/facebookIcon.png" height=22 width=auto title="Listed on Facebook" /></a>{/if}
-                       {if $entry.list_tw}<a href="{$entry.list_tw}"><img src="/images/twitter.png" height=22 width=auto title="Listed on Twitter" /></a>{/if}
-					   {if $entry.list_ta}<a href="{$entry.list_ta}"><img src="/images/tripadvisor2.png" height=22 width=auto title="Reviewed on Tripadvisor" /></a>{/if}
+                       {if $entry.list_fb}<a href="{$entry.list_fb}"><img  class="tagicon"  src="/images/facebookIcon.png"  title="Listed on Facebook" /></a>{/if}
+                       {if $entry.list_tw}<a href="{$entry.list_tw}"><img  class="tagicon"  src="/images/twitter.png" title="Listed on Twitter" /></a>{/if}
+					   {if $entry.list_ta}<a href="{$entry.list_ta}"><img  class="tagicon"  src="/images/tripadvisor2.png" title="Reviewed on Tripadvisor" /></a>{/if}
 					   <!--{if $entry.list_ol}<img src="/images/icon_delivery.png" height=22 width=auto title="Delivery" />{/if}-->
-                       {if $entry.list_www}<a href="{$entry.list_www_url}"><img style="margin:1px;"src="/images/www.png" height=20 width=auto title="Has a Website" /></a>{/if}
+                       {if $entry.list_www}<a href="{$entry.list_www_url}"><img  class="tagicon"  style="margin:1px;"src="/images/www.png" title="Has a Website" /></a>{/if}
 					   
 					   {if $list_lastupdate != '' && $EDIT != ''}
 						   <div style="text-align: center; color: gray; font-size: .8em;" >{$list_lastupdate}</div>
@@ -90,12 +90,12 @@
 							   <div style="text-align:right; color: gray; font-size: .8em;"><a href="{$entry.EDIT}">EDIT</a> &nbsp;{$entry.list_lastupdate}</div>
 							{/if}
 						   {$entry.list_tagsicons}
-                       {if $entry.list_fb}<a href="{$entry.list_fb}"><img src="/images/facebookIcon.png" height=22 width=auto title="Listed on Facebook" /></a>{/if}
-					   {if $entry.list_tw}<a href="{$entry.list_tw}"><img src="/images/twitter.png" height=22 width=auto title="Listed on Twitter" /></a>{/if}
+                       {if $entry.list_fb}<a href="{$entry.list_fb}"><img   class="tagicon" src="/images/facebookIcon.png" title="Listed on Facebook" /></a>{/if}
+					   {if $entry.list_tw}<a href="{$entry.list_tw}"><img   class="tagicon" src="/images/twitter.png" title="Listed on Twitter" /></a>{/if}
 
-					   {if $entry.list_ta}<a href="{$entry.list_ta}"><img src="/images/tripadvisor2.png" height=22 width=auto title="Reviewed on Tripadvisor" /></a>{/if}
+					   {if $entry.list_ta}<a href="{$entry.list_ta}"><img   class="tagicon" src="/images/tripadvisor2.png" title="Reviewed on Tripadvisor" /></a>{/if}
 					  <!-- {if $entry.list_ol}<img src="/images/icon_delivery.png" height=22 width=auto title="Delivery" />{/if} -->
-                       {if $entry.list_www}<a href="{$entry.list_www_url}"><img style="margin:1px;"src="/images/www.png" height=20 width=auto title="Has a Website" /></a>{/if}
+                       {if $entry.list_www}<a href="{$entry.list_www_url}"><img   class="tagicon" style="margin:1px;"src="/images/www.png" title="Has a Website" /></a>{/if}
 					   
 				    </div>
 			   {/if}
