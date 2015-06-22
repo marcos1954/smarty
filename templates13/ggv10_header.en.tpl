@@ -61,7 +61,7 @@
 		</div>
 		
 		<div class="button"  onclick="location.href='/Photos';">
-			<a href="/Photos" >Photos</span>
+			<a href="/FacebookPhotos" >Photos</span>
 		</div>
 		
 		<div style="margin-top: 50px;"></div>
@@ -141,7 +141,7 @@
 			&nbsp;&nbsp;|&nbsp;&nbsp;
 			
 			
-			<a href="{$DIR_WS_BASE}Photos/" title="Photos of Gay Puerto Vallarta">Photos</a>
+			<a href="{$DIR_WS_BASE}FacebookPhotos/" title="Photos of Gay Puerto Vallarta">Photos</a>
 			&nbsp;&nbsp;|&nbsp;&nbsp;
 			
 						
