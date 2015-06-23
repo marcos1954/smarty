@@ -8,18 +8,17 @@
 
 {$cssExtra}
 <link rel="stylesheet" type="text/css" href="{$DIR_WS_BASE}css/GayGuideVallarta.css" media="all" />
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png" />
 
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js"></script>
 <script language="JavaScript" type="text/javascript" src="/js/ggv_main.js"></script> 
 
 {$headerExtra}
-
-<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png" />
-<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png" />
-<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png" />
-<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png" />
-
+ 
 <meta name="google-site-verification" content="oVWtUoxAz0oHmc7Ul2pjLnh5-RC-ej95h71EyU98omc" />
 </head>
 
@@ -32,13 +31,12 @@
 		{$LANG_FLAGS}&nbsp;{$translatemenulink}
 	</div>
 	<div id="app-links">
-		<a href="http://i.gpvr.mx">Download Gay Guide App</a> &nbsp;&nbsp;&nbsp;
 		<a href="http://i.gpvr.mx">iPhone App</a>  &nbsp;&nbsp;&nbsp;
 		<a href="http://i.gpvr.mx">iPad App</a>  &nbsp;&nbsp;&nbsp;
 		<a href="http://i.gpvr.mx">Android App</a>
 	</div>
-
 </div>
+
 <div id="under_menu" class="{if $frontpage}{$frontpage}{/if}">
 	<div id="undermenu-box">
 		
@@ -49,67 +47,59 @@
 		<div style="margin: 30px"></div>
 		
 		<div class="button"  onclick="location.href='/Calendar/index.php?display=day';">
-			<a href="/Calendar/index.php?display=day" >Today</span>
+			<a href="/Calendar/index.php?display=day" >Today</a>
 		</div>
 		
-		<div class="button"  onclick="location.href='/Mapa/gmap.php?cat=bars,rest,shop,hotel,atm,other&lang=en&cookieprefix=mGGV&target=_top';">
-			<a href="/Mapa/gmap.php?cat=bars,rest,shop,hotel,atm,other&lang=en&cookieprefix=mGGV&target=_top" >Map</span>
+		<div class="button"  onclick="location.href='/GayPVMap">
+			<a href="/GayPVMap" >Map</a>
 		</div>
 		
 		<div class="button"  onclick="location.href='/Videos';">
-			<a href="/Videos" >Videos</span>
+			<a href="/Videos" >Videos</a>
 		</div>
 		
-		<div class="button"  onclick="location.href='/Photos';">
-			<a href="/FacebookPhotos" >Photos</span>
-		</div>
-		
-		<div style="margin-top: 50px;"></div>
-		
-		<div class="button"  onclick="location.href='/Daylife/?forcemobile=true';">
-			<a href="/Daylife/" >Daylife</span>
-		</div>
-		
-		<div class="button"  onclick="location.href='/Nightlife/?forcemobile=true';">
-			<a href="/Nightlife/" >Nightlife</span>
-		</div>
-		
-		<div class="button"  onclick="location.href='/Acts/?forcemobile=true';">
-			<a href="/Acts/" >Shows</span>
-		</div>
-		
-		<div class="button"  onclick="location.href='/Restaurants/?forcemobile=true';">
-			<a href="/Restaurants/" >Restaurants</span>
-		</div>
-		
-		<div class="button"  onclick="location.href='/GymSpa/?forcemobile=true';">
-			<a href="/GymSpa/" >Gym &amp; Spa</span>
-		</div>
-		
-		<div class="button"  onclick="location.href='/Shopping/?forcemobile=true';">
-			<a href="/Shopping/" >Shopping</span>
-		</div>
-		
-		<div class="button"  onclick="location.href='/Services/?forcemobile=true';">
-			<a href="/Services/" >Services</span>
+		<div class="button"  onclick="location.href='/FacebookPhotos';">
+			<a href="/FacebookPhotos" >Photos</a>
 		</div>
 		
 		<div style="margin-top: 50px;"></div>
 		
-		<div class="button"  onclick="location.href='/index.php?menu=true';">
-			<a href="/index.php?menu=true" >Gay PVR Intro</span>
+		<div class="button"  onclick="location.href='/Daylife/';">
+			<a href="/Daylife/" >Daylife</a>
 		</div>
 		
+		<div class="button"  onclick="location.href='/Nightlife/';">
+			<a href="/Nightlife/" >Nightlife</a>
+		</div>
+		
+		<div class="button"  onclick="location.href='/Acts/';">
+			<a href="/Acts/" >Shows</a>
+		</div>
+		
+		<div class="button"  onclick="location.href='/Restaurants/';">
+			<a href="/Restaurants/" >Restaurants</a>
+		</div>
+		
+		<div class="button"  onclick="location.href='/GymSpa/';">
+			<a href="/GymSpa/" >Gym &amp; Spa</a>
+		</div>
+		
+		<div class="button"  onclick="location.href='/Shopping/';">
+			<a href="/Shopping/" >Shopping</a>
+		</div>
+		
+		<div class="button"  onclick="location.href='/Services/';">
+			<a href="/Services/" >Services</a>
+		</div>
+		
+		<div style="margin-top: 50px;"></div>
+
 		<div class="button"  onclick="location.href='/Lodging/gay.html?forcemobile=true';">
-			<a href="/Lodging/gay.html" >Lodging</span>
+			<a href="/Lodging/gay.html" >Lodging</a>
 		</div>
-		
-		<div class="button"  onclick="location.href='/?forcemobile=false';">
-			<a href="/?forcemobile=false" >Full Site</span>
-		</div>
-		
+
 		<div class="button"  onclick="location.href='http://i.gpvr.mx';">
-			<a href="http://i.gpvr.mx" >Web App</span>
+			<a href="http://i.gpvr.mx" >Web App</a>
 		</div>
 	
 	</div>
@@ -131,11 +121,13 @@
      {/if}
 	<div id="GayGuideVallarta"></div>
 	
+	
+	
 	<div id="GayGuideVallarta_topmenu">
 		<div class="topmenu-text">
 			<a href="{$DIR_WS_BASE}" title="Home - Gay Guide Vallarta">Gay Vallarta</a>
 			&nbsp;&nbsp;|&nbsp;&nbsp;
-			<a href="{$DIR_WS_BASE}Calendar/" title="Gay Vallarta's Calendar">Calendar</a>
+			<a href="{$DIR_WS_BASE}Calendar/" title="Gay Vallarta Calendar">Calendar</a>
 			&nbsp;&nbsp;|&nbsp;&nbsp;
 			<a href="{$DIR_WS_BASE}GayPVMap/" title="Maps of Gay Puerto Vallarta">Map</a>
 			&nbsp;&nbsp;|&nbsp;&nbsp;
@@ -189,7 +181,7 @@
 			{/if}
 	  			<div class="submenugroup"> GAYGUIDE</div>
 	  			<div class="submenuentry"> &#187; <a href="{$DIR_WS_BASE}Daylife/" title="Daylife at the beach and on gay day tours"> Daylife</a></div>
-	  			<div class="submenuentry"> &#187; <a href="{$DIR_WS_BASE}Nightlife/" title="Vallarta's gay nightlife is rich and varied."> Nightlife</a></div>
+	  			<div class="submenuentry"> &#187; <a href="{$DIR_WS_BASE}Nightlife/" title="The Vallarta gay nightlife is rich and varied."> Nightlife</a></div>
 	  			<div class="submenuentry"> &#187; <a href="{$DIR_WS_BASE}Acts/" title="Vallarta's featured Entertainers."> Shows</a></div>
 	  			<div class="submenuentry"> &#187; <a href="{$DIR_WS_BASE}Restaurants/" title="PV has some fabulous places to eat."> Restaurants</a></div>
 	  			<div class="submenuentry"> &#187; <a href="{$DIR_WS_BASE}GymSpa/" title="Our list of gyms, spas and masseurs."> Gym &amp; Spa</a></div>
