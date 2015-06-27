@@ -55,66 +55,66 @@
 <div id="under_menu" class="{if $frontpage}{$frontpage}{/if}">
 	<div id="undermenu-box">
 		
-		<div align="center" style="padding-top:10px">
+		<div align="center" style="padding-top:10px"  onclick="location.href='/';">
 			<a href="/"><img src="/m/gPVR.png" width="187" height="115" /></a>
 		</div>
 		
 		<div style="margin: 30px"></div>
 		
 		<div class="button"  onclick="location.href='/Calendar/index.php?display=day';">
-			<a href="/Calendar/index.php?display=day" >Calendrier</a>
+			<a  >Calendrier</a>
 		</div>
 		
-		<div class="button"  onclick="location.href='/GayPVMap">
-			<a href="/GayPVMap" >Carte</a>
+		<div class="button"  onclick="location.href='/GayPVMap'">
+			<a  >Carte</a>
 		</div>
 		
 		<div class="button"  onclick="location.href='/Videos';">
-			<a href="/Videos" >Videos</a>
+			<a  >Videos</a>
 		</div>
 		
 		<div class="button"  onclick="location.href='/FacebookPhotos';">
-			<a href="/FacebookPhotos" >Photos</a>
+			<a  >Photos</a>
 		</div>
 		
 		<div style="margin-top: 50px;"></div>
 		
 		<div class="button"  onclick="location.href='/Daylife/';">
-			<a href="/Daylife/" >Vie Quotidienne</a>
+			<a  >Vie Quotidienne</a>
 		</div>
 		
 		<div class="button"  onclick="location.href='/Nightlife/';">
-			<a href="/Nightlife/" >Vie Nocturne</a>
+			<a  >Vie Nocturne</a>
 		</div>
 		
 		<div class="button"  onclick="location.href='/Acts/';">
-			<a href="/Acts/" >Spectacles</a>
+			<a  >Spectacles</a>
 		</div>
 		
 		<div class="button"  onclick="location.href='/Restaurants/';">
-			<a href="/Restaurants/" >Restaurants</a>
+			<a  >Restaurants</a>
 		</div>
 		
 		<div class="button"  onclick="location.href='/GymSpa/';">
-			<a href="/GymSpa/" >Gym et Spa</a>
+			<a  >Gym et Spa</a>
 		</div>
 		
 		<div class="button"  onclick="location.href='/Shopping/';">
-			<a href="/Shopping/" >Magasinage</a>
+			<a  >Magasinage</a>
 		</div>
 		
 		<div class="button"  onclick="location.href='/Services/';">
-			<a href="/Services/" >Services</a>
+			<a  >Services</a>
 		</div>
 		
 		<div style="margin-top: 50px;"></div>
 
 		<div class="button"  onclick="location.href='/Lodging/gay.html?forcemobile=true';">
-			<a href="/Lodging/gay.html" >Logement</a>
+			<a  >Logement</a>
 		</div>
 
 		<div class="button"  onclick="location.href='http://i.gpvr.mx';">
-			<a href="http://i.gpvr.mx" >Web App</a>
+			<a  >Web App</a>
 		</div>
 	
 	</div>
