@@ -31,6 +31,21 @@
 		<div class="lang-links">
 		{$LANG_FLAGS}&nbsp;{$translatemenulink}
 	</div>
+		
+	<div class="social_icons_box">
+		<ul class="social_icons">
+                <li>
+                    <a class="twitter" href="https://twitter.com/gayPVR" target="_blank"></a>
+                </li>
+                <li>
+                    <a class="facebook" href="https://www.facebook.com/GayGuidePV" target="_blank"></a>
+                </li>
+                <li>
+                    <a class="youtube" href="http://www.youtube.com/channel/UCa0EkvzFxOjarG4xyJjRDkw" target="_blank"></a>
+                </li>
+            </ul>
+	</div>	
+		
 	<div id="app-links">
 		<a href="http://i.gpvr.mx">Gay Guide App</a> &nbsp;&nbsp;&nbsp;
 		<a href="http://i.gpvr.mx">iPhone App</a>  &nbsp;&nbsp;&nbsp;
@@ -136,19 +151,20 @@
 			<a href="{$DIR_WS_BASE}GayPVMap/" title="Mapas de Gay Puerto Vallarta">Mapas</a>
 			&nbsp;&nbsp;|&nbsp;&nbsp;
 
-			<a href="{$DIR_WS_BASE}FacebookPhotos/" title="Photos of Gay Puerto Vallarta">Photos</a>
+			<a href="{$DIR_WS_BASE}FacebookPhotos/" title="Photos of Gay Puerto Vallarta">Fotos</a>
 			&nbsp;&nbsp;|&nbsp;&nbsp;
 
 			<a href="{$DIR_WS_BASE}Videos/" title="Photos of Gay Puerto Vallarta">Videos</a>
 			&nbsp;&nbsp;|&nbsp;&nbsp;
 
+			<!--
 			<a href="{$DIR_WS_BASE}Social/" title="Gay Puerto Vallarta">Social</a>
 			&nbsp;&nbsp;|&nbsp;&nbsp;
-
+			-->
 			<a href="{$DIR_WS_BASE}gayPVguide/" title="Nuestra edici&iacute;n impresa. Descargar o encontrar informaci&oacute;n de publicidad.">Gu&iacute;a</a>
-			&nbsp;&nbsp;|&nbsp;&nbsp;<a href="{$DIR_WS_BASE}/?forcemobile=true" title="nuestro sitio para su celular">M&oacute;vil</a>
 
-			<a href="{$DIR_WS_BASE}Advertise/" title=".">Advertise</a>
+&nbsp;&nbsp;|&nbsp;&nbsp;
+			<a href="{$DIR_WS_BASE}Advertise/" title=".">Anunciar</a>
 
 		</div>
     </div>

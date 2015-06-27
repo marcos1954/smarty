@@ -27,7 +27,22 @@
 	<div id="undermenu-link">
 		<a><img src="/includes/Images/download.png" height=25 width=auto></a>
 	</div>
-		<div class="lang-links">
+
+<div class="social_icons_box">
+		<ul class="social_icons">
+                <li>
+                    <a class="twitter" href="https://twitter.com/gayPVR" target="_blank"></a>
+                </li>
+                <li>
+                    <a class="facebook" href="https://www.facebook.com/GayGuidePV" target="_blank"></a>
+                </li>
+                <li>
+                    <a class="youtube" href="http://www.youtube.com/channel/UCa0EkvzFxOjarG4xyJjRDkw" target="_blank"></a>
+                </li>
+            </ul>
+	</div>		
+		
+	<div class="lang-links">
 		{$LANG_FLAGS}&nbsp;{$translatemenulink}
 	</div>
 	<div id="app-links">
@@ -140,9 +155,10 @@
 			&nbsp;&nbsp;|&nbsp;&nbsp;
 			
 				
-						
+			<!--			
 			<a href="{$DIR_WS_BASE}Social/" title="Gay Puerto Vallarta">Social</a>
 			&nbsp;&nbsp;|&nbsp;&nbsp;
+			-->
 			
 
 

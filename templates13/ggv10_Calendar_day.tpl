@@ -1,31 +1,67 @@
 {config_load file="ggv_dayCal.conf"}
 {include file=$headerfilename}
 <div id="topcontent" class="dayCalendar">
-
+	<div id="lang" style="display: none;">{$lang}</div>
 	<h1>{$H1}</h1>
 	     
 	<input type="hidden" name="eventDayDate" id="eventDayDateField" value="{$datevalue}" />
     <div id="eventDayDate"></div>	
 	
 	<div id="eventDaySunset">
-		<div id="eventDaySunsetText">{$dateformatted}<br>Sunset today is at {$sunset_today}</div>
-		<div id="eventDaySunsetTease">Everyday in Gay Puerto Vallarta you will find so many things to do.</div>
+		<div id="eventDaySunsetText">{$dateformatted}
+			<div id="sunsetInfo">
+			{if $lang == 'en'}
+				sunset today is at:
+			{/if}
+			{if $lang == 'es'}
+				puesta de sol de hoy:
+			{/if}
+			{if $lang == 'fr'}
+				coucher du soleil aujourd'hui:
+			{/if}
+			
+			{$sunset_today}
+			</div>
+		</div>
+		<div id="eventDaySunsetTease"></div>
 		<img id="eventDaySunsetImage" src="../images/sunset.jpg" />
 	</div>
-		
 
-	
 	<div id="dayCalControlBlock">
-		<ul>
-			<li id="day_events_link" >events</li>
-			<li id="day_tours_link"  >tours</li>
-			<li id="day_promo_link"  >promos</li>
-			<li id="day_rest_link"   >restaurant specials</li>
-			<li id="day_feliz_link"  >happy hours</li>
-			<li id="day_bars_link"   >bar specials</li>
-			<li id="day_all_link" class="selected"   >all</li>
-		</ul>
-		 
+		{if $lang == 'en'}
+			<ul>
+				<li id="day_events_link" >events</li>
+				<li id="day_tours_link"  >tours</li>
+				<li id="day_promo_link"  >promos</li>
+				<li id="day_rest_link"   >restaurant specials</li>
+				<li id="day_feliz_link"  >happy hours</li>
+				<li id="day_bars_link"   >bar specials</li>
+				<li id="day_all_link" class="selected"   >all</li>
+			</ul>
+		{/if}
+		{if $lang == 'es'}
+			<ul>
+				<li id="day_events_link" >eventos</li>
+				<li id="day_tours_link"  >turs</li>
+				<li id="day_promo_link"  >promos</li>
+				<li id="day_rest_link"   >especiales restaurantes</li>
+				<li id="day_feliz_link"  >horas felices</li>
+				<li id="day_bars_link"   >especiales bares</li>
+				<li id="day_all_link" class="selected"   >todo</li>
+			</ul>
+		{/if}
+		{if $lang == 'fr'}
+			<ul>
+				<li id="day_events_link" >événements</li>
+				<li id="day_tours_link"  >tours</li>
+				<li id="day_promo_link"  >promos</li>
+				<li id="day_rest_link"   >restaurant les promos</li>
+				<li id="day_feliz_link"  >heures heureuses</li>
+				<li id="day_bars_link"   >promos de bar</li>
+				<li id="day_all_link" class="selected"   >all</li>
+			</ul>
+		{/if}
+
 	</div>
 	<div id="ggv_underline" ></div> 
 </div>

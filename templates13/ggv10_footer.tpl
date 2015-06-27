@@ -4,11 +4,12 @@
 	<br clear="all" />
 	<br  />
   </div>
-  <div class="translatorcredit">{$translatorcreditline}</div>
-  <div class="eeo">
-		Gay Guide Vallarta is an Equal Opportunity Employer and Provider: We don't discriminate against any individuals or groups on the basis of ethnicity, national origin, gender, sexual orientation, marital status, age, disabilities, religion or political affiliations.
+  <div class="footer-box">
+	  <div class="translatorcredit">{$translatorcreditline}</div>
+	  <div class="eeo">
+			Gay Guide Vallarta is an Equal Opportunity Employer and Provider: We don't discriminate against any individuals or groups on the basis of ethnicity, national origin, gender, sexual orientation, marital status, age, disabilities, religion or political affiliations.
+	  </div>
   </div>
-  
 {*/strip*}
 
 {if not ( false && $bottomAd == NULL )}
@@ -23,11 +24,7 @@
 	  {/if}
 	</div>
   </div>
-<!--  
-  {if not $NOjquery}
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-  {/if}
-  -->
+
   <script type="text/javascript">
 	{literal}
 	  $().ready(function () {
