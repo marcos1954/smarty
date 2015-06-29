@@ -9,7 +9,7 @@
 				</div>
 
 	{if ($NOright_searchbox != TRUE) }
-	<div style="margin-right: 10px;" id="remote_search_box">
+<!--	<div style="margin-right: 10px;" id="remote_search_box">
 		<div id="remote_search_form">
 	      {php}echo remote_search();{/php}
 		</div>
@@ -23,7 +23,7 @@
 	<a href="../pdf" title="Print your calendar" ><img src="../includes/Images/print_your_calendar.gif" alt="Print your calendar" /></a>
 	<br />
 	<br />
-	</div>
+	</div>-->
 
 	{/if}
 	<div style="width: 180; margin-left:14px;">
