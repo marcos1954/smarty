@@ -72,7 +72,11 @@
 
 		<div id="eventDaySpecialEvents" class="eventDayGroup">
 			<h4>{$transSpecialEvent}</h4>{foreach from=$special_events item=evnt} {$evnt.eidAnchor}
-
+<div class="singleDayCalItem">
+			<div class="logo" >
+				<img {$evnt.logoEventATTRS}  />
+			</div>
+	
 			<div class="eventDayName">
 				{$evnt.nameEvent}
 			</div>{if $evnt.locationEvent != ''}
@@ -91,12 +95,18 @@
 
 			<div class="eventDayDesc">
 				{$evnt.descEvent}
-			</div>{/if} {/foreach}
+			</div>{/if}
+</div>			
+			{/foreach}
 		</div>{/if} {if not ($tour_events == NULL) }
 
 		<div id="eventDayTours" class="eventDayGroup">
 			<h4>{$transGayToursToday}</h4>{foreach from=$tour_events item=evnt} {$evnt.eidAnchor}
 
+<div class="singleDayCalItem">
+			<div class="logo" >
+				<img {$evnt.logoEventATTRS}  />
+			</div>
 			<div class="eventDayName">
 				{$evnt.nameEvent}
 			</div>{if $evnt.locationEvent != ''}
@@ -115,7 +125,9 @@
 
 			<div class="eventDayDesc">
 				{$evnt.descEvent}
-			</div>{/if} {/foreach}
+			</div>{/if}
+</div>
+{/foreach}
 		</div>{/if} {if not ($today_events == NULL) }
 
 		<div id="eventDayStart" class="eventDayGroup">
@@ -123,7 +135,10 @@
 			
 			{foreach from=$today_events item=evnt}
 			{$evnt.eidAnchor}
-
+<div class="singleDayCalItem">
+			<div class="logo" >
+				<img {$evnt.logoEventATTRS}  />
+			</div>
 			<div class="eventDayName">
 				{$evnt.nameEvent}
 			</div>{if $evnt.locationEvent != ''}
@@ -138,14 +153,20 @@
 
 			<div class="eventDayTime">
 				{$evnt.timesEvent}
-			</div>{/if} {$evnt.moreEventLink} {if $evnt.descEvent != ''}
-
+			</div>{/if} {$evnt.moreEventLink}
+			
+			{if $evnt.descEvent != ''}
 			<div class="eventDayDesc">
 				{$evnt.descEvent}
-			</div>{/if} {/foreach}
+			</div>{/if}
+</div>
+			{/foreach}
 
 			{foreach from=$events item=evnt} {$evnt.eidAnchor}
-
+<div class="singleDayCalItem">
+			<div class="logo" >
+				<img {$evnt.logoEventATTRS}  />
+			</div>
 			<div class="eventDayName">
 				{$evnt.nameEvent}
 			</div>{if $evnt.locationEvent != ''}
@@ -164,12 +185,15 @@
 
 			<div class="eventDayDesc">
 				{$evnt.descEvent}
-			</div>{/if} {/foreach}
+			</div>{/if} </div> {/foreach}
 		</div>{/if} {if not ($closed_list == NULL) }
 
 		<div id="eventDayClosed" class="eventDayGroup">
 			<h4>{$transClosedToday}</h4>{foreach from=$closed_list item=evnt} {$evnt.eidAnchor}
-
+<div class="singleDayCalItem">
+			<div class="logo" >
+				<img {$evnt.logoEventATTRS}  />
+			</div>
 			<div class="eventDayName">
 				{$evnt.nameEvent}
 			</div>{if $evnt.locationEvent != ''}
@@ -188,13 +212,16 @@
 
 			<div class="eventDayDesc">
 				{$evnt.descEvent}
-			</div>{/if} {/foreach}
+			</div>{/if} </div>{/foreach}
 		</div>{/if}
 
 		{if not ($restaurant_events == NULL) }
 		<div id="eventDayRest" class="eventDayGroup">
 			<h4>{$transRestaurantSpecials}</h4>{foreach from=$restaurant_events item=evnt} {$evnt.eidAnchor}
-
+<div class="singleDayCalItem">
+			<div class="logo" >
+				<img {$evnt.logoEventATTRS}  />
+			</div>
 			<div class="eventDayName">
 				{$evnt.nameEvent}
 			</div>{if $evnt.locationEvent != ''}
@@ -213,12 +240,18 @@
 
 			<div class="eventDayDesc">
 				{$evnt.descEvent}
-			</div>{/if} {/foreach}
-		</div>{/if} {if ($bars_events != NULL) }
+			</div>{/if} </div> {/foreach}
+		</div>{/if}
+		
+		{if ($bars_events != NULL) }
 
 		<div id="eventDayBarSpecials" class="eventDayGroup">
 			<h4>{$transBarSpecialsToday}</h4>{foreach from=$bars_events item=evnt} {$evnt.eidAnchor}
-
+<div class="singleDayCalItem">
+			<div class="logo" >
+				<img {$evnt.logoEventATTRS}  />
+			</div>
+			
 			<div class="eventDayName">
 				{$evnt.nameEvent}
 			</div>{if $evnt.locationEvent != ''}
@@ -237,12 +270,17 @@
 
 			<div class="eventDayDesc">
 				{$evnt.descEvent}
-			</div>{/if} {/foreach}
-		</div>{/if} {if ($bars_events != NULL) || ($happy_events != NULL) }
+			</div>{/if} </div> {/foreach}
+		</div>{/if}
+		
+		{if ($bars_events != NULL) || ($happy_events != NULL) }
 
 		<div id="eventDayFeliz" class="eventDayGroup">
 			<h4>{$transHappyHoursToday}</h4>{foreach from=$happy_events item=evnt} {$evnt.eidAnchor}
-
+<div class="singleDayCalItem">
+			<div class="logo" >
+				<img {$evnt.logoEventATTRS}  />
+			</div>
 			<div class="eventDayName">
 				{$evnt.nameEvent}
 			</div>{if $evnt.locationEvent != ''}
@@ -261,7 +299,7 @@
 
 			<div class="eventDayDesc">
 				{$evnt.descEvent}
-			</div>{/if} {/foreach}
+			</div>{/if} </div>{/foreach}
 		</div>{/if}
 	</div><!-- end right column of center -->
 </div><!-- end center -->
