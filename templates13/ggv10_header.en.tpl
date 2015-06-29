@@ -213,7 +213,15 @@
 			<div id="LeftColumnContent" >
 				<a href="{$DIR_WS_BASE}gayPVguide/" title=""><img style="width: 180px;height: auto;" src="{$DIR_WS_BASE}includes/Images/GetPrintEdition.jpg" /></a>
 			</div>
-			{include file="ggv10_right_content.tpl" }
+			{* include file="ggv10_right_content.tpl" *}
+			{if not ($ads180x400 == NULL) }
+				<div id="ads180x400">
+					{foreach from=$ads180x400 item=ad}
+						{$ad}
+						<br /><br /><br />
+					{/foreach}
+				</div>
+			{/if}
 		</div>
 
 		<div class="main_container">

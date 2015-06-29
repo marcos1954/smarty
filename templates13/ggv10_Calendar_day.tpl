@@ -268,16 +268,6 @@
 
 <!-- end core -->
 
-{if not ($ads180x400 == NULL) }
-	<div id="ads180x400">
-		<a href="../pdf" title="Print your calendar" ><img src="../includes/Images/print_your_calendar.gif" alt="Print your calendar" /></a>
-		<br /><br />
-		{foreach from=$ads180x400 item=ad}
-			{$ad}
-			<br /><br />
-		{/foreach}
-	</div>
-{/if}
 
 
 {include file="ggv10_footer.tpl"}
