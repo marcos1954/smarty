@@ -6,11 +6,7 @@
 			<div id="Listing_header">
 			  <div class="listinglogo">
                       {if $list_src != ''}
-                       <img border="0"
-			                src="{$list_src}"
-			                width="{$list_width}"
-			                height="{$list_height}"
-			                align="left">
+						<img src="/img.io/timthumb.php?w=100&src={$list_src}" align="left" />
                       {else}
                          &nbsp;
                       {/if}

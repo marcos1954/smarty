@@ -74,7 +74,7 @@
 			<h4>{$transSpecialEvent}</h4>{foreach from=$special_events item=evnt} {$evnt.eidAnchor}
 <div class="singleDayCalItem">
 			<div class="logo" >
-				<img {$evnt.logoEventATTRS}  />
+				{if $evnt.logoEventSrc} <img  src="/img.io/timthumb.php?w=100&src={$evnt.logoEventSrc}"  /> {/if}
 			</div>
 	
 			<div class="eventDayName">
@@ -91,7 +91,13 @@
 
 			<div class="eventDayTime">
 				{$evnt.timesEvent}
-			</div>{/if} {$evnt.moreEventLink} {if $evnt.descEvent != ''}
+			</div>{/if}
+			
+			<div class="eventMoreLink">
+			{$evnt.moreEventLink}
+			</div>
+			
+			{if $evnt.descEvent != ''}
 
 			<div class="eventDayDesc">
 				{$evnt.descEvent}
@@ -105,7 +111,7 @@
 
 <div class="singleDayCalItem">
 			<div class="logo" >
-				<img {$evnt.logoEventATTRS}  />
+				{if $evnt.logoEventSrc} <img  src="/img.io/timthumb.php?w=100&src={$evnt.logoEventSrc}"  /> {/if}
 			</div>
 			<div class="eventDayName">
 				{$evnt.nameEvent}
@@ -121,11 +127,16 @@
 
 			<div class="eventDayTime">
 				{$evnt.timesEvent}
-			</div>{/if} {$evnt.moreEventLink} {if $evnt.descEvent != ''}
-
-			<div class="eventDayDesc">
-				{$evnt.descEvent}
 			</div>{/if}
+			<div class="eventMoreLink">
+				{$evnt.moreEventLink}
+			</div>
+			
+			{if $evnt.descEvent != ''}
+				<div class="eventDayDesc">
+					{$evnt.descEvent}
+				</div>
+			{/if}
 </div>
 {/foreach}
 		</div>{/if} {if not ($today_events == NULL) }
@@ -137,7 +148,7 @@
 			{$evnt.eidAnchor}
 <div class="singleDayCalItem">
 			<div class="logo" >
-				<img {$evnt.logoEventATTRS}  />
+				{if $evnt.logoEventSrc} <img  src="/img.io/timthumb.php?w=100&src={$evnt.logoEventSrc}"  /> {/if}
 			</div>
 			<div class="eventDayName">
 				{$evnt.nameEvent}
@@ -153,7 +164,11 @@
 
 			<div class="eventDayTime">
 				{$evnt.timesEvent}
-			</div>{/if} {$evnt.moreEventLink}
+			</div>{/if} 
+			
+			<div class="eventMoreLink">
+				{$evnt.moreEventLink}
+			</div>
 			
 			{if $evnt.descEvent != ''}
 			<div class="eventDayDesc">
@@ -165,7 +180,7 @@
 			{foreach from=$events item=evnt} {$evnt.eidAnchor}
 <div class="singleDayCalItem">
 			<div class="logo" >
-				<img {$evnt.logoEventATTRS}  />
+				{if $evnt.logoEventSrc} <img  src="/img.io/timthumb.php?w=100&src={$evnt.logoEventSrc}"  /> {/if}
 			</div>
 			<div class="eventDayName">
 				{$evnt.nameEvent}
@@ -181,8 +196,13 @@
 
 			<div class="eventDayTime">
 				{$evnt.timesEvent}
-			</div>{/if} {$evnt.moreEventLink} {if $evnt.descEvent != ''}
-
+			</div>{/if} 
+			
+			<div class="eventMoreLink">
+				{$evnt.moreEventLink}
+			</div>
+			
+			{if $evnt.descEvent != ''}
 			<div class="eventDayDesc">
 				{$evnt.descEvent}
 			</div>{/if} </div> {/foreach}
@@ -192,7 +212,7 @@
 			<h4>{$transClosedToday}</h4>{foreach from=$closed_list item=evnt} {$evnt.eidAnchor}
 <div class="singleDayCalItem">
 			<div class="logo" >
-				<img {$evnt.logoEventATTRS}  />
+				{if $evnt.logoEventSrc} <img  src="/img.io/timthumb.php?w=100&src={$evnt.logoEventSrc}"  /> {/if}
 			</div>
 			<div class="eventDayName">
 				{$evnt.nameEvent}
@@ -208,8 +228,13 @@
 
 			<div class="eventDayTime">
 				{$evnt.timesEvent}
-			</div>{/if} {$evnt.moreEventLink} {if $evnt.descEvent != ''}
-
+			</div>{/if} 
+			
+			<div class="eventMoreLink">
+				{$evnt.moreEventLink}
+			</div>
+			
+			{if $evnt.descEvent != ''}
 			<div class="eventDayDesc">
 				{$evnt.descEvent}
 			</div>{/if} </div>{/foreach}
@@ -220,7 +245,7 @@
 			<h4>{$transRestaurantSpecials}</h4>{foreach from=$restaurant_events item=evnt} {$evnt.eidAnchor}
 <div class="singleDayCalItem">
 			<div class="logo" >
-				<img {$evnt.logoEventATTRS}  />
+				{if $evnt.logoEventSrc} <img  src="/img.io/timthumb.php?w=100&src={$evnt.logoEventSrc}"  /> {/if}
 			</div>
 			<div class="eventDayName">
 				{$evnt.nameEvent}
@@ -236,7 +261,13 @@
 
 			<div class="eventDayTime">
 				{$evnt.timesEvent}
-			</div>{/if} {$evnt.moreEventLink} {if $evnt.descEvent != ''}
+			</div>{/if}
+			
+			<div class="eventMoreLink">
+				{$evnt.moreEventLink}
+			</div>
+			
+			{if $evnt.descEvent != ''}
 
 			<div class="eventDayDesc">
 				{$evnt.descEvent}
@@ -249,7 +280,7 @@
 			<h4>{$transBarSpecialsToday}</h4>{foreach from=$bars_events item=evnt} {$evnt.eidAnchor}
 <div class="singleDayCalItem">
 			<div class="logo" >
-				<img {$evnt.logoEventATTRS}  />
+				{if $evnt.logoEventSrc} <img  src="/img.io/timthumb.php?w=100&src={$evnt.logoEventSrc}"  /> {/if}
 			</div>
 			
 			<div class="eventDayName">
@@ -266,7 +297,14 @@
 
 			<div class="eventDayTime">
 				{$evnt.timesEvent}
-			</div>{/if} {$evnt.moreEventLink} {if $evnt.descEvent != ''}
+			</div>{/if} 
+			
+			<div class="eventMoreLink">
+
+				{$evnt.moreEventLink}
+			</div>
+			
+			{if $evnt.descEvent != ''}
 
 			<div class="eventDayDesc">
 				{$evnt.descEvent}
@@ -275,32 +313,48 @@
 		
 		{if ($bars_events != NULL) || ($happy_events != NULL) }
 
-		<div id="eventDayFeliz" class="eventDayGroup">
-			<h4>{$transHappyHoursToday}</h4>{foreach from=$happy_events item=evnt} {$evnt.eidAnchor}
-<div class="singleDayCalItem">
-			<div class="logo" >
-				<img {$evnt.logoEventATTRS}  />
+			<div id="eventDayFeliz" class="eventDayGroup">
+				<h4>{$transHappyHoursToday}</h4>
+				{foreach from=$happy_events item=evnt}
+					{$evnt.eidAnchor}
+					<div class="singleDayCalItem">
+						<div class="logo" >
+							{if $evnt.logoEventSrc} <img  src="/img.io/timthumb.php?w=100&src={$evnt.logoEventSrc}"  /> {/if}
+						</div>
+						
+						<div class="eventDayName">
+							{$evnt.nameEvent}
+						</div>
+						
+						{if $evnt.locationEvent != ''}
+							<div class="eventDayLocation">
+								&nbsp;&nbsp;@ {$evnt.locationEvent}
+							</div>
+						{/if}
+			
+						<div class="eventDayCat">
+							{$evnt.catnameEvent}
+						</div>
+						
+						{if $evnt.timesEvent != ''}
+			
+						<div class="eventDayTime">
+							{$evnt.timesEvent}
+						</div>{/if} 
+						
+			<div class="eventMoreLink">
+							{$evnt.moreEventLink}
+						</div>
+						
+						{if $evnt.descEvent != ''}
+						<div class="eventDayDesc">
+							{$evnt.descEvent}
+						</div>
+						{/if}
+					</div>
+				{/foreach}
 			</div>
-			<div class="eventDayName">
-				{$evnt.nameEvent}
-			</div>{if $evnt.locationEvent != ''}
-
-			<div class="eventDayLocation">
-				&nbsp;&nbsp;@ {$evnt.locationEvent}
-			</div>{/if}
-
-			<div class="eventDayCat">
-				{$evnt.catnameEvent}
-			</div>{if $evnt.timesEvent != ''}
-
-			<div class="eventDayTime">
-				{$evnt.timesEvent}
-			</div>{/if} {$evnt.moreEventLink} {if $evnt.descEvent != ''}
-
-			<div class="eventDayDesc">
-				{$evnt.descEvent}
-			</div>{/if} </div>{/foreach}
-		</div>{/if}
+		{/if}
 	</div><!-- end right column of center -->
 </div><!-- end center -->
 

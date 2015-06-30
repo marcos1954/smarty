@@ -17,7 +17,7 @@
 		   <div class="listinglogo">
 			 <a name="{$entry.list_dirref}"></a>
 			 {if $entry.list_src != ''}
-			  <img border="0" src="{$entry.list_src}" width="{$entry.list_width}" height="{$entry.list_height}" align="left">
+			  <img src="/img.io/timthumb.php?w=100&src={$entry.list_src}" align="left" />
 			 {else}
 			   &nbsp;
 			 {/if}
@@ -82,7 +82,7 @@
 			   <div class="listinglogo">
 				 <a name="{$entry.list_dirref}"></a>
 				 {if $entry.list_src != ''}
-				  <img border="0" src="{$entry.list_src}" width="{$entry.list_width}" height="{$entry.list_height}" align="left">
+				  <img src="/img.io/timthumb.php?w=100&src={$entry.list_src}" align="left" />
 				 {else}
 				   &nbsp;
 				 {/if}
