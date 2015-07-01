@@ -1,6 +1,20 @@
 {include file=$headerfilename}
 
 <div id="topcontent" >
+		{if $gmap}
+				<div class="gmap_insert"  >
+						<iframe src="http://www.gayguidevallarta.com/Mapa/gmap.php?cat={$gmap_cat}&target=_parent&bgcolor=%23FFFfFf"
+								name="map"
+								width="100%"
+								style="float:right;"
+								marginwidth="0"
+								height="100%"
+								scrolling="no"
+								frameborder="0">
+						</iframe>
+				</div>
+		{/if}
+
 		{$TXT_MAIN_DESCRIPTION}
 	</div>
 
@@ -12,7 +26,7 @@
 				{/foreach}
 		</div>
 		
-     {foreach from=$MAIN_LISTINGS item="entry"}
+		{foreach from=$MAIN_LISTINGS item="entry"}
 		<div  class="listing_box"  >
 		   <div class="listinglogo">
 			 <a name="{$entry.list_dirref}"></a>
@@ -24,20 +38,20 @@
 		  </div>
 		  <div class="listing_info">
 			{if $entry.list_tagsicons != '' || $entry.EDIT != '' || $entry.list_fb != '' || $entry.list_ta != '' || $entry.list_ol != ''|| $entry.list_www != ''}
-				   <div class="tagicons" >
-						{if $entry.EDIT != ''}
-						   <a href="{$entry.EDIT}">EDIT</a> &nbsp;
-						{/if}
-					   {$entry.list_tagsicons}
-                       {if $entry.list_fb}<a href="{$entry.list_fb}"><img  class="tagicon"  src="/images/facebookIcon.png"  title="Listed on Facebook" /></a>{/if}
-                       {if $entry.list_tw}<a href="{$entry.list_tw}"><img  class="tagicon"  src="/images/twitter.png" title="Listed on Twitter" /></a>{/if}
-					   {if $entry.list_ta}<a href="{$entry.list_ta}"><img  class="tagicon"  src="/images/tripadvisor2.png" title="Reviewed on Tripadvisor" /></a>{/if}
-                       {if $entry.list_www}<a href="{$entry.list_www_url}"><img  class="tagicon"  style="margin:1px;"src="/images/www.png" title="Has a Website" /></a>{/if}
-					   
-					   {if $list_lastupdate != '' && $EDIT != ''}
-						   <div style="text-align: center; color: gray; font-size: .8em;" >{$list_lastupdate}</div>
-					   {/if}
-				   </div>
+				<div class="tagicons" >
+					 {if $entry.EDIT != ''}
+						<a href="{$entry.EDIT}">EDIT</a> &nbsp;
+					 {/if}
+					{$entry.list_tagsicons}
+					{if $entry.list_fb}<a href="{$entry.list_fb}"><img  class="tagicon"  src="/images/facebookIcon.png"  title="Listed on Facebook" /></a>{/if}
+					{if $entry.list_tw}<a href="{$entry.list_tw}"><img  class="tagicon"  src="/images/twitter.png" title="Listed on Twitter" /></a>{/if}
+					{if $entry.list_ta}<a href="{$entry.list_ta}"><img  class="tagicon"  src="/images/tripadvisor2.png" title="Reviewed on Tripadvisor" /></a>{/if}
+					{if $entry.list_www}<a href="{$entry.list_www_url}"><img  class="tagicon"  style="margin:1px;"src="/images/www.png" title="Has a Website" /></a>{/if}
+					
+					{if $list_lastupdate != '' && $EDIT != ''}
+						<div style="text-align: center; color: gray; font-size: .8em;" >{$list_lastupdate}</div>
+					{/if}
+				</div>
 		   {/if}
 		   <p class="listing_name">{$entry.list_name}</p>
 		   
@@ -82,7 +96,12 @@
 			   <div class="listinglogo">
 				 <a name="{$entry.list_dirref}"></a>
 				 {if $entry.list_src != ''}
-				  <img src="/img.io/timthumb.php?w=100&src={$entry.list_src}" align="left" />
+				 
+				  {if $entry.list_src_gif_transparent }
+						<img src="{$entry.list_src}" width=100 height=auto align="left" />
+				    {else}
+						<img src="/img.io/timthumb.php?w=100&src={$entry.list_src}" align="left" />
+				  {/if}
 				 {else}
 				   &nbsp;
 				 {/if}

@@ -222,10 +222,10 @@
 		</div>
 
 		<div class="main_container">
-<!--			<div id="searchbox">
+			<div id="searchbox">
 				{include file="googleSearch.tpl" }
 			</div>
 			<div id="breadcrumbs">
         		 <p class="breadcrumbs">{$BREAD_CRUMBS_STRING}</p>
 			</div>
-			<br clear="right"/>-->
+			<br clear="right" />

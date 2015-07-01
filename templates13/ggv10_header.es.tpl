@@ -203,6 +203,7 @@
 			<div id="LeftColumnContent" >
 				<a href="{$DIR_WS_BASE}gayPVguide/" title=""><img style="width: 180px;height: auto;" src="{$DIR_WS_BASE}includes/Images/GetPrintEdition.jpg" /></a>
 			</div>
+			
 			{if not ($ads180x400 == NULL) }
 				<div id="ads180x400">
 					{foreach from=$ads180x400 item=ad}
@@ -213,12 +214,11 @@
 			{/if}
 		</div>
 
-
 		<div class="main_container">
-<!--			<div id="searchbox">
+			<div id="searchbox">
 				{include file="googleSearch.tpl" }
 			</div>
 			<div id="breadcrumbs">
         		 <p class="breadcrumbs">{$BREAD_CRUMBS_STRING}</p>
 			</div>
-			<br clear="right"/>-->
+			<br clear="right"/>
