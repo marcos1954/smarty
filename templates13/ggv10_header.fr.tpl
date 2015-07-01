@@ -99,6 +99,13 @@
 			<a  >Gym et Spa</a>
 		</div>
 		
+		
+		
+		<div class="button"  onclick="location.href='/Galleries/';">
+			<a  >Galerie d'Arts</a>
+		</div>
+		
+		
 		<div class="button"  onclick="location.href='/Shopping/';">
 			<a  >Magasinage</a>
 		</div>

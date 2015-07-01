@@ -102,6 +102,11 @@
 			<a  >Gimnasio &amp; Spa</a>
 		</div>
 		
+		
+		<div class="button"  onclick="location.href='/Galleries/';">
+			<a  >Gallerias</a>
+		</div>
+		
 		<div class="button"  onclick="location.href='/Shopping/';">
 			<a  >Compras</a>
 		</div>
