@@ -1,6 +1,5 @@
 {config_load file="ggv_dayCal.conf"}
 {include file=$headerfilename}
-{if $dd_minus_one} <script>selectedIndex = {$dd_minus_one};</script>{/if}
      	<div id="main_content">
  		  <div id="Listing_full_content" style="margin-top: 0">
 			<div id="Listing_header">
@@ -17,11 +16,9 @@
                </div>
                <div id="Listing_header_right">
 					
-               		<p class="listing_address">
-						
+               		<div class="tagicons">
 					    {if $list_tagsicons != ''}
 							{$list_tagsicons}
-                            
 					    {/if}
 						{if $list_fb_url != ''}
 							  <a href="{$list_fb_url}"><img class="tagicon" src="/images/facebookIcon.png" width=auto title="Facebook" /></a>
@@ -38,7 +35,7 @@
                         {if $list_url != ''}
                               <a href="{$list_url}"><img class="tagicon" style="margin:1px;" src="/images/www.png" title="Has a Website" /></a>
                         {/if}
-					</p>
+					</div>
 					
                     {if $list_addr1 != '' || $list_addr2 != '' || $list_addr3 != '' || 	$list_phone != '' || $list_cell != '' || $list_intlphone != '' }
 					<div class="links" ><span>{$locationPhones|default:'location & phone'}</span></div>
@@ -100,7 +97,6 @@
 										</div>
 										{$list_lastupdate}
 							  </div>	
-					       
 				        {/if}
 
 	
@@ -156,7 +152,7 @@
 
 							<div  class="eventOne">
 								<div class="eventOneFlyer">
-								{if isset($entry.flyer)}<img src="/img.io/timthumb.php?w=250&src={$entry.flyer}" /> {/if}
+								{if isset($entry.flyer)}<img data-src="/img.io/timthumb.php?w=250&src={$entry.flyer}" /> {/if}
 								</div>
 								<div class="eventOneInfo">
 									<div  class="eventOneCat">{$entry.category_name}</div>
@@ -222,9 +218,9 @@
 					  {foreach from=$menus item=picture}
 					   {if $picture != ''}
 						{if $picture.width < 702 }
-					   <li><img src="{$picture.src}" /></li> 
+					   <li><a href="{$picture.src}" ><img data-src="{$picture.src}" /></a></li> 
 						{else}
-					  <li><img src="/img.io/timthumb.php?w=702&src={$picture.src}" /></li>
+					  <li><a href="{$picture.src}" ><img data-src="/img.io/timthumb.php?w=702&src={$picture.src}" /></a></li>
 						{/if}
                        {/if}
 					  {/foreach}
@@ -238,42 +234,38 @@
 				</div>
 
 				<div id="ggv_photos"  class="ggv-ctlbox-content">
-				{if $pix != array() }
-					<div  class="ggv_arrows"  >
-						<a class="ggv_arrow_left"></a>
-						<a class="ggv_arrow_right"></a>
-					</div>
-
-					<div class="slider-navcontrols"></div>
-					
-					<div id="slider" class="flexslider">
-					  <ul class="slides">
-					  {foreach from=$pix item=picture}
-					  {if $picture != ''}
+				  {if $pix != array() }
+					  <div  class="ggv_arrows"  >
+						  <a class="ggv_arrow_left"></a>
+						  <a class="ggv_arrow_right"></a>
+					  </div>
+  
+					  <div class="slider-navcontrols"></div>
 					  
-						{if $picture.width < 722 }
-					   <li><img src="{$picture.src}" /></li> 
-						{else}
-					  <li><img src="/img.io/timthumb.php?w=722&src={$picture.src}" /></li>
-						{/if}
+					  <div id="slider" class="flexslider">
+						<ul class="slides">
+						{foreach from=$pix item=picture}
+						{if $picture != ''}
 						
-					  {/if}
-					  {/foreach}
-					  </ul>
-					</div>
-
-				{else}
-					<div class="borderbox">
-						{$noPhotos|default:'No photos on file.'}
-					</div>
-				{/if}
+						  {if $picture.width < 722 }
+						 <li><a href="{$picture.src}" ><img data-src="{$picture.src}" /></a></li> 
+						  {else}
+						<li><a href="{$picture.src}" ><img data-src="/img.io/timthumb.php?w=722&src={$picture.src}" /></a></li>
+						  {/if}
+						  
+						{/if}
+						{/foreach}
+						</ul>
+					  </div>
+  
+				  {else}
+					  <div class="borderbox">
+						  {$noPhotos|default:'No photos on file.'}
+					  </div>
+				  {/if}
 				</div>
                 
-				<div id="ggv_videos"  class="ggv-ctlbox-content">
-                {if $list_video}
-                {$list_video}
-                {/if}
-				</div> 
+				<div id="ggv_videos"  class="ggv-ctlbox-content" data="{$list_video}"></div>
 
 			</div>
 		</div>

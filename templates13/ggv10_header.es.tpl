@@ -28,9 +28,7 @@
 	<div id="undermenu-link">
 		<a><img src="/includes/Images/download.png" height=25 width=auto></a>
 	</div>
-		<div class="lang-links">
-		{$LANG_FLAGS}&nbsp;{$translatemenulink}
-	</div>
+		
 		
 	<div class="social_icons_box">
 		<ul class="social_icons">
@@ -44,10 +42,13 @@
                     <a class="youtube" href="http://www.youtube.com/channel/UCa0EkvzFxOjarG4xyJjRDkw" target="_blank"></a>
                 </li>
             </ul>
-	</div>	
+	</div>
+	
+	<div class="lang-links">
+		{$LANG_FLAGS}&nbsp;{$translatemenulink}
+	</div>
 		
 	<div id="app-links">
-		<a href="http://i.gpvr.mx">Gay Guide App</a> &nbsp;&nbsp;&nbsp;
 		<a href="http://i.gpvr.mx">iPhone App</a>  &nbsp;&nbsp;&nbsp;
 		<a href="http://i.gpvr.mx">iPad App</a>  &nbsp;&nbsp;&nbsp;
 		<a href="http://i.gpvr.mx">Android App</a>
@@ -58,6 +59,33 @@
 <div id="under_menu" class="{if $frontpage}{$frontpage}{/if}">
 	<div id="undermenu-box">
 		
+		
+		
+		
+<div class="searchbox">	
+{literal}
+<style>
+.cse .gsc-control-cse, .gsc-control-cse {
+border: none;
+}
+</style>
+<script>
+(function() {
+  var cx = '016564231495750127829:fnjmdswjnro';
+  var gcse = document.createElement('script'); gcse.type = 'text/javascript';
+  gcse.async = true;
+  gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+      '//www.google.com/cse/cse.js?cx=' + cx;
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(gcse, s);
+})();
+</script>
+<gcse:search  linkTarget="_self"></gcse:search>
+{/literal}
+</div>
+
+
+
 		<div align="center" style="padding-top:10px" onclick="location.href='/';">
 			<a ><img src="/m/gPVR.png" width="187" height="115" /></a>
 		</div>
@@ -220,8 +248,8 @@
 		</div>
 
 		<div class="main_container">
-			<div id="searchbox">
-				{include file="googleSearch.tpl" }
+			<div class="searchbox">
+				<gcse:search  linkTarget="_self"></gcse:search>
 			</div>
 			<div id="breadcrumbs">
         		 <p class="breadcrumbs">{$BREAD_CRUMBS_STRING}</p>

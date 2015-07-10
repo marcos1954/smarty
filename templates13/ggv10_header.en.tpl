@@ -57,6 +57,32 @@
 <div id="under_menu" class="{if $frontpage}{$frontpage}{/if}">
 	<div id="undermenu-box">
 		
+		
+		
+<div class="searchbox">	
+{literal}
+<style>
+.cse .gsc-control-cse, .gsc-control-cse {
+border: none;
+}
+</style>
+<script>
+(function() {
+  var cx = '016564231495750127829:fnjmdswjnro';
+  var gcse = document.createElement('script'); gcse.type = 'text/javascript';
+  gcse.async = true;
+  gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+      '//www.google.com/cse/cse.js?cx=' + cx;
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(gcse, s);
+})();
+</script>
+<gcse:search  linkTarget="_self"></gcse:search>
+{/literal}
+</div>
+
+
+		
 		<div align="center" onclick="location.href='/'" style="padding-top:10px">
 			<a ><img src="/m/gPVR.png" width="187" height="115" /></a>
 		</div>
@@ -230,8 +256,8 @@
 		</div>
 
 		<div class="main_container">
-			<div id="searchbox">
-				{include file="googleSearch.tpl" }
+			<div class="searchbox">
+				<gcse:search  linkTarget="_self"></gcse:search>
 			</div>
 			<div id="breadcrumbs">
         		 <p class="breadcrumbs">{$BREAD_CRUMBS_STRING}</p>
