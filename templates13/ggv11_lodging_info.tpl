@@ -17,7 +17,7 @@
                </div>
                <div id="Listing_header_right">
 					
-               		<p class="listing_address">
+               		<div class="tagicons">
 						{if $EDIT != ''}
 					       <a href="{$EDIT}">EDIT</a> &nbsp;
 				        {/if}
@@ -35,7 +35,7 @@
 						{if $list_ta_url != ''}
 							  <a href="{$list_ta_url}"><img  class="tagicon" src="/images/tripadvisor2.png" title="Reviewed on Tripadvisor" /></a>
 						{/if}
-					</p>
+					</div>
 						
 					<div class="links" ><span>{$locationPhones|default:'location & phone'}</span></div>
 					
@@ -134,31 +134,12 @@
 	     			</div>
 				</div>
 
-	     		<div id="ggv_fb"  class="ggv-ctlbox-content">
-	     			
-				<!--		  
-				  <div style="margin: 5px  0 10px  25px ; float: right; clear: right; height: 500px !important" class="fb-like-box" data-href="{$list_fb_url_href}" data-width="730" data-height="500" data-show-faces="false" data-stream="true" data-header="true"></div>
-				  
-				  <div id="fb-root"></div>
-				  <script type="text/javascript">
-				  {literal}
-				  (function(d, s, id) {
-							var js, fjs = d.getElementsByTagName(s)[0];
-							if (d.getElementById(id)) return;
-							js = d.createElement(s); js.id = id;
-							js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-							fjs.parentNode.insertBefore(js, fjs);
-				  }(document, 'script', 'facebook-jssdk'));
-				  {/literal}
-				  </script>
-	     		-->
-	     		</div>
-
 				<div id="ggv_events"  class="ggv-ctlbox-content">
 					<div class="eventBox">
 		     	 	<a name="Calendar"></a>
 		     	 	<h2 >Events Calendar</h2>
 	     			{if $list_rows_cal != array()}
+					
 		 				{foreach from=$list_rows_cal item="entry"}
 							<div  class="eventOne">
 								<div class="eventOneFlyer">
@@ -170,7 +151,6 @@
 									{if $entry.nameEvent != ''}<div class="eventOneName">{$entry.nameEvent}</div>{/if}
 									<br />
                                     
-                                    
                                     {foreach from=$entry.dates item="dateblock"}
                                         <br />
                                         {$dateblock.locationEvent}
@@ -179,9 +159,8 @@
                                         <br />
                                         {$dateblock.event_recurs}
                                         <br />
-                                    
-                                    
                                     {/foreach}
+									
 									{if $entry.moreEventLink != ''}<br />{$entry.moreEventLink}
 									<br />{/if}<br /><i>
 									{$entry.descEvent}
@@ -192,9 +171,6 @@
 								</div>
 								<br clear="left" />
 							</div>
-                        
-                        
-                            
 						{/foreach}
 
 					{else}
@@ -212,7 +188,6 @@
 				</div>
 
 				<div id="ggv_menu" class="ggv-ctlbox-content">
-
 				{if $menus != array() }
 					<div  class="ggv_arrows" >
 						<a class="ggv_arrow_left"></a>
@@ -253,9 +228,9 @@
 					  {foreach from=$pix item=picture}
 					  {if $picture != ''}
 						{if $picture.width < 722 }
-					     <li><img src="/img.io/timthumb.php?w={$picture.width}&src={$picture.src}" /></li> 
+					     <li><img data-src="/img.io/timthumb.php?w={$picture.width}&src={$picture.src}" /></li> 
 						{else}
-					     <li><img src="/img.io/timthumb.php?w=722&src={$picture.src}" /></li>
+					     <li><img data-src="/img.io/timthumb.php?w=722&src={$picture.src}" /></li>
 						{/if}
 					  {/if}
 					  {/foreach}
@@ -273,11 +248,8 @@
 					<div id="lodging_ajax"></div>
 				</div>
 					
-				<div id="ggv_videos"  class="ggv-ctlbox-content">
-					{if $list_video}
-					{$list_video}
-					{/if}
-				</div> 
+				<div id="ggv_videos"  class="ggv-ctlbox-content" data="{$list_video}"></div>
+			</div>
 		</div>
 	</div>
 {include file="ggv10_footer.tpl"}

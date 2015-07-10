@@ -19,7 +19,9 @@
 	</div>
 
     <div id="main_content">
-		
+		<div class="cat_name" >
+				{$cat_name}
+		</div>
 		<div id="subcat-buttons" >
 				{foreach from=$subcat item="sub"}
 				 <div id="button_{$sub.subcat_typecode}" class="button" onclick="location.hash = '#{$sub.subcat_typecode}'; window.scrollBy(0,-50)" >{$sub.subcat_name}</div>		
