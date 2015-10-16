@@ -35,7 +35,7 @@
 								<div class="condoLogo">
 								{if $entry.lodging_logo_src ne ''}
 
-								  <a href="{$entry.lodging_logo_src}"><img border="0" src="{$entry.lodging_logo_src}"  width="{$entry.lodging_logo_width}"   height="{$entry.lodging_logo_height}"  align="left"></a>
+								  <a href="../Listings/{$entry.lodging_logo_src}"><img border="0" src="../Listings/{$entry.lodging_logo_src}"  width="{$entry.lodging_logo_width}"   height="{$entry.lodging_logo_height}"  align="left"></a>
 
 								{else}
 
