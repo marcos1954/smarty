@@ -62,6 +62,7 @@
 
 			<div class="roomlabel">
 				<span>room type:</span> {$entry.room_label}
+				<span>&nbsp;  {$entry.room_avail}</span>
 			</div>
 
 			<div class="desc">
