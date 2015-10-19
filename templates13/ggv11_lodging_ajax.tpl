@@ -56,7 +56,11 @@
 				</div>
 
 				<div class="avg">
+					{if $entry.room_avail != 'booked'}
 					<span>per&nbsp;day:</span> {$entry.room_avg_price}
+					{else}
+					<span>already booked</span>
+					{/if}
 				</div>
 			</div>
 
