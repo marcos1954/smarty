@@ -24,6 +24,10 @@
 					    {if $list_tagsicons != ''}
 							{$list_tagsicons}
 					    {/if}
+						{if $lodging_www_url != ''}
+                              <a href="{$lodging_www_url}"><img class="tagicon" style="margin:1px;" src="/images/www.png" title="Has a Website" /></a>
+                        {/if}
+						
 						{if $list_fb_url != ''}
 							  <a href="{$list_fb_url}"><img  class="tagicon" src="/images/facebookIcon.png"title="Facebook" /></a>
 						{/if}
@@ -73,6 +77,10 @@
 						
 						{if $list_ta_url != ''}
      	                    <a class="listlink" href="{$list_ta_url}">{$list_ta_text}</a>&nbsp;&nbsp;
+     	                {/if}
+						
+						{if $list_ol_url != ''}
+     	                    <a class="listlink" href="{$list_ol_url}">{$list_ol_text}</a>&nbsp;&nbsp;
      	                {/if}
 						
 					    {if $list_closed != ''}
