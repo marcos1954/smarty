@@ -39,7 +39,7 @@
 			 {/if}
 		  </div>
 		  <div class="listing_info">
-			{if $entry.list_tagsicons != '' || $entry.EDIT != '' || $entry.list_fb != '' || $entry.list_ta != '' || $entry.list_ol != ''|| $entry.list_www != ''}
+			{if $entry.list_tagsicons != '' || $entry.EDIT != '' || $entry.list_fb != '' || $entry.list_ta != '' || $entry.list_ti != '' || $entry.list_ol != ''|| $entry.list_www != ''}
 				<div class="tagicons" >
 					 {if $entry.EDIT != ''}
 						<a href="{$entry.EDIT}">EDIT</a> &nbsp;
@@ -49,6 +49,9 @@
 					{if $entry.list_tw}<a href="{$entry.list_tw}"><img  class="tagicon"  src="/images/twitter.png" title="Listed on Twitter" /></a>{/if}
 					{if $entry.list_ta}<a href="{$entry.list_ta}"><img  class="tagicon"  src="/images/tripadvisor2.png" title="Reviewed on Tripadvisor" /></a>{/if}
 					{if $entry.list_www}<a href="{$entry.list_www_url}"><img  class="tagicon"  style="margin:1px;"src="/images/www.png" title="Has a Website" /></a>{/if}
+					
+					
+					{if $entry.list_ti}<a href="{$entry.list_ti}"><img  class="tagicon"  src="/images/tickets.png" title="Get Tickets Online" /></a>{/if}
 					
 					{if $list_lastupdate != '' && $EDIT != ''}
 						<div style="text-align: center; color: gray; font-size: .8em;" >{$list_lastupdate}</div>
@@ -109,7 +112,7 @@
 				 {/if}
 			  </div>
 			  <div class="listing_info">
-			   {if $entry.list_tagsicons != '' || $entry.EDIT != '' || $entry.list_fb != '' || $entry.list_ta != '' || $entry.list_ol != ''|| $entry.list_www != ''}
+			   {if $entry.list_tagsicons != '' || $entry.EDIT != '' || $entry.list_fb != '' || $entry.list_ta != '' || $entry.list_ti != '' || $entry.list_ol != ''|| $entry.list_www != ''}
 				   <div class="tagicons">
 							{if $entry.EDIT != ''}
 							   <div style="text-align:right; color: gray; font-size: .8em;"><a href="{$entry.EDIT}">EDIT</a> &nbsp;{$entry.list_lastupdate}</div>
@@ -119,6 +122,9 @@
 					   {if $entry.list_tw}<a href="{$entry.list_tw}"><img   class="tagicon" src="/images/twitter.png" title="Listed on Twitter" /></a>{/if}
 					   {if $entry.list_ta}<a href="{$entry.list_ta}"><img   class="tagicon" src="/images/tripadvisor2.png" title="Reviewed on Tripadvisor" /></a>{/if}
                        {if $entry.list_www}<a href="{$entry.list_www_url}"><img   class="tagicon" style="margin:1px;"src="/images/www.png" title="Has a Website" /></a>{/if}
+					   
+					   				
+						{if $entry.list_ti}<a href="{$entry.list_ti}"><img  class="tagicon"  src="/images/tickets.png" title="Get Tickets Online" /></a>{/if}
 					   
 				    </div>
 			   {/if}

@@ -35,6 +35,10 @@
                         {if $list_url != ''}
                               <a href="{$list_url}"><img class="tagicon" style="margin:1px;" src="/images/www.png" title="Has a Website" /></a>
                         {/if}
+						
+						{if $list_ti_url != ''}
+                              <a href="{$list_ti_url}"><img class="tagicon" style="margin:1px;" src="/images/tickets.png" title="Get Tickets Online" /></a>
+                        {/if}
 					</div>
 					
                     {if $list_addr1 != '' || $list_addr2 != '' || $list_addr3 != '' || 	$list_phone != '' || $list_cell != '' || $list_intlphone != '' }
@@ -60,7 +64,7 @@
                     </p>
                     {/if}
                     
-                    {if $list_url != '' || $list_fb_url != '' || $list_tw_url != '' || $list_ta_url != '' || 	$list_ol_url != ''  }
+                    {if $list_url != '' || $list_fb_url != '' || $list_tw_url != '' || $list_ta_url != '' || $list_ti_url != '' || 	$list_ol_url != ''  }
 					
 					<div class="links" ><span>{$websitesListings|default:'website & listings'}</span></div>
 					{/if}		 
@@ -78,6 +82,10 @@
 						
 						{if $list_ta_url != ''}
      	                    <a class="listlink" href="{$list_ta_url}">{$list_ta_text}</a>
+     	                {/if}
+						
+						{if $list_ti_url != ''}
+     	                    <a class="listlink" href="{$list_ti_url}">{$list_ti_text}</a>
      	                {/if}
                         
                         {if $list_ol_url != ''}
