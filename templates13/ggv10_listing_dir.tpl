@@ -1,5 +1,5 @@
 {include file=$headerfilename}
-
+{debug}
 <div id="topcontent" >
 		{if $gmap}
 				<div class="gmap_insert"  >
