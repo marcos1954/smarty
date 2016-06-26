@@ -1,6 +1,6 @@
 {include file=$headerfilename}
-{debug}
 <div id="topcontent" >
+		
 		{if $gmap}
 				<div class="gmap_insert"  >
 						<iframe src="http://www.gayguidevallarta.com/Mapa/gmap.php?cat={$gmap_cat}&target=_parent&bgcolor=%23FFFfFf"
@@ -27,6 +27,10 @@
 				 <div id="button_{$sub.subcat_typecode}" class="button" onclick="location.hash = '#{$sub.subcat_typecode}'; window.scrollBy(0,-50)" >{$sub.subcat_name}</div>		
 				{/foreach}
 		</div>
+
+		{if $cat_name_prime != ''}
+				<h2>{$cat_name_prime}</h2>
+		{/if}
 		
 		{foreach from=$MAIN_LISTINGS item="entry"}
 		<div  class="listing_box"  >
