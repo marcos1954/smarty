@@ -20,11 +20,11 @@
 			</div>
 			<div id="ggv_cal_controlbar" style="width: {$tablewidth}px !important;">
 				<span link="{$prev_month_href}" class="ajaxlink">
-					<img height=24 width=24   style="padding-left: 0px;" border="0"  src="http://www.gayguidevallarta.com/Calendar/Images/rewind.png">
+					<img height=24 width=24   style="padding-left: 0px;" border="0"  src="https://www.gayguidevallarta.com/Calendar/Images/rewind.png">
 				</span>
 				<span class="dayviewdate">&nbsp;{$this_month} {$this_year}&nbsp;</span>
 				<span link="{$next_month_href}" class="ajaxlink">
-					<img height=24 width=24  style="padding-left: 0px;"  border="0"  src="http://www.gayguidevallarta.com/Calendar/Images/forward.png">
+					<img height=24 width=24  style="padding-left: 0px;"  border="0"  src="https://www.gayguidevallarta.com/Calendar/Images/forward.png">
 				</span>
 			</div>
 		</form>

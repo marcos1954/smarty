@@ -3,7 +3,7 @@
 		
 		{if $gmap}
 				<div class="gmap_insert"  >
-						<iframe src="http://www.gayguidevallarta.com/Mapa/gmap.php?cat={$gmap_cat}&target=_parent&bgcolor=%23FFFfFf"
+						<iframe src="/Mapa/gmap.php?cat={$gmap_cat}&target=_parent&bgcolor=%23FFFfFf"
 								name="map"
 								width="100%"
 								style="float:right;"

@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <title>{$PAGE_TITLE|default:"gayguide Vallarta"}</title>
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
 {$cssExtra}
 <link rel="stylesheet" type="text/css" href="{$DIR_WS_BASE}css/GayGuideVallarta.css" media="all" />
@@ -13,8 +13,8 @@
 <link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png" />
 <link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png" />
 
-<script type="text/javascript" src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js"></script>
 <script language="JavaScript" type="text/javascript" src="/js/ggv_main.js"></script> 
 
 {$headerExtra}
@@ -48,9 +48,9 @@
 		{$LANG_FLAGS}&nbsp;{$translatemenulink}
 	</div>
 	<div id="app-links">
-		<a href="http://i.gpvr.mx">iPhone App</a>  &nbsp;&nbsp;&nbsp;
-		<a href="http://i.gpvr.mx">iPad App</a>  &nbsp;&nbsp;&nbsp;
-		<a href="http://i.gpvr.mx">Android App</a>
+		<a href="http://gayguidevallarta.com/touch">iPhone App</a>  &nbsp;&nbsp;&nbsp;
+		<a href="http://gayguidevallarta.com/touch">iPad App</a>  &nbsp;&nbsp;&nbsp;
+		<a href="http://gayguidevallarta.com/touch">Android App</a>
 	</div>
 </div>
 
@@ -146,7 +146,7 @@ border: none;
 			<a  >Lodging</a>
 		</div>
 
-		<div class="button"  onclick="location.href='http://i.gpvr.mx';">
+		<div class="button"  onclick="location.href='https://i.gpvr.mx';">
 			<a  >Web App</a>
 		</div>
 	
