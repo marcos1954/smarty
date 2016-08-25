@@ -227,6 +227,7 @@ border: none;
 	  			<div class="submenuentry"> &#187; <a href="{$DIR_WS_BASE}Lodging/villas.html" title="Villas fit for celebrities and groups."> Villas</a></div>
 	  			<!-- <div class="submenuentry"> &#187; <a href="{$DIR_WS_BASE}Lodging/agents.html"> Agents</a></div>  -->
 	  			<div class="submenuentry"> &#187; <a href="{$DIR_WS_BASE}Lodging/sidetrips.html" title="Great places to visit in this region of Mexico."> Regional</a></div>
+				<div class="submenuentry"> &#187; <a href="{$DIR_WS_BASE}Agents/" title="Vacation Rental Agencies."> Agents</a></div>
 			{/if}
 	  			<div class="submenugroup"> GAYGUIDE</div>
 	  			<div class="submenuentry"> &#187; <a href="{$DIR_WS_BASE}Daylife/" title="Daylife at the beach and on gay day tours"> Daylife</a></div>

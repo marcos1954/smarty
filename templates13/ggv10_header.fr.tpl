@@ -229,6 +229,7 @@ border: none;
 	  			<div class="submenuentry"> &#187; <a href="{$DIR_WS_BASE}Lodging/condos.html" title="Hundreds of condos conviently located."> Condos</a></div>
 	  			<div class="submenuentry"> &#187; <a href="{$DIR_WS_BASE}Lodging/villas.html" title="Villas fit for celebrities and groups."> Villas</a></div>
 	  			<div class="submenuentry"> &#187; <a href="{$DIR_WS_BASE}Lodging/sidetrips.html" title="Great places to visit in this region of Mexico."> Regional</a></div>
+			    <div class="submenuentry"> &#187; <a href="{$DIR_WS_BASE}Agents/" title="Vacation Rental Agencies."> Agents</a></div>
 			{/if}
 	  			<div class="submenugroup"> GUIDE GAY</div>
 	  			<div class="submenuentry"> &#187; <a href="{$DIR_WS_BASE}Daylife/" title="Vie quotidienne de la plage et de randonn�s gaies">Vie Quotidienne</a></div>
