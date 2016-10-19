@@ -139,6 +139,10 @@ border: none;
 			<a  >Compras</a>
 		</div>
 		
+		<div class="button"  onclick="location.href='/RealEstate/';">
+			<a  >Bienes Raíces</a>
+		</div>
+		
 		<div class="button"  onclick="location.href='/Services/';">
 			<a  >Servicios</a>
 		</div>
@@ -147,6 +151,10 @@ border: none;
 		
 		<div class="button"  onclick="location.href='/Lodging/gay.html?forcemobile=true';">
 			<a  >Lodging</a>
+		</div>
+		
+		<div class="button"  onclick="location.href='/Agents/';">
+			<a  >Agentes de Renta</a>
 		</div>
 		
 		<div class="button"  onclick="location.href='http://i.gpvr.mx';">
@@ -174,31 +182,57 @@ border: none;
 		
     <div id="GayGuideVallarta_topmenu">	
 		<div class="topmenu-text">
-		
+		<ul>
+			<li>
 			<a href="{$DIR_WS_BASE}" title="Inicio - Gay Guide Vallarta">Vallarta Gay</a>
-			&nbsp;&nbsp;|&nbsp;&nbsp;
+			</li>
 			
-			<a href="{$DIR_WS_BASE}Calendar/" title="Calendario de Gay Vallarta">Calendario</a>
-			&nbsp;&nbsp;|&nbsp;&nbsp;
+			<li  class="dropdownMenu">
+			<a class="dropdownMenuLink"  id="directory"  >Directorio</a>
+			<div class="menuBlock" >
+				<div class="directoryMenuTitle">Directorio de PV</div>
+	  			<div class="popdirentry"> &#187; <a href="{$DIR_WS_BASE}Lodging/gay.html" title="Lodging information for tourists staying in gay Puerto Vallarta."> Alojamientos</a></div>
+				<br />
+				<div class="popdirentry"> &#187; <a href="{$DIR_WS_BASE}Daylife/" title="Daylife at the beach and on gay day tours">Vida diurna</a></div>
+	  			<div class="popdirentry"> &#187; <a href="{$DIR_WS_BASE}Nightlife/" title="Vallarta's gay nightlife is rich and varied.">Vida nocturna</a></div>
+	  			<div class="popdirentry"> &#187; <a href="{$DIR_WS_BASE}Acts/" title="Vallarta's featured Entertainers."> Espectáculos</a></div>
+	  			<div class="popdirentry"> &#187; <a href="{$DIR_WS_BASE}Restaurants/" title="PV has some fabulous places to eat."> Restaurantes</a></div>
+	  			<div class="popdirentry"> &#187; <a href="{$DIR_WS_BASE}GymSpa/" title="Our list of gyms, spas and masseurs."> Gimnasio y Spa</a></div>
+	  			<div class="popdirentry"> &#187; <a href="{$DIR_WS_BASE}Galleries/" title="Fine art galleries abound in Puerto Vallarta"> Galer&iacute;as de Arte</a></div>
+	  			<div class="popdirentry"> &#187; <a href="{$DIR_WS_BASE}Shopping/" title="From beachware to home decorating"> Compras</a></div>
+	  			<div class="popdirentry"> &#187; <a href="{$DIR_WS_BASE}Services/" title="Misc services of interest."> Servicios</a></div>
+	  			<div class="popdirentry"> &#187; <a href="{$DIR_WS_BASE}RealEstate/" title="Real Estate Offices, Brokers and Mortgages."> Bienes Raíces</a></div>
+			</div>
+			</li>
 			
+			<li  class="dropdownMenu">
+			<a  class="dropdownMenuLink" href="{$DIR_WS_BASE}Calendar/" >Calendario</a>
+		    <div class="menuBlock" >
+				<div class="directoryMenuTitle">Calendario de Eventos</div>
+				<div class="popdirentry"> &#187; <a href="{$DIR_WS_BASE}Calendar/" title="Aspectos destacados anuales."> Destacados Anuales</a></div>
+				<div class="popdirentry"> &#187; <a href="{$DIR_WS_BASE}Calendar/index.php?display=day" title="Calendario completo Día."> Día</a></div>
+				<div class="popdirentry"> &#187; <a href="{$DIR_WS_BASE}Calendar/index.php?display=month" title="Calendario mensual."> Mensual</a></div>
+				<br />
+				<div class="popdirentry"> &#187; <a href="{$DIR_WS_BASE}Calendar/index.php?id=&code=&display=month&category=2,19,20&Go=Go" title="Calendario de espectáculos."> Espectáculos</a></div>
+				<div class="popdirentry"> &#187; <a href="{$DIR_WS_BASE}Calendar/index.php?id=&code=&display=month&category=3&Go=Go" title="Calendario de espectáculos."> Excursiónes</a></div>
+			</div>
+		   </li>
+			
+			<li>
 			<a href="{$DIR_WS_BASE}GayPVMap/" title="Mapas de Gay Puerto Vallarta">Mapas</a>
-			&nbsp;&nbsp;|&nbsp;&nbsp;
-
+			</li>
+			
+			<li>
 			<a href="{$DIR_WS_BASE}FacebookPhotos/" title="Photos of Gay Puerto Vallarta">Fotos</a>
-			&nbsp;&nbsp;|&nbsp;&nbsp;
-
+			</li>
+			
+			<li>
 			<a href="{$DIR_WS_BASE}Videos/" title="Photos of Gay Puerto Vallarta">Videos</a>
-			&nbsp;&nbsp;|&nbsp;&nbsp;
-
-			<!--
-			<a href="{$DIR_WS_BASE}Social/" title="Gay Puerto Vallarta">Social</a>
-			&nbsp;&nbsp;|&nbsp;&nbsp;
-			-->
+			</li>
+			
+			<li>
 			<a href="{$DIR_WS_BASE}gayPVguide/" title="Nuestra edici&iacute;n impresa. Descargar o encontrar informaci&oacute;n de publicidad.">Gu&iacute;a</a>
-
-&nbsp;&nbsp;|&nbsp;&nbsp;
-			<a href="{$DIR_WS_BASE}Advertise/" title=".">Anunciar</a>
-
+			</li>
 		</div>
     </div>
 	
@@ -219,7 +253,7 @@ border: none;
 	  			<div class="submenuentry"> &#187; <a href="{$DIR_WS_BASE}Lodging/condos.html" title="Hundreds of condos conviently located."> Condos</a></div>
 	  			<div class="submenuentry"> &#187; <a href="{$DIR_WS_BASE}Lodging/villas.html" title="Villas fit for celebrities and groups."> Villas</a></div>
 	  			<div class="submenuentry"> &#187; <a href="{$DIR_WS_BASE}Lodging/sidetrips.html" title="Great places to visit in this region of Mexico."> Regional</a></div>
-				<div class="submenuentry"> &#187; <a href="{$DIR_WS_BASE}Agents/" title="Vacation Rental Agencies."> Agents</a></div>
+				<div class="submenuentry"> &#187; <a href="{$DIR_WS_BASE}Agents/" title="Agencias de alquiler."> Agentes</a></div>
 			{/if}
 	  			<div class="submenugroup"> GUIA GAY</div>
 	  			<div class="submenuentry"> &#187; <a href="{$DIR_WS_BASE}Daylife/" title="Daylife at the beach and on gay day tours">Vida diurna</a></div>
@@ -230,7 +264,8 @@ border: none;
 	  			<div class="submenuentry"> &#187; <a href="{$DIR_WS_BASE}Galleries/" title="Fine art galleries abound in Puerto Vallarta"> Galer&iacute;as de Arte</a></div>
 	  			<div class="submenuentry"> &#187; <a href="{$DIR_WS_BASE}Shopping/" title="From beachware to home decorating"> Compras</a></div>
 	  			<div class="submenuentry"> &#187; <a href="{$DIR_WS_BASE}Services/" title="Misc services of interest."> Servicios</a></div>
-	  			<div class="mainmenuentry"> &#187; <a href="{$DIR_WS_BASE}GeneralInfo/" title="Some orientation on the non-gay part of Vallarta."> Info Gral.</a></div>
+	  			<div class="submenuentry"> &#187; <a href="{$DIR_WS_BASE}RealEstate/" title="Real Estate Offices, Brokers and Mortgages."> Bienes Raíces</a></div>
+				<div class="mainmenuentry"> &#187; <a href="{$DIR_WS_BASE}GeneralInfo/" title="Some orientation on the non-gay part of Vallarta."> Info Gral.</a></div>
 	  		</div>
 			
 			<div id="GayGuideVallarta_r3_c1"></div>

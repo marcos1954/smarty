@@ -173,35 +173,50 @@ border: none;
 	
     <div id="GayGuideVallarta_topmenu">
 		<div class="topmenu-text">
+			<ul>
+				<li>
         	<a href="{$DIR_WS_BASE}" title="Accueil - GuideGay Vallarta">Vallarta Gay</a>
-        	&nbsp;&nbsp;|&nbsp;&nbsp;
+				</li>
+				
+				
+				<li  class="dropdownMenu">
+			<a  class="dropdownMenuLink" id="directory">R&eacute;pertoire</a>
+			<div  class="menuBlock" >
+				<div class="directoryMenuTitle">R&eacute;pertoire PV</div>
+
+	  			<div class="popdirentry"> &#187; <a href="{$DIR_WS_BASE}Lodging/gay.html" title="Renseignements de logements touristiques � gay Puerto Vallarta"> Logement</a></div>
+				<div class="popdirentry"> &#187; <a href="{$DIR_WS_BASE}Daylife/" title="Vie quotidienne de la plage et de randonn�s gaies">Vie Quotidienne</a></div>
+	  			<div class="popdirentry"> &#187; <a href="{$DIR_WS_BASE}Nightlife/" title="La vie nocturne gaie de Vallarta est riche et diversifi�e">Vie Nocturne</a></div>
+	  			<div class="popdirentry"> &#187; <a href="{$DIR_WS_BASE}Acts/" title="Vallarta's featured Entertainers."> Spectacles</a></div>
+	  			<div class="popdirentry"> &#187; <a href="{$DIR_WS_BASE}Restaurants/" title="De nombreux et fantastiques endroits � manger"> Restaurants</a></div>
+	  			<div class="popdirentry"> &#187; <a href="{$DIR_WS_BASE}GymSpa/" title="�num�rations de gyms, spas et masseurs"> Gym et Spa</a></div>
+	  			<div class="popdirentry"> &#187; <a href="{$DIR_WS_BASE}Galleries/" title="Galerie d�art � travers Puerto Vallarta"> Galerie d'Arts</a></div>
+	  			<div class="popdirentry"> &#187; <a href="{$DIR_WS_BASE}Shopping/" title="De v�tements pour la plage au d�cor r�sidentiel "> Magasinage</a></div>
+	  			<div class="popdirentry"> &#187; <a href="{$DIR_WS_BASE}Services/" title="Diff�rents services d�int�r�ts"> Services</a></div>
+	  			<div class="popdirentry"> &#187; <a href="{$DIR_WS_BASE}GeneralInfo/" title="Une orientation de la partie non-gay de Vallarta"> Info G&eacute;n&eacute;raux</a></div>
+
+			</div>
+			
+			
+				</li><li>
         	<a href="{$DIR_WS_BASE}Calendar/" title="Calendrier d'activit�s gaies de Vallarta">Calendrier</a>
-        	&nbsp;&nbsp;|&nbsp;&nbsp;
+				</li><li>
         	<a href="{$DIR_WS_BASE}GayPVMap/" title="Cartes de gay Puerto Vallarta">Carte</a>
-        	&nbsp;&nbsp;|&nbsp;&nbsp;
+				</li><li>
 
 
 			
 			<a href="{$DIR_WS_BASE}FacebookPhotos/" title="Photos of Gay Puerto Vallarta">Photos</a>
-			&nbsp;&nbsp;|&nbsp;&nbsp;
+				</li><li>
 			
 						
 			<a href="{$DIR_WS_BASE}Videos/" title="Photos of Gay Puerto Vallarta">Videos</a>
-			&nbsp;&nbsp;|&nbsp;&nbsp;
-			
-				
-			<!--			
-			<a href="{$DIR_WS_BASE}Social/" title="Gay Puerto Vallarta">Social</a>
-			&nbsp;&nbsp;|&nbsp;&nbsp;
-			-->
-			
-
-
+				</li><li>
 
         	<a href="{$DIR_WS_BASE}gayPVguide/" title="Notre publication.  T�l�charger ou obtenez notre information publicitaire">Guide</a>
-&nbsp;&nbsp;|&nbsp;&nbsp;
-			<a href="{$DIR_WS_BASE}Advertise/" title=".">Advertise</a>
-			
+				</li>
+
+			</ul>
         </div>
     </div>
 

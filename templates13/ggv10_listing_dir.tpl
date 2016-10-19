@@ -37,7 +37,7 @@
 		   <div class="listinglogo">
 			 <a name="{$entry.list_dirref}"></a>
 			 {if $entry.list_src != ''}
-			  <img src="/img.io/timthumb.php?w=100&src={$entry.list_src}" align="left" />
+			  <img src="{$entry.list_src}" align="left" />
 			 {else}
 			   &nbsp;
 			 {/if}
