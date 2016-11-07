@@ -184,15 +184,14 @@ border: none;
 		<div class="topmenu-text">
 		  <ul>
 		   <li>
-			<a href="{$DIR_WS_BASE}" title="Home - Gay Guide Vallarta">Gay Vallarta</a>
+			<a href="{$DIR_WS_BASE}" title="Home - Gay Guide Vallarta">Home</a>
 		   </li>
 		   
 		   <li  class="dropdownMenu">
-			<a class="dropdownMenuLink" id="directory" >Directory</a>
+			<a class="dropdownMenuLink" id="directory" >Gay Vallarta</a>
 			<div class="menuBlock" >
-				<div class="directoryMenuTitle">PV Directory</div>
+				<div class="directoryMenuTitle">Gay Vallarta Directory</div>
 				<div class="popdirentry"> &#187; <a href="{$DIR_WS_BASE}Lodging/gay.html" title="Lodging information for tourists staying in gay Puerto Vallarta."> Lodging</a></div>
-				<br />
 				<div class="popdirentry"> &#187; <a href="{$DIR_WS_BASE}Daylife/" title="Daylife at the beach and on gay day tours"> Daylife</a></div>
 	  			<div class="popdirentry"> &#187; <a href="{$DIR_WS_BASE}Nightlife/" title="The Vallarta gay nightlife is rich and varied."> Nightlife</a></div>
 	  			<div class="popdirentry"> &#187; <a href="{$DIR_WS_BASE}Acts/" title="Vallarta's featured Entertainers."> Shows</a></div>
@@ -218,20 +217,42 @@ border: none;
 			</div>
 		   </li>
 		   
-		   <li>
-			<a href="{$DIR_WS_BASE}GayPVMap/" title="Maps of Gay Puerto Vallarta">Map</a>
+		   <li  class="dropdownMenu">
+			<a  class="dropdownMenuLink"  href="{$DIR_WS_BASE}GayPVMap/" title="Map of Gay Puerto Vallarta">Map</a>
+			<div class="menuBlock" >
+				<div class="directoryMenuTitle">Gay Vallarta Maps</div>
+				<div class="popdirentry"> &#187; <a   href="{$DIR_WS_BASE}GayPVMap/index.php" title="Map of Gay Puerto Vallarta">Gay Vallarta Map</a></div>
+				<br />
+				<div class="popdirentry"> &#187; <a   href="{$DIR_WS_BASE}GayPVMap/index.php?cat=bars&catlist=bars" title="Bar Map of Gay Puerto Vallarta">Bar Map</a></div>
+				<div class="popdirentry"> &#187; <a   href="{$DIR_WS_BASE}GayPVMap/index.php?cat=rest&catlist=rest" title="Restaurant Map of Gay Puerto Vallarta">Restaurant Map</a></div>
+				<div class="popdirentry"> &#187; <a   href="{$DIR_WS_BASE}GayPVMap/index.php?cat=hotel&catlist=hotel" title="Hotel Map of Gay Puerto Vallarta">Hotel Map</a></div>
+			</div>
 		   </li>
 		   
-		   <li>
-			<a href="{$DIR_WS_BASE}FacebookPhotos/" title="Photos of Gay Puerto Vallarta">Photos</a>
+		    <li  class="dropdownMenu">
+			<a   class="dropdownMenuLink" href="{$DIR_WS_BASE}FacebookPhotos/" >Photos</a>
+			<div class="menuBlock" >
+				<div class="directoryMenuTitle">Gay Vallarta Photos</div>
+				<div class="popdirentry"> &#187; <a   href="{$DIR_WS_BASE}FacebookPhotos/" title="Photos of Gay Puerto Vallarta">Facebook Albums</a></div>
+			</div>
 		   </li>
 		   
-		   <li>			
-			<a href="{$DIR_WS_BASE}Videos/" title="Photos of Gay Puerto Vallarta">Videos</a>
+		   <li  class="dropdownMenu">
+			<a   class="dropdownMenuLink" href="{$DIR_WS_BASE}Videos/" >Videos</a>
+			<div class="menuBlock" >
+				<div class="directoryMenuTitle">Gay Vallarta Videos</div>
+				<div class="popdirentry"> &#187; <a   href="{$DIR_WS_BASE}Videos/" title="Videos of Gay Puerto Vallarta">You-tube Videos</a></div>
+			</div>
 		   </li>
 		   
-		   <li>
-			<a href="{$DIR_WS_BASE}gayPVguide/" title="Our printed edition.  Download or find advertising information.">Guidebook</a>
+		   <li  class="dropdownMenu">
+			<a   class="dropdownMenuLink" href="{$DIR_WS_BASE}gayPVguide/" >Guidebook</a>
+			<div class="menuBlock" >
+				<div class="directoryMenuTitle">Gay Guide Vallarta</div>
+				<div class="popdirentry"> &#187; <a   href="{$DIR_WS_BASE}gayPVguide/index.php" title="Map of Gay Puerto Vallarta">Print Edition</a></div>
+				<br />
+				<div class="popdirentry"> &#187; <a   href="{$DIR_WS_BASE}Advertise/index.php" title="">Advertise</a></div>
+				</div>
 		   </li>
 		  </ul>
 		</div>
