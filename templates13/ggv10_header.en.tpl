@@ -49,9 +49,9 @@
 		{$LANG_FLAGS}&nbsp;{$translatemenulink}
 	</div>
 	<div id="app-links">
-		<a href="http://gayguidevallarta.com/touch">iPhone App</a>  &nbsp;&nbsp;&nbsp;
-		<a href="http://gayguidevallarta.com/touch">iPad App</a>  &nbsp;&nbsp;&nbsp;
-		<a href="http://gayguidevallarta.com/touch">Android App</a>
+		<a href="https://www.gayguidevallarta.com/touch">iPhone App</a>  &nbsp;&nbsp;&nbsp;
+		<a href="https://www.gayguidevallarta.com/touch">iPad App</a>  &nbsp;&nbsp;&nbsp;
+		<a href="https://www.gayguidevallarta.com/touch">Android App</a>
 	</div>
 </div>
 
@@ -155,7 +155,7 @@ border: none;
 			<a  >Rental Agents</a>
 		</div>
 
-		<div class="button"  onclick="location.href='https://i.gpvr.mx';">
+		<div class="button"  onclick="location.href='https://www.gayguidevallarta.com/touch';">
 			<a  >Web App</a>
 		</div>
 	
@@ -171,7 +171,7 @@ border: none;
     	</div>
     {else}
    		<div id="topBanner">
-    	<a href="http://www.gayguidevallarta.com/qr.ggv122c.php">
+    	<a href="https://www.gayguidevallarta.com/qr.ggv122c.php">
     		<img height="150" width="950" src="{$DIR_WS_BASE}includes/Images/topBannerAPP.gif" />
     	</a>
    		</div>

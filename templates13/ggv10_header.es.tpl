@@ -49,9 +49,9 @@
 	</div>
 		
 	<div id="app-links">
-		<a href="http://i.gpvr.mx">iPhone App</a>  &nbsp;&nbsp;&nbsp;
-		<a href="http://i.gpvr.mx">iPad App</a>  &nbsp;&nbsp;&nbsp;
-		<a href="http://i.gpvr.mx">Android App</a>
+		<a href="https://www.gayguidevallarta.com/touch">iPhone App</a>  &nbsp;&nbsp;&nbsp;
+		<a href="https://www.gayguidevallarta.com/touch">iPad App</a>  &nbsp;&nbsp;&nbsp;
+		<a href="https://www.gayguidevallarta.com/touch">Android App</a>
 	</div>
 </div>
 
@@ -157,7 +157,7 @@ border: none;
 			<a  >Agentes de Renta</a>
 		</div>
 		
-		<div class="button"  onclick="location.href='http://i.gpvr.mx';">
+		<div class="button"  onclick="location.href='https://www.gayguidevallarta.com/touch';">
 			<a  >Web App</a>
 		</div>
 	
