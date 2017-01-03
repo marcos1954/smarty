@@ -260,7 +260,8 @@ border: none;
 			<div id="GayGuideVallarta_r3_c1"></div>
 
 			<div id="LeftColumnContent" >
-				 <a href="{$DIR_WS_BASE}gayPVguide/" title=""><img src="{$DIR_WS_BASE}includes/Images/GetPrintEdition.jpg" /></a>
+				<div class="printEditionText" style="margin: 0 10px; background-color: black; color: white;font-family: sans-serif;padding: 4px;">Edicion Actuelle</div>
+				 <a href="{$DIR_WS_BASE}gayPVguide/" title=""><img src="{$DIR_WS_BASE}includes/Images/Cover164.a.small.jpg" /></a>
 			</div>
 			{if not ($ads180x400 == NULL) }
 				<div id="ads180x400">

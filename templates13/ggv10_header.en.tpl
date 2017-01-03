@@ -302,7 +302,8 @@ border: none;
 	  		</div>
 			<div id="GayGuideVallarta_r3_c1"></div>
 			<div id="LeftColumnContent" >
-				<a href="{$DIR_WS_BASE}gayPVguide/" title=""><img style="width: 180px;height: auto;" src="{$DIR_WS_BASE}includes/Images/GetPrintEdition.jpg" /></a>
+				<div class="printEditionText" style="margin: 0 10px; background-color: black; color: white;font-family: sans-serif;padding: 4px;">Print Edition</div>
+				<a href="{$DIR_WS_BASE}gayPVguide/" title=""><img style="width: 180px;height: auto;" src="{$DIR_WS_BASE}includes/Images/Cover164.a.small.jpg" /></a>
 			</div>
 			{* include file="ggv10_right_content.tpl" *}
 			{if not ($ads180x400 == NULL) }
