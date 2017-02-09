@@ -16,7 +16,7 @@
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js"></script>
-<script language="JavaScript" type="text/javascript" src="/js/ggv_main.js"></script> 
+<script type="text/javascript" src="/js/ggv_main.js"></script> 
 
 {$headerExtra}
  
@@ -303,7 +303,7 @@ border: none;
 			<div id="GayGuideVallarta_r3_c1"></div>
 			<div id="LeftColumnContent" >
 				<div class="printEditionText" style="margin: 0 10px; background-color: black; color: white;font-family: sans-serif;padding: 4px;">Print Edition</div>
-				<a href="{$DIR_WS_BASE}gayPVguide/" title=""><img style="width: 180px;height: auto;" src="{$DIR_WS_BASE}includes/Images/Cover164.a.small.jpg" /></a>
+				<a href="{$DIR_WS_BASE}gayPVguide/" title=""><img style="width: 180px;height: auto;" src="{$DIR_WS_BASE}includes/Images/Cover171.a.180x360.jpg" /></a><br /><br />
 			</div>
 			{* include file="ggv10_right_content.tpl" *}
 			{if not ($ads180x400 == NULL) }

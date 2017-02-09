@@ -1,4 +1,4 @@
-{*strip*}
+{strip}
 {include file=$headerfilename}
 
      	<div id="main_content">
@@ -20,24 +20,25 @@
                		<div class="tagicons">
 						{if $EDIT != ''}
 					       <a href="{$EDIT}">EDIT</a> &nbsp;
-				        {/if}
-					    {if $list_tagsicons != ''}
-							{$list_tagsicons}
-					    {/if}
+				    {/if}
+					  {if $list_tagsicons != ''}
+								{$list_tagsicons}
+					  {/if}
+						
 						{if $lodging_www_url != ''}
-                              <a href="{$lodging_www_url}"><img class="tagicon" style="margin:1px;" src="/images/www.png" title="Has a Website" /></a>
-                        {/if}
+								<a class="trackLink" data-listname="{$hotel_name} : website"  href="{$lodging_www_url}"><img class="tagicon" style="margin:1px;" src="/images/www.png" title="Has a Website" /></a>
+						{/if}
 						
 						{if $list_fb_url != ''}
-							  <a href="{$list_fb_url}"><img  class="tagicon" src="/images/facebookIcon.png"title="Facebook" /></a>
+							  <a class="trackLink" data-listname="{$hotel_name} : facebook"   href="{$list_fb_url}"><img  class="tagicon" src="/images/facebookIcon.png"title="Facebook" /></a>
 						{/if}
 						
 						{if $list_tw_url != ''}
-							  <a href="{$list_tw_url}"><img  class="tagicon" src="/images/twitter.png" title="Facebook" /></a>
+							  <a class="trackLink" data-listname="{$hotel_name} : twitter"   href="{$list_tw_url}"><img  class="tagicon" src="/images/twitter.png" title="Facebook" /></a>
 						{/if}
 						
 						{if $list_ta_url != ''}
-							  <a href="{$list_ta_url}"><img  class="tagicon" src="/images/tripadvisor2.png" title="Reviewed on Tripadvisor" /></a>
+							  <a class="trackLink" data-listname="{$hotel_name} : tripadvisor"   href="{$list_ta_url}"><img  class="tagicon" src="/images/tripadvisor2.png" title="Reviewed on Tripadvisor" /></a>
 						{/if}
 					</div>
 						
@@ -64,48 +65,48 @@
 					<div class="links" ><span>{$websitesListings|default:'website & listings'}</span></div>
 							 
 
-                        {if $lodging_link_url != ''}
-     	                    <a class="listlink" rel="nofollow" href="{$lodging_link_url}">website</a>&nbsp;&nbsp;
-     	                {/if}
-						{if $list_fb_url != ''}
-     	                    <a class="listlink" href="{$list_fb_url}">{$list_fb_text}</a>&nbsp;&nbsp;
-     	                {/if}
+							{if $lodging_link_url != ''}
+									<a class="listlink" rel="nofollow" href="{$lodging_link_url}">website</a>&nbsp;&nbsp;
+							{/if}
+							{if $list_fb_url != ''}
+									<a class="listlink" href="{$list_fb_url}">{$list_fb_text}</a>&nbsp;&nbsp;
+							{/if}
 						
-						{if $list_tw_url != ''}
-     	                    <a class="listlink" href="{$list_tw_url}">{$list_tw_text}</a>&nbsp;&nbsp;
-     	                {/if}
+							{if $list_tw_url != ''}
+									<a class="listlink" href="{$list_tw_url}">{$list_tw_text}</a>&nbsp;&nbsp;
+							{/if}
 						
-						{if $list_ta_url != ''}
-     	                    <a class="listlink" href="{$list_ta_url}">{$list_ta_text}</a>&nbsp;&nbsp;
-     	                {/if}
+							{if $list_ta_url != ''}
+									<a class="listlink" href="{$list_ta_url}">{$list_ta_text}</a>&nbsp;&nbsp;
+							{/if}
 						
-						{if $list_ol_url != ''}
-     	                    <a class="listlink" href="{$list_ol_url}">{$list_ol_text}</a>&nbsp;&nbsp;
-     	                {/if}
+							{if $list_ol_url != ''}
+									<a class="listlink" href="{$list_ol_url}">{$list_ol_text}</a>&nbsp;&nbsp;
+							{/if}
 						
 					    {if $list_closed != ''}
-     	                      <br /><br />{$list_closed}
-     	                {/if}
+									<br /><br />{$list_closed}
+							{/if}
 
-						{if $list_lastupdate != '0000-00-00 00:00:00' && $EDIT != ''}
-							  <div class="links" ><span>last update</span></div>
+							{if $list_lastupdate != '0000-00-00 00:00:00' && $EDIT != ''}
+									<div class="links" ><span>last update</span></div>
 									<div style="text-align: center; color: gray; font-size: .8em;" >{$list_lastupdate}</div>
-     	                {/if}
+							{/if}
 	
 			   </div>
-               <div class="listing_info">
-                 	<p class="listing_name" style="margin-top: 0">{$hotel_name}</p>
-					<p class="tags">
+					<div class="listing_info">
+						<p class="listing_name" style="margin-top: 0">{$hotel_name}</p>
+						<p class="tags">
      					{if $list_tags != ''}
-     	                   {$list_tags}
-     	                {/if}
-						{if $list_tags != '' && $features != ''}, {/if}
+								{$list_tags}
+							{/if}
+							{if $list_tags != '' && $features != ''}, {/if}
 						
-						{if $features != ''}
-     	                   {$features}
-     	                {/if}
-					</p>
-                 	<div id="ggv_descshort">{$lodging_descshort}</div>
+							{if $features != ''}
+								{$features}
+							{/if}
+						</p>
+            <div id="ggv_descshort">{$lodging_descshort}</div>
      			</div>
      		</div>  <!-- end of Listing_header -->
 
@@ -261,4 +262,4 @@
 		</div>
 	</div>
 {include file="ggv10_footer.tpl"}
-{*/strip*}
+{/strip}

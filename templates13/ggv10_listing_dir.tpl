@@ -49,13 +49,11 @@
 						<a href="{$entry.EDIT}">EDIT</a> &nbsp;
 					 {/if}
 					{$entry.list_tagsicons}
-					{if $entry.list_fb}<a href="{$entry.list_fb}"><img  class="tagicon"  src="/images/facebookIcon.png"  title="Listed on Facebook" /></a>{/if}
-					{if $entry.list_tw}<a href="{$entry.list_tw}"><img  class="tagicon"  src="/images/twitter.png" title="Listed on Twitter" /></a>{/if}
-					{if $entry.list_ta}<a href="{$entry.list_ta}"><img  class="tagicon"  src="/images/tripadvisor2.png" title="Reviewed on Tripadvisor" /></a>{/if}
-					{if $entry.list_www}<a href="{$entry.list_www_url}"><img  class="tagicon"  style="margin:1px;"src="/images/www.png" title="Has a Website" /></a>{/if}
-					
-					
-					{if $entry.list_ti}<a href="{$entry.list_ti}"><img  class="tagicon"  src="/images/tickets.png" title="Get Tickets Online" /></a>{/if}
+					{if $entry.list_fb}<a class="trackLink" data-listname="{$entry.list_name} : facebook"  href="{$entry.list_fb}"><img  class="tagicon"  src="/images/facebookIcon.png"  title="Listed on Facebook" /></a>{/if}
+					{if $entry.list_tw}<a class="trackLink" data-listname="{$entry.list_name} : twitter"  href="{$entry.list_tw}"><img  class="tagicon"  src="/images/twitter.png" title="Listed on Twitter" /></a>{/if}
+					{if $entry.list_ta}<a class="trackLink" data-listname="{$entry.list_name} : tripadvisor"  href="{$entry.list_ta}"><img  class="tagicon"  src="/images/tripadvisor2.png" title="Reviewed on Tripadvisor" /></a>{/if}
+					{if $entry.list_www}<a class="trackLink" data-listname="{$entry.list_name} : website"  href="{$entry.list_www_url}"><img  class="tagicon"  style="margin:1px;"src="/images/www.png" title="Has a Website" /></a>{/if}
+					{if $entry.list_ti}<a class="trackLink" data-listname="{$entry.list_name} : tickets"   href="{$entry.list_ti}"><img  class="tagicon"  src="/images/tickets.png" title="Get Tickets Online" /></a>{/if}
 					
 					{if $list_lastupdate != '' && $EDIT != ''}
 						<div style="text-align: center; color: gray; font-size: .8em;" >{$list_lastupdate}</div>
@@ -122,14 +120,13 @@
 							   <div style="text-align:right; color: gray; font-size: .8em;"><a href="{$entry.EDIT}">EDIT</a> &nbsp;{$entry.list_lastupdate}</div>
 							{/if}
 						   {$entry.list_tagsicons}
-                       {if $entry.list_fb}<a href="{$entry.list_fb}"><img   class="tagicon" src="/images/facebookIcon.png" title="Listed on Facebook" /></a>{/if}
-					   {if $entry.list_tw}<a href="{$entry.list_tw}"><img   class="tagicon" src="/images/twitter.png" title="Listed on Twitter" /></a>{/if}
-					   {if $entry.list_ta}<a href="{$entry.list_ta}"><img   class="tagicon" src="/images/tripadvisor2.png" title="Reviewed on Tripadvisor" /></a>{/if}
-                       {if $entry.list_www}<a href="{$entry.list_www_url}"><img   class="tagicon" style="margin:1px;"src="/images/www.png" title="Has a Website" /></a>{/if}
-					   
-					   				
-						{if $entry.list_ti}<a href="{$entry.list_ti}"><img  class="tagicon"  src="/images/tickets.png" title="Get Tickets Online" /></a>{/if}
-					   
+			
+				{if $entry.list_fb}<a class="trackLink" data-listname="{$entry.list_name} : facebook"  href="{$entry.list_fb}"><img  class="tagicon"  src="/images/facebookIcon.png"  title="Listed on Facebook" /></a>{/if}
+				{if $entry.list_tw}<a class="trackLink" data-listname="{$entry.list_name} : twitter"  href="{$entry.list_tw}"><img  class="tagicon"  src="/images/twitter.png" title="Listed on Twitter" /></a>{/if}
+				{if $entry.list_ta}<a class="trackLink" data-listname="{$entry.list_name} : tripadvisor"  href="{$entry.list_ta}"><img  class="tagicon"  src="/images/tripadvisor2.png" title="Reviewed on Tripadvisor" /></a>{/if}
+				{if $entry.list_www}<a class="trackLink" data-listname="{$entry.list_name} : website"  href="{$entry.list_www_url}"><img  class="tagicon"  style="margin:1px;"src="/images/www.png" title="Has a Website" /></a>{/if}
+				{if $entry.list_ti}<a class="trackLink" data-listname="{$entry.list_name} : tickets"   href="{$entry.list_ti}"><img  class="tagicon"  src="/images/tickets.png" title="Get Tickets Online" /></a>{/if}
+									   
 				    </div>
 			   {/if}
 			   <p class="listing_name" onclick="location" >{$entry.list_name}</p>

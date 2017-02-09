@@ -296,7 +296,7 @@ border: none;
 			<div id="LeftColumnContent" >
 				<div class="printEditionText" style="margin: 0 10px; background-color: black; color: white;font-family: sans-serif;padding: 4px;">Edición Impresa</div>
 
-				<a href="{$DIR_WS_BASE}gayPVguide/" title=""><img style="width: 180px;height: auto;" src="{$DIR_WS_BASE}includes/Images/Cover164.a.small.jpg" /></a>
+				<a href="{$DIR_WS_BASE}gayPVguide/" title=""><img style="width: 180px;height: auto;" src="{$DIR_WS_BASE}includes/Images/Cover171.a.180x360.jpg" /></a><br /><br />
 			</div>
 			
 			{if not ($ads180x400 == NULL) }

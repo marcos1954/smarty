@@ -21,7 +21,7 @@
                 &nbsp;&nbsp;&nbsp;
                 <a href="{$entry.hotelinfo_URL}" class="srchHlink">more info</a>
                 &nbsp;&nbsp;&nbsp;
-                <a href="{$entry.hotellink_URL}" rel="nofollow" class="srchHlink">website</a>
+                <a class="srchHlink trackLink" data-listname="{$entry.hotel_name} : website" href="{$entry.hotellink_URL}" rel="nofollow" >website</a>
             </td>
             <td class="srchHdr4">
                 {$numAdults} Adult{if $numAdults ne 1}s{/if} &nbsp;/&nbsp;

@@ -35,7 +35,7 @@
 								<div class="condoLogo">
 								{if $entry.lodging_logo_src ne ''}
 
-								  <a href="../Listings/{$entry.lodging_logo_src}"><img border="0" src="../Listings/{$entry.lodging_logo_src}"  width="{$entry.lodging_logo_width}"   height="{$entry.lodging_logo_height}"  align="left"></a>
+								  <img border="0" src="../Listings/{$entry.lodging_logo_src}"  width="{$entry.lodging_logo_width}"   height="{$entry.lodging_logo_height}" align="left">
 
 								{else}
 
@@ -65,7 +65,8 @@
 			{/if}
 								<tr bgcolor={cycle values="`$smarty.config.searchcycleBgColor`" name="`$grpid`"}>
 								 <td class="agency" nowrap>
-								 {if $entry.acct_url ne ""}<a rel="nofollow" href="{$entry.acct_url}" class="condoZlink">{$entry.acct_name|truncate:10}</a>
+								 {if $entry.acct_url ne ""}
+								   <a  class="condoZlink trackLink" data-listname="{$entry.acct_name} {$entry.room_name} : website" rel="nofollow" href="{$entry.acct_url}" >{$entry.acct_name|truncate:10}</a>
 								 {else}
 								  {$entry.acct_name|truncate:10}
 								  {/if}

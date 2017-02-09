@@ -21,27 +21,27 @@
 							{$list_tagsicons}
 					    {/if}
 						{if $list_fb_url != ''}
-							  <a href="{$list_fb_url}"><img class="tagicon" src="/images/facebookIcon.png" width=auto title="Facebook" /></a>
+							  <a class="trackLink" data-listname="{$list_name} : facebook" href="{$list_fb_url}"><img class="tagicon" src="/images/facebookIcon.png" width=auto title="Facebook" /></a>
 						{/if}
 						
 						{if $list_tw_url != ''}
-							  <a href="{$list_tw_url}"><img class="tagicon" src="/images/twitter.png" title="Twitter" /></a>
+							  <a class="trackLink" data-listname="{$list_name} : twitter" href="{$list_tw_url}"><img class="tagicon" src="/images/twitter.png" title="Twitter" /></a>
 						{/if}
 						
 						{if $list_ta_url != ''}
-							  <a href="{$list_ta_url}"><img class="tagicon" src="/images/tripadvisor2.png" title="Reviewed on Tripadvisor" /></a>
+							  <a class="trackLink" data-listname="{$list_name} : tripadvisor" href="{$list_ta_url}"><img class="tagicon" src="/images/tripadvisor2.png" title="Reviewed on Tripadvisor" /></a>
 						{/if}
                         
-                        {if $list_url != ''}
-                              <a href="{$list_url}"><img class="tagicon" style="margin:1px;" src="/images/www.png" title="Has a Website" /></a>
-                        {/if}
+						{if $list_url != ''}
+									<a class="trackLink" data-listname="{$list_name} : website" href="{$list_url}"><img class="tagicon" style="margin:1px;" src="/images/www.png" title="Has a Website" /></a>
+						{/if}
 						
 						{if $list_ti_url != ''}
-                              <a href="{$list_ti_url}"><img class="tagicon" style="margin:1px;" src="/images/tickets.png" title="Get Tickets Online" /></a>
-                        {/if}
+									<a class="trackLink" data-listname="{$list_name} : tickets" href="{$list_ti_url}"><img class="tagicon" style="margin:1px;" src="/images/tickets.png" title="Get Tickets Online" /></a>
+						{/if}
 					</div>
 					
-                    {if $list_addr1 != '' || $list_addr2 != '' || $list_addr3 != '' || 	$list_phone != '' || $list_cell != '' || $list_intlphone != '' }
+          {if $list_addr1 != '' || $list_addr2 != '' || $list_addr3 != '' || 	$list_phone != '' || $list_cell != '' || $list_intlphone != '' }
 					<div class="links" ><span>{$locationPhones|default:'location & phone'}</span></div>
 					
 					<p  class="listing_address">
