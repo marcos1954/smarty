@@ -70,27 +70,27 @@
 					{/if}		 
 
                         {if $list_url != ''}
-     	                    <a class="listlink" rel="nofollow" href="{$list_url}">{$list_url_text}</a>
+     	                    <a  class="listlink trackLink" data-listname="{$list_name} : website" rel="nofollow" href="{$list_url}">{$list_url_text}</a>
      	                {/if}
 						{if $list_fb_url != ''}
-     	                    <a class="listlink" href="{$list_fb_url}">{$list_fb_text}</a>
+     	                    <a  class="listlink trackLink" data-listname="{$list_name} : facebook" href="{$list_fb_url}">{$list_fb_text}</a>
      	                {/if}
 						
 						{if $list_tw_url != ''}
-     	                    <a class="listlink" href="{$list_tw_url}">{$list_tw_text}</a>
+     	                    <a  class="listlink trackLink" data-listname="{$list_name} : twitter" href="{$list_tw_url}">{$list_tw_text}</a>
      	                {/if}
 						
 						{if $list_ta_url != ''}
-     	                    <a class="listlink" href="{$list_ta_url}">{$list_ta_text}</a>
+     	                    <a  class="listlink trackLink" data-listname="{$list_name} : tripadvisor" href="{$list_ta_url}">{$list_ta_text}</a>
      	                {/if}
 						
 						{if $list_ti_url != ''}
-     	                    <a class="listlink" href="{$list_ti_url}">{$list_ti_text}</a>
+     	                    <a  class="listlink trackLink" data-listname="{$list_name} : tickets" href="{$list_ti_url}">{$list_ti_text}</a>
      	                {/if}
                         
-                        {if $list_ol_url != ''}
-     	                    <a class="listlink" href="{$list_ol_url}">{$list_ol_text}</a>
-     	                {/if}
+						{if $list_ol_url != ''}
+								<a  class="listlink trackLink" data-listname="{$list_name} : {$list_ol_text}" href="{$list_ol_url}">{$list_ol_text}</a>
+						{/if}
 						
 					    {if $list_closed != ''}
      	                      <br /><br />{$list_closed}

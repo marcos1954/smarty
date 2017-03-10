@@ -66,22 +66,22 @@
 							 
 
 							{if $lodging_link_url != ''}
-									<a class="listlink" rel="nofollow" href="{$lodging_link_url}">website</a>&nbsp;&nbsp;
+									<a  class="listlink trackLink" data-listname="{$hotel_name} : website" rel="nofollow" href="{$lodging_link_url}">website</a>&nbsp;&nbsp;
 							{/if}
 							{if $list_fb_url != ''}
-									<a class="listlink" href="{$list_fb_url}">{$list_fb_text}</a>&nbsp;&nbsp;
+									<a  class="listlink trackLink" data-listname="{$hotel_name} : facebook" href="{$list_fb_url}">{$list_fb_text}</a>&nbsp;&nbsp;
 							{/if}
 						
 							{if $list_tw_url != ''}
-									<a class="listlink" href="{$list_tw_url}">{$list_tw_text}</a>&nbsp;&nbsp;
+									<a  class="listlink trackLink" data-listname="{$hotel_name} : twitter" href="{$list_tw_url}">{$list_tw_text}</a>&nbsp;&nbsp;
 							{/if}
 						
 							{if $list_ta_url != ''}
-									<a class="listlink" href="{$list_ta_url}">{$list_ta_text}</a>&nbsp;&nbsp;
+									<a  class="listlink trackLink" data-listname="{$hotel_name} : tripadvisor" href="{$list_ta_url}">{$list_ta_text}</a>&nbsp;&nbsp;
 							{/if}
 						
 							{if $list_ol_url != ''}
-									<a class="listlink" href="{$list_ol_url}">{$list_ol_text}</a>&nbsp;&nbsp;
+									<a  class="listlink trackLink" data-listname="{$hotel_name} : {$list_ol_text}" href="{$list_ol_url}">{$list_ol_text}</a>&nbsp;&nbsp;
 							{/if}
 						
 					    {if $list_closed != ''}

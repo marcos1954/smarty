@@ -1,3 +1,4 @@
+{debug}
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -171,12 +172,16 @@ border: none;
     	</div>
     {else}
    		<div id="topBanner">
+			{$is_mobile}
+		{if $is_mobile != 0 }
+
     	<a href="https://www.gayguidevallarta.com/qr.ggv122c.php">
     		<img height="150" width="950" src="{$DIR_WS_BASE}includes/Images/topBannerAPP.gif" />
     	</a>
+		{/if}
    		</div>
      {/if}
-	<div id="GayGuideVallarta"></div>
+	<div id="GayGuideVallarta" {if $is_mobile != 0 } style='background-image: url("/css/images/ggvHeader.jpg");' {/if}   ></div>
 	
 	
 	
@@ -303,7 +308,9 @@ border: none;
 			<div id="GayGuideVallarta_r3_c1"></div>
 			<div id="LeftColumnContent" >
 				<div class="printEditionText" style="margin: 0 10px; background-color: black; color: white;font-family: sans-serif;padding: 4px;">Print Edition</div>
+				{if $is_mobile == false}
 				<a href="{$DIR_WS_BASE}gayPVguide/" title=""><img style="width: 180px;height: auto;" src="{$DIR_WS_BASE}includes/Images/Cover171.a.180x360.jpg" /></a><br /><br />
+				{/if}
 			</div>
 			{* include file="ggv10_right_content.tpl" *}
 			{if not ($ads180x400 == NULL) }

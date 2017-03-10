@@ -24,7 +24,9 @@
 			</div>
 		</div>
 		<div id="eventDaySunsetTease"></div>
-		<img id="eventDaySunsetImage" src="../images/sunset.jpg" />
+		{if $is_mobile == false }
+			<img id="eventDaySunsetImage" src="../images/sunset.jpg" />
+		{/if}	
 	</div>
 
 	<div id="dayCalControlBlock">
