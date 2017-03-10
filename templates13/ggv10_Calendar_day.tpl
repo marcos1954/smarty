@@ -1,4 +1,4 @@
-{config_load file="ggv_dayCal.conf"}
+{config_load file="ggv_dayCal.conf"}  
 {include file=$headerfilename}
 <div id="topcontent" class="dayCalendar">
 	<div id="lang" style="display: none;">{$lang}</div>
@@ -169,7 +169,7 @@
 			</div>
 		{/if}
 		
-		{if not ($today_events == NULL) }
+		{if not ($today_events == NULL && $events == NULL) }
 			<div id="eventDayStart" class="eventDayGroup">
 				<h4>{$transEventsByStartTime}</h4>
 				
