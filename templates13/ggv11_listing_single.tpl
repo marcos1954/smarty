@@ -52,19 +52,19 @@
      					{if $list_addr3 != ''}
      						<br /> {$list_addr3}
      					{/if}
+					</p>
      					{if $list_phone != ''}
-     						<br /> Tel. {$list_phone}
+     						 {$list_phone}
      					{/if}
 						{if $list_cell != ''}
-     						<br /> Cel. {$list_cell}
-     					{/if}
+     						 {$list_cell}
+     				{/if}
 						{if $list_intlphone != ''}
-     						<br /> US/Can. {$list_intlphone}
-     					{/if}
-                    </p>
-                    {/if}
+     						  {$list_intlphone}
+     				{/if}
+          {/if}
                     
-                    {if $list_url != '' || $list_fb_url != '' || $list_tw_url != '' || $list_ta_url != '' || $list_ti_url != '' || 	$list_ol_url != ''  }
+          {if $list_url != '' || $list_fb_url != '' || $list_tw_url != '' || $list_ta_url != '' || $list_ti_url != '' || 	$list_ol_url != ''  }
 					
 					<div class="links" ><span>{$websitesListings|default:'website & listings'}</span></div>
 					{/if}		 

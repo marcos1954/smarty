@@ -3,6 +3,7 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="referrer" content="always">
 <title>{$PAGE_TITLE|default:"gayguide Vallarta"}</title>
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
@@ -49,16 +50,19 @@
 		{$LANG_FLAGS}&nbsp;{$translatemenulink}
 	</div>
 	<div id="app-links">
-		<a href="https://www.gayguidevallarta.com/touch">iPhone App</a>  &nbsp;&nbsp;&nbsp;
-		<a href="https://www.gayguidevallarta.com/touch">iPad App</a>  &nbsp;&nbsp;&nbsp;
-		<a href="https://www.gayguidevallarta.com/touch">Android App</a>
+		<a href="https://itunes.apple.com/us/app/gay-guide-vallarta/id1241706011?ls=1&mt=8">iPhone App</a>  &nbsp;&nbsp;&nbsp;
+		<a href="https://itunes.apple.com/us/app/gay-guide-vallarta/id1241706011?ls=1&mt=8">iPad App</a>  &nbsp;&nbsp;&nbsp;
+		<a href="https://play.google.com/store/apps/details?id=com.gayguidevallarta.GayGuideApp&hl=en">Android App</a>
 	</div>
 </div>
 
 <div id="under_menu" class="{if $frontpage}{$frontpage}{/if}">
 	<div id="undermenu-box">
 		
-		
+		<div style="text-align: center;" >
+			<a href="https://itunes.apple.com/us/app/gay-guide-vallarta/id1241706011?ls=1&mt=8"><img src="/images/appstore180.png" width="90"  style="margin:  0;" /></a>
+			<a href="https://play.google.com/store/apps/details?id=com.gayguidevallarta.GayGuideApp&hl=en"><img src="/images/en_badge_180.png" width="100" style="margin: 0;" /></a>
+		</div>
 		
 <div class="searchbox">	
 {literal}
@@ -155,9 +159,9 @@ border: none;
 			<a  >Rental Agents</a>
 		</div>
 
-		<div class="button"  onclick="location.href='https://www.gayguidevallarta.com/touch';">
+		<!--<div class="button"  onclick="location.href='https://www.gayguidevallarta.com/touch';">
 			<a  >Web App</a>
-		</div>
+		</div>-->
 	
 	</div>
 </div>
@@ -306,9 +310,15 @@ border: none;
 	  		</div>
 			<div id="GayGuideVallarta_r3_c1"></div>
 			<div id="LeftColumnContent" >
+				<div class="printEditionText" style="margin: 0 10px; background-color: red; color: white;font-family: sans-serif;padding: 4px;">Gay Guide Vallarta App</div>
+				<div style="text-align:  center; margin: 10px; background-color: red; border-radius: 10px;">
+					<a href="https://itunes.apple.com/us/app/gay-guide-vallarta/id1241706011?ls=1&mt=8"><img src="/images/appstore180.png" width="180"  style="margin: 10px 0 0 0;" /></a>
+					<a href="https://play.google.com/store/apps/details?id=com.gayguidevallarta.GayGuideApp&hl=en"><img src="/images/en_badge_180.png" width="180" style="margin: 0;" /></a>
+				</div>
+				<br />
 				<div class="printEditionText" style="margin: 0 10px; background-color: black; color: white;font-family: sans-serif;padding: 4px;">Print Edition</div>
 				{if $is_mobile == false}
-				<a href="{$DIR_WS_BASE}gayPVguide/" title=""><img style="width: 180px;height: auto;" src="{$DIR_WS_BASE}includes/Images/Cover171.a.180x360.jpg" /></a><br /><br />
+				<a href="{$DIR_WS_BASE}gayPVguide/" title=""><img style="width: 180px;height: auto;" src="{$DIR_WS_BASE}includes/Images/Cover172.d.180x360.jpg" /></a><br /><br />
 				{/if}
 			</div>
 			{* include file="ggv10_right_content.tpl" *}

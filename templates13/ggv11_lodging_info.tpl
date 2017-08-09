@@ -52,16 +52,17 @@
      					{if $lodging_addr3 != ''}
      						<br /> {$lodging_addr3}
      					{/if}
+						</p>
      					{if $lodging_phone != ''}
-     						<br /> Tel. {$lodging_phone}
+     						{$lodging_phone}
      					{/if}
 						{if $list_cell != ''}
-     						<br /> Cel. {$list_cell}
+     						{$list_cell}
      					{/if}
 						{if $list_intlphone != ''}
-     						<br /> US/Can. {$list_intlphone}
+     						{$list_intlphone}
      					{/if}
-                   </p>
+                   
 					<div class="links" ><span>{$websitesListings|default:'website & listings'}</span></div>
 							 
 

@@ -3,6 +3,7 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="referrer" content="always">
 <title>{$PAGE_TITLE|default:"gayguide Vallarta"}</title>
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
@@ -46,9 +47,9 @@
 		{$LANG_FLAGS}&nbsp;{$translatemenulink}
 	</div>
 	<div id="app-links">
-		<a href="http://i.gpvr.mx">iPhone App</a>  &nbsp;&nbsp;&nbsp;
-		<a href="http://i.gpvr.mx">iPad App</a>  &nbsp;&nbsp;&nbsp;
-		<a href="http://i.gpvr.mx">Android App</a>
+		<a href="https://itunes.apple.com/us/app/gay-guide-vallarta/id1241706011?ls=1&mt=8">iPhone App</a>  &nbsp;&nbsp;&nbsp;
+		<a href="https://itunes.apple.com/us/app/gay-guide-vallarta/id1241706011?ls=1&mt=8">iPad App</a>  &nbsp;&nbsp;&nbsp;
+		<a href="https://play.google.com/store/apps/details?id=com.gayguidevallarta.GayGuideApp&hl=en">Android App</a>
 	</div>
 </div>
 
@@ -261,7 +262,7 @@ border: none;
 
 			<div id="LeftColumnContent" >
 				<div class="printEditionText" style="margin: 0 10px; background-color: black; color: white;font-family: sans-serif;padding: 4px;">Edicion Actuelle</div>
-				 <a href="{$DIR_WS_BASE}gayPVguide/" title=""><img src="{$DIR_WS_BASE}includes/Images/Cover171.a.180x360.jpg" /></a><br /><br />
+				 <a href="{$DIR_WS_BASE}gayPVguide/" title=""><img src="{$DIR_WS_BASE}includes/Images/Cover172.d.180x360.jpg" /></a><br /><br />
 			</div>
 			{if not ($ads180x400 == NULL) }
 				<div id="ads180x400">
