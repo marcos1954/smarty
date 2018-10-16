@@ -1,3 +1,4 @@
+{*debug*}
 {include file=$headerfilename}
 
 {if not ($topcontent == NULL) }

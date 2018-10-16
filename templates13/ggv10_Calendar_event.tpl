@@ -1,9 +1,14 @@
 {include file=$headerfilename}
 
 <div id="Listing_right_column_pix">
-	{if $biz_map != ''}
+	{if $biz_map != ''  &&  $event_gmap == ''}
 		<div id="eventMapStatic">
-			<a href="{$biz_mapbig}"><img width="200" height="300" src="{$biz_map}" /></a>
+			<a href="{$biz_mapbig}"><img width="250" height="300" src="{$biz_map}" /></a>
+		</div>
+	
+	{elseif $event_gmap != ''}
+		<div id="eventMapStatic">
+			{$event_gmap }
 		</div>
 	{/if}
 </div>
@@ -61,12 +66,14 @@
 						{$dateblock.event_times}
 					{else} 
 						{$dateblock.all_day_event}
-					{/if}</strong> 
+					{/if}
+				</strong> 
 				&nbsp;
 				{$dateblock.event_recurs}
 				<br>
 				</div>
 			{/foreach}
+			
 		</div>
 		<div id="eventDescShort">{$event_desc_short|nl2br}</div>
 	</div>

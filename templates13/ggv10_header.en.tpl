@@ -220,7 +220,7 @@ border: none;
 				<div class="popdirentry"> &#187; <a href="{$DIR_WS_BASE}Calendar/index.php?display=day" title="Day Calendar."> Full Day Calendar</a></div>
 				<div class="popdirentry"> &#187; <a href="{$DIR_WS_BASE}Calendar/index.php?display=month" title="Monthly Calendar."> Monthly Calendar</a></div>
 				<br />
-				<div class="popdirentry"> &#187; <a href="{$DIR_WS_BASE}Calendar/index.php?id=&code=&display=month&category=2,19,20&Go=Go" title="Show Calendar."> Show Calendar</a></div>
+				<div class="popdirentry"> &#187; <a href="{$DIR_WS_BASE}Calendar/index.php?id=&code=&display=month&category=2,19,20,21&Go=Go" title="Show Calendar."> Show Calendar</a></div>
 				<div class="popdirentry"> &#187; <a href="{$DIR_WS_BASE}Calendar/index.php?id=&code=&display=month&category=3&Go=Go" title="Tour Calendar."> Tour Calendar</a></div>
 			</div>
 		   </li>
@@ -318,7 +318,7 @@ border: none;
 				<br />
 				<div class="printEditionText" style="margin: 0 10px; background-color: black; color: white;font-family: sans-serif;padding: 4px;">Print Edition</div>
 				{if $is_mobile == false}
-				<a href="{$DIR_WS_BASE}gayPVguide/" title=""><img style="width: 180px;height: auto;" src="{$DIR_WS_BASE}includes/Images/cover173.jpg" /></a><br /><br />
+				<a href="{$DIR_WS_BASE}gayPVguide/" title=""><img style="width: 180px;height: auto;" src="{$DIR_WS_BASE}includes/Images/Cover183.sm.jpg" /></a><br /><br />
 				{/if}
 			</div>
 			{* include file="ggv10_right_content.tpl" *}

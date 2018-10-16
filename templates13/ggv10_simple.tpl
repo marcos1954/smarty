@@ -18,4 +18,3 @@
 {include file="ggv10_right_content.tpl"}
 
 {include file="ggv10_footer.tpl"}
-{*debug*}
